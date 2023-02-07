@@ -2725,3 +2725,10 @@ div.selebrites__container {
     width: 246.26px;
   }
 }
+
+@media (min-width:1288px) {
+  .cosmetics__content {
+    grid-template-columns: 790px 377px;
+    column-gap: 90px;
+  }
+}
