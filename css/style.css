@@ -2137,11 +2137,15 @@ div.selebrites__container {
 
 @media screen and (min-width: 1400px) {
   .splide__arrow--prev {
-    left: -3em !important;
+    left: 1.5em !important;
+
+    width: 65px !important;
   }
 
   .splide__arrow--next {
-    right: -3em !important;
+
+    width: 65px !important;
+    right: 1.5em !important;
   }
 }
 
