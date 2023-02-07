@@ -126,12 +126,17 @@ h2 {
   z-index: 99999999999;
 }
 
-video {
+.reservation.fixed {
+  position: fixed;
+  bottom: 0;
   width: 100%;
+  z-index: 99999;
+  right: 0;
+  left: 0;
+  margin-bottom: 0;
 }
 
 .reservation {
-  position: sticky;
   bottom: 0px;
   z-index: 999999999;
 }
@@ -2223,7 +2228,7 @@ div.selebrites__container {
 
 .reservation__price,
 .reservation__text {
-  font-size: 15px;
+  font-size: 20px;
   line-height: 240%;
   /* 36/15 */
   color: #6c1401;
@@ -2373,7 +2378,7 @@ div.selebrites__container {
     font-size: 14px;
     line-height: 114.285714%;
     /* 16/14 */
-    padding: 4px 36px 2px !important;
+    padding: 11px 36px 8px !important;
   }
 
   .resertext h3,
@@ -2400,12 +2405,7 @@ div.selebrites__container {
     left: 3em !important;
   }
 
-  .reser-inner a {
-    font-size: 14px;
-    line-height: 114.285714%;
-    /* 16/14 */
-    padding: 4px 36px 2px !important;
-  }
+
 
   .resertext h3,
   .resertext h5,
@@ -2642,8 +2642,8 @@ div.selebrites__container {
   user-select: none;
   width: 200px;
   height: 100%;
-  left: -5%;
-  z-index: 1;
+  left: -3%;
+  z-index: 2;
   background: linear-gradient(90deg, #ffffff 30.74%, rgba(255, 255, 255, 0) 100%) !important;
 }
 
@@ -2691,12 +2691,14 @@ div.selebrites__container {
 @media (max-width:1210px) {
   .cosmetics__splide {
     width: 90%;
-    margin: 0 auto !important;
     min-width: 75% !important;
+    margin: 0 auto;
   }
 
   .cosmetics__container {
-    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+
   }
 
   .cosmetics__main-image {
@@ -2708,13 +2710,32 @@ div.selebrites__container {
     display: flex;
     padding-bottom: 5rem;
   }
+
+  .splide__slide img,
+  .steps-content,
+  .steps-subtitle {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .steps-splide .splide__arrow {
+    width: 55px;
+  }
+
+}
+
+@media (min-width:1288px) {
+  .cosmetics__container {
+    padding: 50%;
+
+  }
 }
 
 @media (max-width:726px) {
   .cosmetics__splide {
-    width: 100%;
+    width: 80vw;
     margin: 0 auto !important;
-    min-width: 90% !important;
+    min-width: 90vw !important;
   }
 
   .cosmetics__main-image {
@@ -2731,4 +2752,54 @@ div.selebrites__container {
     grid-template-columns: 790px 377px;
     column-gap: 90px;
   }
+}
+
+@media (max-width:760px) {
+  .hero-content-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-content-container h2 {
+    text-align: center;
+  }
+
+  .splide__slide.maison__slide.culte__slide.is-next {
+    margin-right: 25px !important;
+  }
+
+  .technique-splide {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  .splide__arrow.splide__arrow--prev.technique-arrow-prev {
+    left: 14px !important;
+  }
+
+  .steps-splide .splide__track::after,
+  .steps-splide .splide__track::before {
+    width: 100px !important;
+  }
+
+  .steps-splide .splide__arrow {
+    top: 50% !important;
+    width: 36px !important;
+    height: 40px !important;
+  }
+
+  .cosmetics__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.cosmetics__splide-image {
+  max-height: initial;
+  max-width: 100%;
 }

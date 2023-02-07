@@ -10,6 +10,21 @@ const headerEl = document.querySelector(".header");
 btnNavEl.forEach((btn) =>
   btn.addEventListener("click", () => headerEl.classList.toggle("nav-open"))
 );
+const current = document.querySelector('#current');
+const imgs = document.querySelectorAll('.hero__gallery-container img');
+const opacity = 0.4;
+
+imgs[0].style.opacity = opacity;
+
+imgs.forEach(img => img.addEventListener('click', imgClick));
+
+function imgClick(e) {
+  imgs.forEach(img => (img.style.opacity = 1));
+  current.src = e.target.src;
+  current.classList.add('fade-in');
+  setTimeout(() => current.classList.remove('fade-in'), 500);
+  e.target.style.opacity = opacity;
+}
 
 const googleSplide = new Splide(".google__splide", {
   focus: "center",
@@ -144,41 +159,32 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-const stepsSplide = new Splide(".steps-splide", {
-  focus: "center",
-  type: "loop",
-  perPage: 1,
-  perMove: 1,
-  mediaQuery: "min",
-  width: "405px",
-  fixedWidth: "250px",
-  gap: "11px",
-  breakpoints: {
-    320: {
-      gap: "2px",
-      perPage: 1.2,
-      padding: "0rem",
-      fixedWidth: "300px",
-      width: "100%",
-    },
-    728: {
-      perPage: 2,
-      padding: "0rem",
-      fixedWidth: "280px",
-      width: "689px",
+// <!-- Initialize Swiper -->
+var swiperSteps = new Swiper(".mySwiperSteps", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  centeredSlide: true,
+  navigation: {
+    nextEl: ".step-swiper-button-next",
+    prevEl: ".step-swiper-button-prev",
+  }, breakpoints: {
+    640: {
+      slidesPerView: 2,
     },
     998: {
-      perPage: 2,
-      padding: "0rem",
-      fixedWidth: "380px",
-      width: "868px",
-    },
-    1024: {
-      perPage: 3,
-      padding: "0rem",
-      fixedWidth: "312px",
-      width: "1026px",
+      slidesPerView: 3,
     },
   },
 });
-stepsSplide.mount();
+
+
+// -------
+$(window).scroll(function () {
+  if ($(this).scrollTop() > $(window).height() / 4) {
+    $(".reservation").addClass("fixed");
+  } else {
+    $(".reservation").removeClass("fixed");
+  }
+});
+
+

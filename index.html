@@ -88,13 +88,14 @@
         <div class="hero-container">
           <div class="hero__images">
             <div class="hero__main__image-container">
-              <img src="img/hero/hero-image-1.jpeg" alt="" class="hero__main__image" />
+              <img src="img/hero/hero-image-1.jpeg" alt="" class="hero__main__image" id="current" />
             </div>
+
             <div class="hero__gallery-container">
+              <img src="img/hero/hero-image-1.jpeg" alt="" />
               <img src="img/hero/hero-image-2.jpeg" alt="" />
               <img src="img/hero/hero-image-3.jpeg" alt="" />
               <img src="img/hero/hero-image-4.jpeg" alt="" />
-              <img src="img/hero/hero-image-5.jpeg" alt="" />
             </div>
           </div>
           <div class="hero-content-container">
@@ -155,7 +156,6 @@
                     alt="Actices photo" />
                   <p class="maison__fullname">Lily Collins</p>
                   <p class="maison__descpip">Actrice d’Emily in Paris</p>
-                  <a href="#" class="maison__reserve-btn">Je Réserve mon soin</a>
                 </li>
 
                 <li class="splide__slide maison__slide culte__slide">
@@ -163,14 +163,12 @@
                     alt="Actices photo" />
                   <p class="maison__fullname">Camille Razat</p>
                   <p class="maison__descpip">Actrice d’Emily in Paris</p>
-                  <a href="#" class="maison__reserve-btn">Je Réserve mon soin</a>
                 </li>
                 <li class="splide__slide maison__slide culte__slide">
                   <img class="maison__splide-image culte-image" width="340" height="442" src="img/selebretes/sel-3.jpg"
                     alt="Actices photo" />
                   <p class="maison__fullname">Ashley Park</p>
                   <p class="maison__descpip">Actrice d’Emily in Paris</p>
-                  <a href="#" class="maison__reserve-btn">Je Réserve mon soin</a>
                 </li>
               </ul>
             </div>
@@ -266,21 +264,20 @@
         </div>
       </section>
 
-      <section class="splide steps-splide" aria-labelledby="carousel-heading">
+      <section class="steps-splide">
         <div class="splide__arrows">
-          <button class="splide__arrow splide__arrow--prev">
+          <div class="step-swiper-button-prev splide__arrow splide__arrow--prev">
             <img src="img/technique/next.svg" alt="" />
-          </button>
-          <button class="splide__arrow splide__arrow--next">
+          </div>
+          <div class="step-swiper-button-next splide__arrow splide__arrow--next">
             <img src="img/technique/next.svg" alt="" />
-          </button>
+          </div>
         </div>
-
         <h2 class="technique-subtitle">Les 7 étapes du Soin Culte</h2>
-
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide steps-card">
+        <!-- Swiper -->
+        <div class="swiper mySwiperSteps splide__track">
+          <div class="swiper-wrapper splide__list">
+            <div class="swiper-slide splide__slide steps-card">
               <img class="steps-img" src="img/steps/1.jpeg" alt="" />
               <p class="steps-title">Étape 1</p>
               <p class="steps-subtitle">Le diagnostic de peau</p>
@@ -291,8 +288,9 @@
                 <br />
                 <u>En savoir plus</u>
               </p>
-            </li>
-            <li class="splide__slide steps-card">
+            </div>
+
+            <div class="swiper-slide splide__slide steps-card">
               <img class="steps-img" src="img/steps/2.jpeg" alt="" />
               <p class="steps-title">Étape 2</p>
               <p class="steps-subtitle">
@@ -308,8 +306,8 @@
                 <br />
                 <u>En savoir plus</u>
               </p>
-            </li>
-            <li class="splide__slide steps-card">
+            </div>
+            <div class="swiper-slide splide__slide steps-card">
               <img class="steps-img" src="img/steps/3.jpeg" alt="" />
               <p class="steps-title">Étape 3</p>
               <p class="steps-subtitle">Le masque Carboxythérapie</p>
@@ -322,8 +320,8 @@
                 <br />
                 <u>En savoir plus</u>
               </p>
-            </li>
-            <li class="splide__slide steps-card">
+            </div>
+            <div class="swiper-slide splide__slide steps-card">
               <img class="steps-img" src="img/steps/4.jpeg" alt="" />
               <p class="steps-title">Étape 4</p>
               <p class="steps-subtitle">
@@ -338,9 +336,58 @@
                 <br />
                 <u>En savoir plus</u>
               </p>
-            </li>
-          </ul>
+            </div>
+            <div class="swiper-slide splide__slide steps-card">
+              <img class="steps-img" src="img/steps/4.jpeg" alt="" />
+              <p class="steps-title">Étape 5</p>
+              <p class="steps-subtitle">
+                Le masque biopeeling “miracle” avec la Crème Culte
+              </p>
+              <p class="steps-content">
+                Exfoliant doux et hydratant grâce à l’Acide glycolique
+                complété de la Vitamine E, doublé d’un <br />
+                ...
+                <br />
+
+                <br />
+                <u>En savoir plus</u>
+              </p>
+            </div>
+            <div class="swiper-slide splide__slide steps-card">
+              <img class="steps-img" src="img/steps/4.jpeg" alt="" />
+              <p class="steps-title">Étape 6</p>
+              <p class="steps-subtitle">
+                Le masque biopeeling “miracle” avec la Crème Culte
+              </p>
+              <p class="steps-content">
+                Exfoliant doux et hydratant grâce à l’Acide glycolique
+                complété de la Vitamine E, doublé d’un <br />
+                ...
+                <br />
+
+                <br />
+                <u>En savoir plus</u>
+              </p>
+            </div>
+            <div class="swiper-slide splide__slide steps-card">
+              <img class="steps-img" src="img/steps/4.jpeg" alt="" />
+              <p class="steps-title">Étape 7</p>
+              <p class="steps-subtitle">
+                Le masque biopeeling “miracle” avec la Crème Culte
+              </p>
+              <p class="steps-content">
+                Exfoliant doux et hydratant grâce à l’Acide glycolique
+                complété de la Vitamine E, doublé d’un <br />
+                ...
+                <br />
+
+                <br />
+                <u>En savoir plus</u>
+              </p>
+            </div>
+          </div>
         </div>
+
       </section>
 
       <section class="main__selebrites selebrites">
@@ -437,6 +484,7 @@
       </section>
 
       <section class="main__cosmetics cosmetics cosmetics__splide">
+
         <div class="cosmetics__container">
           <h2 class="cosmetics__title">L’Essence Activatrice</h2>
           <div class="cosmetics__content">
@@ -444,17 +492,17 @@
               alt="Image of our cosmetics" />
             <!-- Swiper -->
             <div class="mySwiperCosmaticMain">
-              <div class="swiper mySwiperCosmatic splide__track">
-                <div class="swiper-wrapper splide__list cosmetics-slider-list">
-                  <div class="swiper-slide splide__slide cosmetics__slide">
+              <div class="swiper mySwiperCosmatic">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img class="cosmetics__s" width="377" height="369" src="img/cosmetics/product-1.jpg"
+                      alt="Our cometic" />
+                  </div>
+                  <div class="swiper-slide">
                     <img class="cosmetics__splide-image" width="377" height="369" src="img/cosmetics/product-1.jpg"
                       alt="Our cometic" />
                   </div>
-                  <div class="swiper-slide splide__slide cosmetics__slide">
-                    <img class="cosmetics__splide-image" width="377" height="369" src="img/cosmetics/product-1.jpg"
-                      alt="Our cometic" />
-                  </div>
-                  <div class="swiper-slide splide__slide cosmetics__slide">
+                  <div class="swiper-slide">
                     <img class="cosmetics__splide-image" width="377" height="369" src="img/cosmetics/product-1.jpg"
                       alt="Our cometic" />
                   </div>
@@ -539,7 +587,21 @@
               <h3>LE SOIN CULTE</h3>
               <h5>Peau lumineuse, tonifiée, réoxygénée, teint unifié</h5>
             </div>
+            <!-- <script>
+              $(window).scroll(function () {
+                var heroBottom = $(".hero").offset().top + $(".hero").height();
+                var footerTop = $(".footer").offset().top;
 
+                if ($(this).scrollTop() > heroBottom) {
+                  $(".reservation").addClass("fixed");
+                } else if ($(this).scrollTop() >= footerTop) {
+                  $(".reservation").removeClass("fixed");
+                } else {
+                  $(".reservation").removeClass("fixed");
+                  $(".reservation").addClass("fixed");
+                }
+              });
+            </script> -->
             <div class="col">
               <div class="clockmin">
                 <img width="16" height="16" src="img/clock.svg" alt="60 min" />
@@ -641,6 +703,7 @@
 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </body>
 
 </html>
