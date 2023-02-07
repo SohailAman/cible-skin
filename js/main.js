@@ -162,7 +162,7 @@ var swiper = new Swiper(".mySwiper", {
 // <!-- Initialize Swiper -->
 var swiperSteps = new Swiper(".mySwiperSteps", {
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 20,
   centeredSlide: true,
   navigation: {
     nextEl: ".step-swiper-button-next",
@@ -187,4 +187,15 @@ $(window).scroll(function () {
   }
 });
 
+$(window).scroll(function () {
+  let target = $(".footer").offset().top;
+  let currentScroll = $(target).scrollTop();
+
+  if (currentScroll >= target) {
+    $(".reservation").css({
+      position: "initial",
+      display: "none"
+    });
+  }
+});
 
