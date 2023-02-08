@@ -1244,7 +1244,7 @@ div.selebrites__container {
 .cosmetics__title {
   width: fit-content;
   text-align: center;
-  margin: 33px auto;
+  margin: 10px auto 33px auto;
 }
 
 .cosmetics__content {
@@ -1354,6 +1354,9 @@ div.selebrites__container {
 .cosmetics__product-btn {
   display: none;
 }
+
+
+
 
 
 @media screen and (min-width: 560px) {
@@ -1929,7 +1932,7 @@ div.selebrites__container {
 
   .main__google {
     padding-top: 107px;
-    margin-bottom: 220px;
+    margin-bottom: 80px;
   }
 
   .users-links {
@@ -2489,7 +2492,7 @@ div.selebrites__container {
   max-width: 316px;
   margin: 0 auto;
   margin-bottom: 17px;
-  margin-top: 76px;
+  margin-top: 30px;
 }
 
 .technique-splide .splide__slide {
@@ -2541,7 +2544,7 @@ div.selebrites__container {
     line-height: 42px;
     max-width: 700px;
     margin-bottom: 85px;
-    margin-top: 81px;
+    margin-top: 30px;
   }
 
   .technique-splide .splide__arrow {
@@ -2583,7 +2586,7 @@ div.selebrites__container {
   }
 
   .technique-subtitle {
-    margin-top: 136px;
+    margin-top: 35px;
     font-size: 48px;
     line-height: 57.6px;
     max-width: 1008px;
@@ -2659,11 +2662,29 @@ div.selebrites__container {
   border-top: 1px solid #000000;
   padding-top: 10px;
   max-width: 214px;
+  position: relative;
 }
 
 .steps-content u {
   padding-left: 2px;
 }
+
+
+/* ----------js ClassList---- */
+
+.morePara {
+  visibility: visible;
+  transition: all .4s;
+}
+
+.hideText {
+  font-size: 0;
+  line-height: 0;
+  transition: all .4s;
+  visibility: hidden;
+}
+
+/* ----------js ClassList---- */
 
 .steps-splide .splide__arrow {
   top: 70%;
@@ -2901,5 +2922,13 @@ div.selebrites__container {
     height: 9px;
     width: 9px;
     margin: 0 8px !important;
+  }
+
+  .hero-content-container .maison__reserve-btn {
+    margin-top: 0 !important;
+  }
+
+  .hero-content-tags {
+    margin-bottom: 16px !important;
   }
 }

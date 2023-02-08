@@ -201,3 +201,33 @@ $(window).scroll(function () {
   }
 });
 
+// Read more btns
+
+let readMoreBtn = document.querySelectorAll('.readMoreBtn');
+let elipsis = document.querySelectorAll('.elipsis');
+let morePara = document.querySelectorAll('.morePara');
+
+let viewed = false;
+
+for (let i = 0; i < morePara.length; i++) {
+
+  readMoreBtn[i].addEventListener('click', () => {
+    if (viewed === false) {
+      elipsis[i].style.display = "none";
+      morePara[i].classList.remove('hideText');
+      readMoreBtn[i].innerHTML = "Show less";
+      viewed = true;
+    }
+    else {
+      elipsis[i].style.display = "block";
+      morePara[i].classList.add('hideText');
+      readMoreBtn[i].innerHTML = "En savoir plus";
+      viewed = false;
+    }
+  })
+
+  elipsis[i].style.display = "block";
+  morePara[i].classList.add('hideText');
+  readMoreBtn[i].innerHTML = "En savoir plus";
+
+}
