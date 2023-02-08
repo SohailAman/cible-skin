@@ -1495,6 +1495,7 @@ div.selebrites__container {
 
   h2 {
     font-size: 35px !important;
+    width: 100vw;
   }
 
   .hero__title {
@@ -1632,7 +1633,7 @@ div.selebrites__container {
   }
 
   .cosmetics__splide {
-    max-width: 550px;
+    max-width: 100%;
     min-height: 337px;
   }
 
@@ -2764,6 +2765,15 @@ div.selebrites__container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 0;
+  }
+
+  .maison-culte__splide .splide__arrow.maison__arrow_next {
+    right: 8px !important;
+  }
+
+  .maison-culte__splide .splide__arrow.maison__arrow_prev {
+    left: 8px !important;
   }
 
   .hero-content-container h2 {
@@ -2800,9 +2810,21 @@ div.selebrites__container {
     justify-content: center;
     align-items: center;
   }
+
+  .steps-splide .splide__track::after,
+  .steps-splide .splide__track::before {
+    content: none;
+  }
 }
 
 .cosmetics__splide-image {
   max-height: initial;
   max-width: 100%;
+}
+
+@media (max-width:640px) {
+  .splide__list.maison-slider-list .splide__slide {
+    width: 65vw !important;
+    ;
+  }
 }
