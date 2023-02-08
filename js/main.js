@@ -161,8 +161,8 @@ var swiper = new Swiper(".mySwiper", {
 
 // <!-- Initialize Swiper -->
 var swiperSteps = new Swiper(".mySwiperSteps", {
-  slidesPerView: 1,
-  spaceBetween: 50,
+  slidesPerView: 1.2,
+  spaceBetween: 30,
   centeredSlide: true,
   navigation: {
     nextEl: ".step-swiper-button-next",

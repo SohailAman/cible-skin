@@ -563,9 +563,14 @@ p.maison__quote {
   text-align: center;
 }
 
+.main__culte.maison {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 @media screen and (min-width: 728px) {
   .sion-subtitle {
-    margin-top: 0;
+    margin: 55px auto 85px auto;
   }
 }
 
@@ -591,8 +596,9 @@ p.maison__quote {
 
 .signature__title {
   text-align: center;
+  width: fit-content;
   line-height: 1.2;
-  margin-bottom: 16px;
+  margin: 16px auto;
 }
 
 .signature__cards {
@@ -1056,6 +1062,8 @@ p.maison__quote {
 
 .maison__title {
   max-width: 334px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .maison__quote {
@@ -1234,7 +1242,9 @@ div.selebrites__container {
 
 
 .cosmetics__title {
-  margin-bottom: 33px;
+  width: fit-content;
+  text-align: center;
+  margin: 33px auto;
 }
 
 .cosmetics__content {
@@ -1695,7 +1705,7 @@ div.selebrites__container {
   }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 767px) and (max-width:1400px) {
   .hero-content-container .inner {
     display: grid;
     grid-template-columns: 300px 300px;
@@ -2218,6 +2228,7 @@ div.selebrites__container {
   .selebrites__phone {
     width: 37.8%;
   }
+
 }
 
 @media screen and (max-width: 561px) {
@@ -2540,6 +2551,10 @@ div.selebrites__container {
   .technique-splide::before {
     top: 207px;
   }
+
+  .mySwiperSteps {
+    margin: 0 60px;
+  }
 }
 
 @media screen and (min-width: 1119px) {
@@ -2788,7 +2803,7 @@ div.selebrites__container {
 
   .hero-content-container .maison__reserve-btn,
   .hero-subtitle {
-    margin: 0 auto;
+    margin: 20px auto;
   }
 
   .hero-content-container .inner {
@@ -2862,12 +2877,16 @@ div.selebrites__container {
   }
 
   .steps-splide {
-    width: 75vw;
+    width: 90vw;
   }
 
   .steps-subtitle {
     font-size: 16px;
     height: 96px;
+  }
+
+  .mySwiperSteps {
+    margin: 0px 20px;
   }
 
   .mySwiperCosmaticMain img {
