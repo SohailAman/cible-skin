@@ -162,16 +162,18 @@ var swiper = new Swiper(".mySwiper", {
 // <!-- Initialize Swiper -->
 var swiperSteps = new Swiper(".mySwiperSteps", {
   slidesPerView: 1,
-  spaceBetween: 20,
+  spaceBetween: 50,
   centeredSlide: true,
   navigation: {
     nextEl: ".step-swiper-button-next",
     prevEl: ".step-swiper-button-prev",
   }, breakpoints: {
     640: {
+      spaceBetween: 20,
       slidesPerView: 2,
     },
     998: {
+      spaceBetween: 20,
       slidesPerView: 3,
     },
   },
