@@ -719,7 +719,7 @@ p.maison__quote {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #6c1401;
-  padding: 9px 40px 11px;
+  padding: 9px 40px 7px;
   border-radius: 16.5px;
 }
 
@@ -2926,9 +2926,21 @@ div.selebrites__container {
 
   .hero-content-container .maison__reserve-btn {
     margin-top: 0 !important;
+    width: 34ch;
   }
 
   .hero-content-tags {
     margin-bottom: 4px !important;
+    justify-content: center;
   }
+
+  .hero-content-tags .hero-subtag {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .hero-content-tags> :nth-child(1) {
+    margin-left: auto;
+  }
+
 }
