@@ -1169,6 +1169,27 @@ div.selebrites__container {
   margin-bottom: 32px;
 }
 
+.selebrites .captions {
+  position: absolute;
+  z-index: 999;
+  width: 18%;
+  bottom: -86px;
+  left: 16px;
+}
+
+.selebrites .captions * {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+
+
+.remove {
+  display: none;
+}
+
 @media only screen and (max-width: 375px) {
   .selebrites__name {
     margin-top: 150px !important;
@@ -2178,6 +2199,15 @@ div.selebrites__container {
     width: 65px !important;
     right: 1.5em !important;
   }
+
+  .selebrites .captions * {
+    line-height: 20px;
+    font-size: 16px;
+  }
+
+  .selebrites .captions {
+    bottom: -106px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -2194,6 +2224,12 @@ div.selebrites__container {
     max-width: 642px;
     margin: 0 auto 30px;
     margin-left: auto;
+  }
+
+  .selebrites .captions {
+    width: 31%;
+    bottom: -39.5%;
+    left: 18px;
   }
 }
 
@@ -2241,6 +2277,18 @@ div.selebrites__container {
 
   .selebrites__phone {
     width: 58%;
+  }
+
+  .selebrites .captions {
+    width: 45%;
+    bottom: -80px;
+    left: 12px;
+  }
+
+  .selebrites .captions * {
+    font-size: 12px;
+    line-height: 14px;
+
   }
 }
 
