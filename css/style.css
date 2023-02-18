@@ -417,6 +417,10 @@ p.maison__quote {
   }
 }
 
+.maison-culte__splide {
+  position: relative;
+}
+
 .maison-culte__splide .splide__arrow.maison__arrow_next {
   right: 35px !important;
 }
@@ -572,8 +576,7 @@ p.maison__quote {
 }
 
 .main__culte.maison {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto;
 }
 
 .main__culte.maison .swiper-button-prev:after,
