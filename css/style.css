@@ -2858,6 +2858,12 @@ div.selebrites__container {
   }
 }
 
+@media (min-width:1210px) and (max-width:1399px) {
+  .cosmetics__title {
+    width: 100vw;
+  }
+}
+
 @media (max-width:1210px) {
   .cosmetics__splide {
     width: 90%;
