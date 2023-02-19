@@ -1422,8 +1422,11 @@ div.selebrites__container {
   display: none;
 }
 
-
-
+.maison-culte__splide,
+.maison__splide.maison-culte__splide {
+  margin-top: 50px !important;
+  margin-bottom: 90px !important;
+}
 
 
 @media screen and (min-width: 560px) {
@@ -2317,6 +2320,11 @@ div.selebrites__container {
     width: 37.8%;
   }
 
+  .maison-culte__splide,
+  .maison__splide.maison-culte__splide {
+    margin-top: 30px !important;
+    margin-bottom: 60px !important;
+  }
 }
 
 @media screen and (max-width: 561px) {

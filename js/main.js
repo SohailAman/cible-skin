@@ -26,33 +26,7 @@ function imgClick(e) {
   e.target.style.opacity = opacity;
 }
 
-const googleSplide = new Splide(".google__splide", {
-  focus: "center",
-  type: "loop",
-  perPage: 1,
-  perMove: 1,
-  mediaQuery: "min",
-  padding: { left: "3.3em", right: "5em" },
-  breakpoints: {
-    560: {
-      perPage: 2,
-      padding: { left: "5.2em", right: "5.2em" },
-      gap: "5rem",
-    },
-    768: {
-      padding: { left: "5.2em", right: "5.2em" },
-      gap: "5rem",
-    },
 
-    1119: {
-      gap: "null",
-      perPage: 2,
-      padding: { left: "2px", right: "100px" },
-      width: "795px",
-    },
-  },
-});
-googleSplide.mount();
 
 // <!-- Initialize Swiper -->
 var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
@@ -81,6 +55,24 @@ var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
     1200: {
       slidesPerView: 1.8,
       spaceBetween: 20,
+    }
+  }
+});
+// <!-- Initialize Swiper -->
+var swiperGoogle = new Swiper(".swiperGoogle", {
+  loop: true,
+  centeredSlides: true,
+  grabCursor: true,
+  slidesPerView: 1.6,
+  spaceBetween: 0,
+  speed: 500,
+  navigation: {
+    nextEl: ".google-main-swiper-button-next",
+    prevEl: ".google-main-swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      spaceBetween: 25,
     }
   }
 });
