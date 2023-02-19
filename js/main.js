@@ -56,16 +56,33 @@ googleSplide.mount();
 
 // <!-- Initialize Swiper -->
 var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
-  loop: true,
+  effect: "coverflow", loop: true,
   centeredSlides: true,
   grabCursor: true,
-  slidesPerView: 1.6,
-  spaceBetween: 20,
+  slidesPerView: 1.4,
+  spaceBetween: 10,
   speed: 500,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows: false,
+  },
   navigation: {
     nextEl: ".maison-main-swiper-button-next",
     prevEl: ".maison-main-swiper-button-prev",
   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
+    },
+    1200: {
+      slidesPerView: 1.8,
+      spaceBetween: 20,
+    }
+  }
 });
 
 
@@ -89,21 +106,38 @@ window.addEventListener("load", function (e) {
 
 // <!-- Initialize Swiper -->
 var swiperMaison = new Swiper(".swiperMaison", {
+  effect: "coverflow",
   loop: true,
   centeredSlides: true,
   grabCursor: true,
-  slidesPerView: 1.6,
-  spaceBetween: 20,
+  slidesPerView: 1.4,
+  spaceBetween: 0,
   speed: 500,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows: false,
+  },
   navigation: {
     nextEl: ".maison-swiper-button-next",
     prevEl: ".maison-swiper-button-prev",
   },
   breakpoints: {
-    640: {
-      slidesPerView: 2,
+    0: {
+      slidesPerView: 1.4,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
+    },
+    1200: {
+      slidesPerView: 1.8,
+      spaceBetween: 10,
     }
-  },
+  }
 });
 
 // <!-- Initialize Swiper -->

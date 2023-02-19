@@ -422,11 +422,11 @@ p.maison__quote {
 }
 
 .maison-culte__splide .splide__arrow.maison__arrow_next {
-  right: 35px !important;
+  right: -75px !important;
 }
 
 .maison-culte__splide .splide__arrow.maison__arrow_prev {
-  left: 35px !important;
+  left: -75px !important;
 }
 
 @media (max-width:1210px) {
@@ -439,11 +439,11 @@ p.maison__quote {
   }
 
   .maison-culte__splide .splide__arrow.maison__arrow_next {
-    right: 20px !important;
+    right: -45px !important;
   }
 
   .maison-culte__splide .splide__arrow.maison__arrow_prev {
-    left: 20px !important;
+    left: -45px !important;
   }
 
   .steps-splide .splide__track::after,
@@ -584,8 +584,8 @@ p.maison__quote {
   content: none;
 }
 
-.main__maison .swiperMaisonMain,
-.main__culte.maison {
+.main__culte .maison-culte__splide,
+.main__culte.maison.main__maison .maison-culte__splide {
   max-width: 720px;
   position: relative;
 }
@@ -704,13 +704,12 @@ p.maison__quote {
   margin-bottom: 25px;
 }
 
-.main__maison .swiperMaisonMain,
-.maison-culte__splide {
-  /* max-width: 375px; */
+.main__culte .maison-culte__splide,
+.main__maison .maison-culte__splide {
   margin: 0 auto;
 }
 
-.swiperMaisonMain::after,
+.maison-culte__splide::after,
 .maison-culte__splide::after {
   content: "";
   user-select: none;
@@ -726,7 +725,7 @@ p.maison__quote {
   transform: rotate(180deg);
 }
 
-.swiperMaisonMain::before,
+.maison-culte__splide::before,
 .maison-culte__splide::before {
   content: "";
   user-select: none;
@@ -1252,8 +1251,9 @@ div.selebrites__container {
     position: relative;
   }
 
-  .main__maison .swiperMaisonMain,
-  .main__culte.maison {
+
+  .main__culte .maison-culte__splide,
+  .main__culte.maison.main__maison .maison-culte__splide {
     max-width: 425px;
   }
 }
@@ -1527,7 +1527,7 @@ div.selebrites__container {
     width: 400px !important;
   }
 
-  .swiperMaisonMain::after,
+  .maison-culte__splide::after,
   .maison__splide::after,
   .maison-culte__splide::after,
   .maison__track::after {
@@ -1850,7 +1850,7 @@ div.selebrites__container {
     font-size: 30px;
   }
 
-  .swiperMaisonMain::after,
+  .maison-culte__splide::after,
   .maison-culte__splide::after {
     background: linear-gradient(90deg,
         #ffffff 30.74%,
@@ -2240,15 +2240,13 @@ div.selebrites__container {
 
 @media screen and (min-width: 1400px) {
   .splide__arrow--prev {
-    left: 1.5em !important;
-
+    left: -5em !important;
     width: 65px !important;
   }
 
   .splide__arrow--next {
-
     width: 65px !important;
-    right: 1.5em !important;
+    right: -5em !important;
   }
 
   .selebrites .captions * {
@@ -2938,11 +2936,11 @@ div.selebrites__container {
   }
 
   .maison-culte__splide .splide__arrow.maison__arrow_next {
-    right: 8px !important;
+    right: 12px !important;
   }
 
   .maison-culte__splide .splide__arrow.maison__arrow_prev {
-    left: 8px !important;
+    left: 12px !important;
   }
 
   .hero-content-container h2 {
@@ -2983,6 +2981,16 @@ div.selebrites__container {
   .steps-splide .splide__track::after,
   .steps-splide .splide__track::before {
     content: none;
+  }
+
+  .maison-culte__splide::before,
+  .maison-culte__splide::before {
+    width: 50px !important;
+  }
+
+  .icon-arrow-prev,
+  .icon-arrow-next {
+    height: 34px;
   }
 }
 
@@ -3045,9 +3053,13 @@ div.selebrites__container {
 }
 
 @media screen and (max-width: 560px) {
+  .maison__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-  .main__maison .swiperMaisonMain,
-  .main__culte.maison {
-    max-width: 96%;
+  .main__culte .maison-culte__splide,
+  .main__culte.maison.main__maison .maison-culte__splide {
+    max-width: 100%;
   }
 }
