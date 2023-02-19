@@ -3021,10 +3021,6 @@ div.selebrites__container {
     height: 185px;
   }
 
-  .mySwiperCosmaticMain .swiper-pagination-bullets.swiper-pagination-horizontal {
-    left: -70px !important;
-  }
-
   .cosmetics__splide .swiper-pagination-bullet {
     height: 9px;
     width: 9px;
