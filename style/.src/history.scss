@@ -1,0 +1,673 @@
+@use 'global' as *;
+
+
+
+body {
+    max-width: $responsiveDesktopPageMaxWidth;
+	padding-top: 0;
+}
+
+
+header {
+    background-color: transparent !important;
+
+
+    .second-deck {
+        display: none !important;
+    }
+}
+
+
+
+section {
+    position: relative;
+}
+
+
+.page.full {
+    height: 100vh;
+}
+
+
+
+section.slides {
+    $titlesMarginTop: 30vh;
+    height: 500vh;
+    color: $themeBrown;
+
+
+    .sticky-background {
+        position: sticky;
+        top: 0; height: 100vh;
+        left: 0; width: 100%;
+
+
+        .page {
+            position: absolute;
+            top: 0; height: 100%;
+            left: 0; width: 100%;
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+    }
+
+
+    .fixed-titles {
+        z-index: 100;
+        position: fixed;
+        top: $titlesMarginTop;
+
+
+        .content.titles {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+    }
+
+
+    & > .page {
+        position: relative;
+        height: 100vh;
+
+
+        &.fourth {
+            margin-top: 100vh;
+        }
+    }
+
+
+    .page {
+        @include backgroundCover;
+
+
+        &.title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:not(.title) {
+            padding-top: $titlesMarginTop;
+        }
+
+
+        video.background, .background-mask {
+            position: absolute;
+            left: 0; width: 100%;
+            top: 0; height: 100%;
+        }
+
+        video.background {
+            z-index: 0;
+            object-fit: cover;
+        }
+
+        .background-mask {
+            z-index: 1;
+            background-color: white;
+            opacity: 0.25;
+
+            &.opaquer {
+                opacity: 0.5;
+            }
+        }
+
+
+        .discovery-guide {
+            z-index: 10;
+        }
+    }
+
+
+    .content.titles {
+        z-index: 10;
+
+
+        h1, h2, h3 {
+            @include serifFontFamily;
+            font-weight: 500;
+        }
+
+        h1 {
+            line-height: 1.1;
+            font-size: 48px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        h2 {
+            line-height: 1;
+            margin-left: 20px;
+            font-size: 80px;
+            letter-spacing: 0.66px;
+
+
+            .minor {
+                font-size: 60px;
+                font-weight: 300;
+            }
+        }
+
+        h3 {
+            line-height: 1.1;
+            margin-top: -6px;
+            font-size: 42px;
+            letter-spacing: 0.5px;
+
+            &.centred {
+                text-align: center;
+            }
+
+            &.full-width {
+                padding-left: 24px;
+            }
+        }
+    }
+}
+
+
+
+section.number-1 {
+    opacity: 0;
+    height: 300vh;
+    @include serifFontFamily;
+    text-align: center;
+    color: $themeBrown;
+
+
+    .page {
+        position: fixed;
+        top: 0; height: 100vh;
+        left: 0; width: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        &.show {
+            opacity: 1;
+        }
+
+        &.first {
+            @include backgroundCover;
+
+
+            .transition-image {
+                position: absolute;
+                left: 0; width: 100%;
+                top: 0; height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &.second {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+
+    h1 {
+        margin-top: 25vh;
+        line-height: 1;
+        font-size: 270px;
+        font-weight: 300;
+
+        background-clip: text !important;
+        -webkit-background-clip: text !important;
+        -ms-background-clip: text !important;
+        -webkit-text-fill-color: transparent;
+        background-image: url('/assets/images/history-number-1-background.jpg');
+    }
+
+    h2 {
+        line-height: 1.1;
+        margin-top: -50px;
+        font-weight: 500;
+        font-size: 42px;
+        letter-spacing: 0.5px;
+    }
+
+    h1 + h2 {
+        font-weight: 400;
+    }
+
+
+    p {
+        line-height: 1.05;
+        font-weight: 500;
+        font-size: 36px;
+        letter-spacing: 1px;
+
+
+        span {
+            display: inline-block;
+
+            &.minor {
+                @include sansSerifFontFamily;
+            }
+        }
+    }
+}
+
+
+
+section.timeline {
+    padding-top: 50px;
+
+
+    #emblem {
+        z-index: 100;
+        pointer-events: none;
+        position: sticky;
+        top: 38vh;
+        text-align: center;
+        opacity: 0;
+
+
+        img {
+            position: relative;
+            width: 180px;
+        }
+    }
+
+
+    .year {
+        color: $textBlack;
+        text-align: center;
+
+        &.vertical-scroll {
+            margin-top: 100px;
+            padding-bottom: 50px;
+        }
+
+        &.year-2017 {
+            color: $themeBrown;
+        }
+
+
+        .disappearing {
+            transition: opacity 0.2s ease-in-out;
+
+            &.dim {
+                opacity: 0.1;
+            }
+        }
+
+
+        h1, h2 {
+            line-height: 1;
+            padding: 0 $responsiveMobilePagePadding;
+            @include serifFontFamily;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+
+            &.sansSerif {
+                @include sansSerifFontFamily;
+            }
+        }
+
+
+        h1 {
+            z-index: 10;
+            position: sticky;
+            font-size: 60px;
+        }
+
+        &.vertical-scroll h1 {
+            top: 20px + $headerHeight;
+
+            @include respondToDesktop {
+                top: 20px + $headerHeightPlusSecondDeck;
+            }
+        }
+
+
+        h2 {
+            font-size: 35px;
+        }
+
+
+        .text {
+            line-height: 1;
+            padding: 0 $responsiveMobilePagePaddingLarger;
+            text-align: left;
+            font-size: 30px;
+            letter-spacing: 0.5px;
+
+            @include respondToDesktop {
+                text-align: center;
+            }
+        }
+
+        &.vertical-scroll .text {
+            margin-top: 140px;
+        }
+
+        &.year-2017 .text {
+            margin-top: 360px;
+            text-align: center;
+            @include serifFontFamily;
+            font-size: 35px;
+            font-weight: 500;
+        }
+
+
+        &.vertical-scroll .event {
+            margin-top: 160px;
+
+
+            .main-image {
+                position: relative;
+                margin-top: 30px;
+
+
+                img {
+                    width: 100%;
+                }
+
+
+                .text {
+                    position: absolute;
+                    top: $responsiveMobilePagePadding;
+                    left: 0; width: 100%;
+                    margin-top: 0;
+                    color: white;
+                }
+            }
+        }
+    }
+
+
+    .horizontal-scroll-container {
+        position: relative;
+    }
+
+    .horizontal-scroll-content {
+        position: sticky;
+        top: 0; height: 100vh;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        font-size: 0;
+
+
+        .year {
+            position: relative;
+            display: inline-block; vertical-align: top;
+            height: 100%;
+            min-width: 100%;
+            padding-top: $headerHeight;
+
+            @include respondToDesktop {
+                padding-top: $headerHeightPlusSecondDeck;
+            }
+
+            &.year-2017 {
+                width: 100%;
+                padding-top: 30px + $headerHeight;
+                white-space: normal;
+
+                @include respondToDesktop {
+                    padding-top: 30px + $headerHeightPlusSecondDeck;
+                }
+            }
+
+            &:not(.year-2017) {
+                text-align: left;
+            }
+
+            &.fullscreen {
+                padding-top: 0;
+            }
+
+
+            .h1-container {
+                position: absolute;
+                left: 0; width: 100%;
+                top: 30px + $headerHeight;
+
+                @include respondToDesktop {
+                    top: 30px + $headerHeightPlusSecondDeck;
+                }
+            }
+
+            h1 {
+                color: $themeBrown;
+            }
+
+            &:not(.year-2017) h1 {
+                display: inline-block;
+                left: 50vw;
+                margin-left: 50vw;
+                transform: translateX(-50%);
+            }
+
+
+            .column {
+                position: relative;
+                display: inline-block; vertical-align: top;
+                height: 100%;
+                white-space: normal;
+
+
+                img.zine {
+                    max-height: 100%;
+                }
+
+
+                p {
+                    z-index: 10;
+                    position: relative;
+                    line-height: 1;
+                    color: $textBlack;
+                    font-weight: 500;
+                    font-size: 30px;
+                    letter-spacing: 0.5px;
+
+                    &.light-colour {
+                        color: white;
+                    }
+
+                    &.serif-font {
+                        @include serifFontFamily;
+                    }
+
+                    &.larger-horizontal-padding {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+section.revolution {
+    $textColour: white;
+    background-color: $themeBrown;
+    color: $textColour;
+
+
+    .page.centred-title {
+        .content {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+
+    .content {
+        &.sticky {
+            position: sticky;
+        }
+    }
+
+
+    h1, h2, p {
+        line-height: 1.1;
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    h1, h2 {
+        @include serifFontFamily;
+        letter-spacing: 2px;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+
+        &.shifting-lines {
+            span {
+                display: inline-block;
+            }
+        }
+
+
+        strong {
+            font-size: 1.5em;
+            font-weight: inherit;
+            letter-spacing: 3px;
+        }
+
+
+        sup {
+            font-size: 0.5em;
+        }
+    }
+
+    p {
+        letter-spacing: 0.5px;
+
+        &.dim-with-highlights {
+            color: rgba($textColour, 50%);
+
+
+            strong {
+                color: $textColour;
+                font-weight: inherit;
+            }
+        }
+
+        &.dynamic-highlights {
+            span {
+                opacity: 0.5;
+
+                &.highlight {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
+    img {
+        width: 100%;
+        margin-top: $responsiveMobilePagePadding;
+    }
+}
+
+
+
+section.product-discovery {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 80px + $headerHeight;
+    color: $themeBrown;
+    text-align: center;
+
+    @include respondToDesktop {
+        padding-top: 80px + $headerHeightPlusSecondDeck;
+    }
+
+
+    h2, h3 {
+        line-height: 1;
+        @include serifFontFamily;
+        font-weight: 400;
+    }
+
+    h2 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    h3 {
+        margin-top: 75px;
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+
+    .image-container {
+        flex: 1;
+        position: relative;
+        max-height: 50vh;
+        margin-top: 50px;
+        font-size: 0;
+
+
+        .pagination-indicators {
+            display: none !important; // TODO: temp
+            position: absolute;
+            top: -16px; height: 1px;
+            left: 50%; transform: translateX(-50%);
+            display: flex;
+
+
+            .indicator {
+                width: 30px; height: 100%;
+                margin: 0 6px;
+                background-color: $textGrey4;
+
+                &.on {
+                    background-color: $themeBrown;
+                }
+            }
+        }
+
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+
+        .instruction {
+            position: absolute;
+            bottom: 40px;
+            left: 0; width: 100%;
+            line-height: 2.2;
+            @include serifFontFamily;
+            font-size: 24px;
+            letter-spacing: 1.5px;
+            text-shadow: white 0 0 5px;
+
+
+            .underline {
+                position: absolute;
+                bottom: 0;
+                left: 50%; transform: translateX(-50%);
+                height: 1px;
+                width: 80px;
+                border-bottom: 1px solid $themeBrown;
+            }
+        }
+    }
+}

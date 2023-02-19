@@ -1,0 +1,85 @@
+@use 'global' as *;
+
+
+
+body {
+    max-width: $responsiveDesktopPageMaxWidth;
+}
+
+
+header {
+    .second-deck {
+        background-color: $backgroundColour;
+    }
+}
+
+
+
+h1 {
+    @extend .commonProminentH1;
+
+    @include respondToTablet {
+        margin-top: 100px;
+    }
+}
+
+
+p {
+    margin-top: 30px;
+    color: $textGrey3;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    text-align: center;
+
+
+    .order-number {
+        line-height: 1.6;
+        color: $themeBrown;
+        font-size: 20px;
+    }
+}
+
+
+
+$buttonMaxWidth: 340px;
+
+section.buttons {
+    margin-top: 50px;
+
+
+    .content.narrow {
+        max-width: $buttonMaxWidth;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+section.contact {
+    max-width: $buttonMaxWidth;
+    margin: auto;
+
+
+    p {
+        margin-bottom: 10px;
+        text-align: left;
+        letter-spacing: 0;
+    }
+
+
+    a {
+        color: $textGrey3;
+        font-size: 16px;
+        text-decoration: underline;
+    }
+}
+
+
+
+footer {
+    margin-top: 100px;
+
+    @include respondToTablet {
+        margin-top: 200px;
+    }
+}

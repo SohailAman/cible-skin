@@ -1,0 +1,798 @@
+@use "global" as *;
+
+body {
+    max-width: $responsiveDesktopPageMaxWidth;
+    padding-top: 0;
+    background-color: $themeDarkBrown;
+}
+
+header {
+    background-color: transparent !important;
+
+    .second-deck {
+        display: none !important;
+    }
+}
+
+section {
+    position: relative;
+}
+
+section#revolution {
+    color: white;
+    height: 100vh;
+    background-color: #000;
+    video.background {
+        z-index: -1;
+        left: 0;
+        width: 100%;
+        top: 0;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .content.title {
+        overflow-x: hidden;
+        position: absolute;
+        top: 35vh;
+        height: 65vh;
+        width: 100%;
+        @include respondToTablet {
+            top: 45vh;
+        }
+
+        h2,
+        h1 {
+            position: relative;
+            text-align: center;
+            @include serifFontFamily;
+            font-weight: 500;
+            letter-spacing: 1px;
+
+            font-size: $fontSizeL;
+        }
+        h1 {
+            margin-top: 10px;
+        }
+    }
+
+    .content.details {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 90%;
+        line-height: 1.3;
+        color: white;
+        font-weight: 400;
+        font-size: $fontSizeS;
+        text-align: left;
+
+        @include respondToTablet {
+            max-width: 70vw;
+            font-size: $fontSizeM;
+        }
+        @include respondToDesktop {
+            font-size: $fontSizeL;
+        }
+
+        span {
+            opacity: 0.5;
+            -webkit-transition: opacity 0.8s cubic-bezier(0.32, 0.94, 0.6, 1);
+            transition: opacity 0.8s cubic-bezier(0.32, 0.94, 0.6, 1);
+
+            &.highlight {
+                opacity: 1;
+                -webkit-transition: opacity 0.8s cubic-bezier(0.32, 0.94, 0.6, 1);
+                transition: opacity 0.8s cubic-bezier(0.32, 0.94, 0.6, 1);
+            }
+        }
+    }
+}
+
+section.idans {
+    height: 200vh;
+    background: radial-gradient(
+                    200% 60% at top center,
+                    rgba(0, 0, 0, 1) 40%,
+                    rgba(157, 101, 27, 0.4),
+                    rgba(249, 203, 95, 0.506),
+                    transparent 95%
+    ),
+    radial-gradient(
+                    200% 60% at bottom center,
+                    rgba(0, 0, 0, 1) 40%,
+                    rgba(157, 101, 27, 0.4),
+                    rgba(249, 203, 95, 0.506),
+                    transparent 95%
+    );
+
+    background-color: $themeDarkBrown;
+
+    .content {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+
+        h1,
+        h2 {
+            @include serifFontFamily;
+            font-weight: 500;
+            background-image: radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 80px;
+            padding-left: 0.4em;
+            letter-spacing: 2px;
+
+            sup {
+                font-size: 0.5em;
+            }
+            display: block;
+            @include respondToTablet {
+                font-size: 120px;
+            }
+            @include respondToDesktop {
+                font-size: 200px;
+            }
+        }
+        h2 {
+            padding-right: 8em;
+            font-size: 20px;
+            letter-spacing: 1.5px;
+            @include respondToTablet {
+                padding-right: 12em;
+                font-size: 24px;
+            }
+            @include respondToDesktop {
+                font-size: 32px;
+                padding-right: 14em;
+            }
+        }
+    }
+}
+
+section.aspects {
+    height: 100vh;
+    background-color: #000;
+    .page {
+        position: absolute;
+        bottom: 5vh;
+
+        h2 {
+            @include serifFontFamily;
+            line-height: 1.2;
+            padding-left: $responsiveMobilePagePaddingLarger;
+            color: white;
+            width: $widthMobile;
+            font-size: $fontSizeS;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        video {
+            height: 55vh;
+            width: 100%;
+            margin-top: 2em;
+            object-fit: cover;
+        }
+        @include respondToTablet {
+            bottom: 3vh;
+            h2 {
+                margin: auto;
+                width: $widthTablet;
+                font-size: $fontSizeL;
+                text-align: center;
+            }
+            video {
+                height: 65vh;
+            }
+        }
+    }
+    .regeneration h2 {
+        max-width: none;
+    }
+}
+
+section.idans-details {
+    background: #fff;
+
+    .content.text {
+        padding: $responsiveMobilePagePaddingLarger;
+
+        &.larger-vertical-padding {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        &.black-background {
+            background-color: black;
+            //   background-color: pink;
+
+            p strong,
+            p span.highlight {
+                color: white;
+            }
+        }
+
+        &.white-background {
+            background-color: white;
+
+            p strong,
+            p span.highlight {
+                color: $themeBrown;
+                -webkit-transition: all 0.8s cubic-bezier(0.32, 0.94, 0.6, 1);
+                transition: all 0.8s cubic-bezier(0.32, 0.94, 0.6, 1);
+            }
+        }
+
+        p {
+            line-height: 1.3;
+            color: $textGrey1;
+            font-weight: 500;
+            font-size: $fontSizeS;
+            max-width: $widthMobile;
+            margin: auto;
+            -webkit-transition: all 0.8s cubic-bezier(0.32, 0.94, 0.6, 1);
+            transition: all 0.8s cubic-bezier(0.32, 0.94, 0.6, 1);
+
+            strong {
+                font-weight: inherit;
+            }
+
+            @include respondToTablet {
+                max-width: $widthTablet;
+                font-size: $fontSizeM;
+            }
+            @include respondToDesktop {
+                max-width: $widthDesktop;
+                font-size: $fontSizeL;
+            }
+        }
+    }
+
+    .question {
+        position: relative;
+        background-color: white;
+        padding-top: 30vh;
+
+        .content {
+            h2 {
+                line-height: 1.3;
+                padding-left: $responsiveMobilePagePaddingLarger;
+                color: $textGrey1;
+                @include serifFontFamily;
+                font-weight: 500;
+                font-size: $fontSizeM;
+                letter-spacing: 1.5px;
+                max-width: $widthMobile;
+                margin: auto;
+
+                strong {
+                    color: $themeBrown;
+                    font-weight: inherit;
+                }
+                @include respondToTablet {
+                    font-size: $fontSizeXl;
+                    max-width: $widthTablet;
+                    margin: auto;
+                }
+                @include respondToDesktop {
+                    font-size: $fontSizeXxl;
+                }
+            }
+
+            img {
+                height: 45vh;
+                width: 100%;
+                margin-top: 36px;
+                object-fit: cover;
+            }
+        }
+    }
+    .id-scroll-pin {
+        height: 100vh;
+    }
+    .content.text.main {
+        h1 {
+            padding: $headerHeight 0;
+
+            @include serifFontFamily;
+            color: $themeBrown;
+            font-weight: 500;
+            font-size: 80px;
+            letter-spacing: 2px;
+            position: relative;
+            max-width: $widthMobile;
+            margin: auto;
+
+            sup {
+                font-size: 0.5em;
+            }
+            @include respondToTablet {
+                max-width: $widthTablet;
+            }
+        }
+
+        #data-entry-gsap {
+            position: absolute;
+            top: $headerHeight * 2;
+            left: 0;
+            right: 0;
+            width: $widthMobile;
+            height: 100vh;
+            margin: auto;
+
+            @include respondToTablet {
+                max-width: $widthTablet;
+            }
+            @include respondToDesktop {
+                max-width: $widthDesktop;
+            }
+        }
+
+        .data-entry {
+            position: absolute;
+            width: 100%;
+            height: 70%;
+
+            .sticky-wrapper {
+                background-color: #fff;
+                position: relative;
+
+                h2,
+                h3 {
+                    line-height: 1;
+                    color: $themeBrown;
+                    font-weight: 500;
+                    max-width: 90%;
+                }
+
+                h2 {
+                    font-size: 54px;
+                    letter-spacing: 3px;
+
+                    .minor {
+                        font-size: 32px;
+                    }
+                }
+
+                h3 {
+                    margin-top: 15px;
+                    font-size: 26px;
+                    letter-spacing: 1.2px;
+                }
+                @include respondToTablet {
+                    padding: 30px 0 10px 0;
+                    h2 {
+                        font-size: 64px;
+                    }
+                    h3 {
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            h6 {
+                line-height: 1.3;
+                color: $textGrey1;
+                font-weight: 500;
+                font-size: $fontSizeS;
+                max-width: 100%;
+                position: absolute;
+                top: 10ch;
+
+                @include respondToTablet {
+                    font-size: $fontSizeM;
+                }
+                @include respondToDesktop {
+                    font-size: $fontSizeL;
+                }
+            }
+            .star {
+                position: absolute;
+                top: 80%;
+                font-size: 8px;
+                @include respondToTablet {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+section.chart {
+    position: relative;
+    height: 100vh;
+    background-color: white;
+
+    h2,
+    h3 {
+        line-height: 1;
+        color: $themeBrown;
+        @include serifFontFamily;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .content {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        font-size: $fontSizeXl;
+        padding: 3em 0;
+    }
+
+    .page.full {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        h3 {
+            font-size: $fontSizeM;
+            top: $headerHeight;
+            text-align: center;
+        }
+
+        .chart-container {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            direction: rtl;
+            white-space: nowrap;
+
+            .chart-entry {
+                $w: 100px;
+                position: relative;
+
+                width: $w;
+                right: -$w / 2;
+                display: inline-block;
+                height: 100%;
+                margin-left: 10%;
+                direction: initial;
+                text-align: center;
+                transition: all 0.15s ease-out;
+
+                &.dim {
+                    opacity: 0.618;
+                }
+                @include respondToTablet {
+                    $w: 154px;
+                    .percentage {
+                        font-size: 64px;
+                        .minor {
+                            font-size: 32px;
+                        }
+                    }
+                    .caption {
+                        width: 3 * $w;
+                        font-size: 20px;
+                    }
+                }
+                @include respondToDesktop {
+                    $w: 184px;
+                }
+
+                .flex-wrapper {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    justify-content: end;
+                    align-items: center;
+                    height: 100%;
+
+                    .percentage {
+                        font-size: 54px;
+                        color: $themeBrown;
+                        font-weight: 500;
+                        letter-spacing: 3px;
+
+                        .minor {
+                            font-size: 28px;
+                        }
+                    }
+
+                    .caption {
+                        width: $w;
+                        margin-top: 4px;
+                        color: $textGrey3;
+                        font-size: 18px;
+                        white-space: normal;
+                        letter-spacing: 0.5px;
+                    }
+
+                    .bar {
+                        --barFlex: 0%;
+                        flex: 0 0 40%;
+                        flex-basis: var(--barFlex);
+                        width: 100%;
+                        margin-top: 20px;
+                        background: linear-gradient(
+                                        rgba($themeBrown, 100%) 10%,
+                                        rgba($themeBrown, 0%) 100%
+                        );
+                        transition: all 0.15s ease-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.before-after {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    background-color: white;
+    color: $themeBrown;
+
+    .before-after-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        @include respondToTablet {
+            flex-direction: row;
+            margin: 0 2rem;
+        }
+    }
+
+    .entry {
+        position: relative;
+        margin-top: 100px;
+
+        .percentage {
+            font-size: 64px;
+            font-weight: 500;
+            letter-spacing: 3.5px;
+            text-align: center;
+
+            .minor {
+                font-size: 32px;
+            }
+        }
+
+        .caption {
+            line-height: 1;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: $fontSizeS;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        $beforeAfterImageWidth: $responsiveMobilePageMinWidth;
+
+        .before-after-image {
+            position: relative;
+            height: 250px;
+            width: $beforeAfterImageWidth;
+            margin: 30px auto 10px;
+            @include backgroundCover;
+
+            .image-container.before {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                left: 0;
+                width: 50%;
+                overflow: hidden;
+                border-right: 1px solid white;
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    width: $beforeAfterImageWidth;
+                    top: 0;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+            }
+        }
+
+        .legend {
+            width: $beforeAfterImageWidth;
+            margin: 10px auto 0;
+            font-size: 16px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .chevron-indicators {
+                position: relative;
+                top: -1px;
+
+                img {
+                    vertical-align: middle;
+                    height: 14px;
+                    margin: 0 4px;
+                }
+            }
+        }
+
+        .slider {
+            display: block;
+            width: $beforeAfterImageWidth;
+            height: 1px;
+            margin: 18px auto 0;
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: $themeBrown;
+            outline: none;
+
+            @mixin sliderThumb {
+                $grabAreaW: 30px;
+
+                appearance: none;
+                -webkit-appearance: none;
+                box-sizing: border-box;
+                width: 25px + $grabAreaW * 2;
+                height: 10px + $grabAreaW * 2;
+                background-color: $themeBrown;
+                background-clip: content-box;
+                border: $grabAreaW solid transparent;
+                border-radius: 100px;
+                box-shadow: none;
+                cursor: grab;
+            }
+
+            &::-webkit-slider-thumb {
+                @include sliderThumb;
+            }
+
+            &::-moz-range-thumb {
+                @include sliderThumb;
+            }
+        }
+    }
+
+    .footnote {
+        margin-top: 60px;
+        color: $textGrey3;
+        font-weight: 300;
+        font-size: 16px;
+        @include respondToTablet {
+            width: $widthTablet;
+            margin: 60px auto 0 auto;
+        }
+    }
+}
+
+$particleVideoBackgroundBlendColour: #601008;
+section.power-of-science {
+    min-height: 100vh;
+    background: linear-gradient(
+                    white 0%,
+                    $particleVideoBackgroundBlendColour 45%
+    );
+    position: relative;
+
+    .power-bg-container {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        bottom: 0;
+        z-index: -10;
+        svg {
+            overflow: visible;
+            width: 100%;
+        }
+        path {
+            opacity: 0;
+        }
+        .particle-wrap {
+            z-index: -5;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            background-color: yellow;
+            .particle {
+                position: absolute;
+                border-radius: 50%;
+            }
+            @for $i from 1 through 30 {
+                @keyframes particle-animation-#{$i} {
+                    100% {
+                        transform: translate3d(
+                                                (random(90) * 1vw),
+                                                (random(90) * 1vh),
+                                                (random(100) * 1px)
+                        );
+                    }
+                }
+
+                .particle:nth-child(#{$i}) {
+                    animation: particle-animation-#{$i} 60s infinite;
+                    $size: random(8) + 8 + px;
+                    opacity: random(100) / 100;
+                    height: $size;
+                    width: $size;
+                    animation-delay: -$i * 0.2s;
+                    transform: translate3d(
+                                            (random(90) * 1vw),
+                                            (random(90) * 1vh),
+                                            (random(100) * 1px)
+                    );
+                    background: rgba(255, 255, 255, random(1));
+                }
+            }
+        }
+    }
+
+    h2 {
+        padding: $headerHeight 0;
+        line-height: 1;
+        color: $themeBrown;
+        @include serifFontFamily;
+        font-weight: 500;
+        font-size: $fontSizeL;
+        letter-spacing: 0.8px;
+        text-align: center;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30vh;
+        @include respondToTablet {
+            flex-direction: row;
+            margin: 2rem;
+        }
+    }
+
+    .image-container {
+        width: 90%;
+
+        height: fit-content;
+        overflow: hidden;
+        img.researcher {
+            width: 100%;
+            margin-top: 80px;
+        }
+        @include respondToTablet {
+            width: 50%;
+            height: 40vw;
+        }
+    }
+
+    p.text {
+        margin: 50px auto 0;
+        line-height: 1.2;
+        color: $textGrey4;
+        font-weight: 500;
+        font-size: $fontSizeM;
+        width: $widthMobile;
+
+        @include respondToTablet {
+            width: 40%;
+        }
+    }
+    //   }
+}
+
+body > .smooth-scroll > footer {
+    background-color: $particleVideoBackgroundBlendColour;
+
+    nav .prominent a {
+        color: white !important;
+    }
+
+    .content nav .normal .link a {
+        color: white !important;
+    }
+
+    .copyright {
+        color: $textGrey4 !important;
+    }
+}

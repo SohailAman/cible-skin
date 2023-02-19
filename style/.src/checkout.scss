@@ -1,0 +1,255 @@
+@use 'global' as *;
+
+
+
+body {
+    max-width: $responsiveDesktopPageMaxWidth;
+}
+
+
+
+main {
+    max-width: 453px;
+    margin: auto;
+}
+
+
+section {
+    margin-top: 30px;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+
+
+    h2 {
+        @extend .commonUnderlinedH2;
+
+
+        button.edit {
+            display: none;
+            position: absolute;
+            right: 0;
+            bottom: 12px;
+            color: $textGrey1;
+            @include sansSerifFontFamily;
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 0.8px;
+            text-decoration: underline;
+
+            &.show {
+                display: block;
+            }
+        }
+    }
+
+
+    h3 {
+        @extend .commonUnderlinedH2;
+        margin-top: 40px;
+        padding: 0;
+        border-bottom: none;
+    }
+
+
+    button.large {
+        margin-top: 50px;
+    }
+}
+
+
+
+section.delivery {
+    section.delivery-method {
+        margin-top: 30px;
+        color: $textGrey3;
+        font-size: 14px;
+        letter-spacing: 0.8px;
+
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: {
+                top: 20px;
+                bottom: 10px;
+            }
+
+
+            input[type='radio'] {
+                flex: 0 0 20px;
+            }
+
+
+            span {
+                flex: 1;
+            }
+        }
+
+
+        #free-delivery {
+            margin-top: 10px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+
+
+        .click-collect-info {
+            margin-left: 30px;
+
+
+            .address {
+                color: $themeBrown;
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+
+
+            p {
+                margin-top: 10px;
+                color: $themeBrown;
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+
+    section.addresses {
+        h3 {
+            @include sansSerifFontFamily;
+        }
+
+
+        form {
+            margin-top: 30px;
+
+
+            h3 {
+                margin-bottom: 30px;
+            }
+        }
+
+
+        .same-address-selection {
+            display: flex;
+            align-items: start;
+            margin-top: 40px;
+            color: $themeBrown;
+            font-size: 14px;
+            letter-spacing: 0.8px;
+
+
+            .caption {
+                flex: 0 0 32%;
+                padding-right: 10px;
+            }
+
+
+            .options {
+                label {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+
+
+    section.cart {
+        .total {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+section.payment {
+    .address {
+        margin-top: 15px;
+        padding-top: 15px;
+
+        &:not(:first-child) {
+            border-top: 1px solid $separatorGrey;
+        }
+
+
+        .caption {
+            margin-bottom: 12px;
+            color: $themeBrown;
+            @include serifFontFamily;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+
+        p {
+            margin-bottom: 8px;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+    }
+
+
+    .payment-method {
+        .selection, .agreements {
+            color: $textGrey3;
+
+
+            label {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+
+                input[type='radio'], input[type='checkbox'] {
+                    flex: 0 0 20px;
+                }
+            }
+        }
+
+
+        .selection {
+            margin-top: 30px;
+            font-size: 16px;
+            letter-spacing: 1px;
+
+
+            label {
+                margin: {
+                    top: 20px;
+                    bottom: 20px;
+                }
+            }
+        }
+
+
+        button.large {
+            margin-bottom: 20px;
+        }
+
+
+        .agreements {
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 0.75px;
+
+
+            label {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+
+footer {
+    margin-top: 80px;
+}

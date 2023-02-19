@@ -1,0 +1,370 @@
+@use 'global' as *;
+
+
+
+body {
+    max-width: $responsiveDesktopPageMaxWidth;
+}
+
+
+
+header {
+    @include respondToTablet {
+        @include whiteHeader;
+        background-color: transparent;
+    }
+
+
+    nav.products {
+        .top-border {
+            display: none;
+        }
+    }
+}
+
+
+.banner-image {
+    display: none;
+
+    @include respondToTablet {
+        display: block;
+        position: absolute;
+        top: 0; height: 350px;
+        left: 0; width: 100%;
+        @include backgroundCover;
+    }
+}
+
+
+
+.content.main {
+    max-width: 680px;
+    padding-top: 30px;
+
+    @include respondToTablet {
+        padding: 80px 90px;
+        background-color: $backgroundColour;
+    }
+}
+
+
+h1, h2, h3 {
+    @include serifFontFamily;
+    color: $themeBrown;
+    font-weight: 400;
+}
+
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1.25px;
+}
+
+
+h2, h3 {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+
+p.empty-text {
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+
+section.top {
+    .row {
+        font-size: 0;
+
+
+        .email {
+            margin-right: 16px;
+            color: $textGrey1;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+
+        .logout {
+            font-size: 16px;
+            text-decoration: underline;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+
+.expandable {
+    border-bottom: 1px solid $themeBrown;
+
+
+    .title {
+        padding: 15px 0;
+    }
+}
+
+
+section.information {
+    padding-top: 35px;
+
+
+    .collapsing-content .inner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+
+        .address {
+            margin-bottom: 40px;
+        }
+
+
+        .title-button-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 22px;
+
+
+            h3 {
+                flex: 1;
+            }
+
+
+            button {
+                color: $textGrey1;
+                font-size: 14px;
+                font-weight: 300;
+                letter-spacing: 0.88px;
+                text-decoration: underline;
+
+                &:last-of-type {
+                    margin-left: 10px;
+                }
+
+                &.delete {
+                    color: $themeBrown;
+                }
+            }
+        }
+
+
+        .group {
+            margin-bottom: 10px;
+
+
+            .info {
+                font-size: 16px;
+            }
+        }
+
+
+        .separator {
+            height: 1px;
+            margin: 32px 0;
+            background-color: $backgroundColourLightGrey;
+        }
+
+
+        button.add-an-address {
+            margin-top: 40px;
+        }
+    }
+}
+
+
+
+#address-form-slideover {
+    .content {
+        max-width: $responsiveMobilePageMaxWidth;
+
+
+        section.scrolling {
+            padding-bottom: 50px;
+
+
+            form {
+                margin-top: 40px;
+
+
+                button[type='submit'] {
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+
+
+section.orders {
+    padding-top: 20px;
+
+
+    .collapsing-content .inner {
+        padding: {
+            top: 15px;
+            bottom: 20px;
+        }
+
+
+        .item {
+            display: flex;
+            margin-bottom: 10px;
+
+
+            .product-image {
+                flex-shrink: 0;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+
+
+            .info-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-grow: 1;
+                padding: 10px;
+                background-color: #fff;
+
+
+                .row {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 4px;
+                }
+
+
+                .product-title {
+                    @include serifFontFamily;
+                    color: $themeBrown;
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                }
+
+
+                .status {
+                    color: $themeBrown;
+                    font-size: 10px;
+                    font-weight: 300;
+                    letter-spacing: 0.5px;
+
+                    &.complete {
+                        color: $textGrey1;
+                    }
+                }
+
+
+                .caption {
+                    margin-bottom: 4px;
+                    font-size: 12px;
+                    font-weight: 300;
+                }
+
+
+                .total {
+                    @include serifFontFamily;
+                    text-align: right;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+
+        button.continue-shopping {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+
+section.order-detail {
+    > .title {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $themeBrown;
+
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+
+    > .info {
+        margin-top: 30px;
+
+
+        .status {
+            color: $themeBrown;
+            margin-bottom: 20px;
+            @include serifFontFamily;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+
+        .line {
+            margin-top: 10px;
+            color: $textBlack;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+    }
+
+
+    > .entries {
+        margin-top: 10px;
+    }
+
+
+    > .additional-info {
+        padding-top: 10px;
+        border-top: 1px solid $backgroundColourDarkGrey;
+
+
+        .line {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 14px;
+            letter-spacing: 0.8px;
+
+
+            .caption {
+                color: $textGrey5;
+            }
+
+
+            .value {
+                color: $textBlack;
+                text-align: right;
+            }
+        }
+    }
+}
+
+
+
+.wish-list-link {
+    @extend h2;
+    display: inline-block;
+    margin-top: 35px;
+}
+
+
+
+footer {
+    margin-top: 100px;
+
+    @include respondToTablet {
+        margin-top: 150px;
+    }
+}
