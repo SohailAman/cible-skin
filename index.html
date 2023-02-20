@@ -62,6 +62,7 @@ Cart::create();
   <div class="wrapper">
 
 
+
     <main class="main">
 
       <section class="main__hero hero">
@@ -89,8 +90,8 @@ Cart::create();
                 </p>
               </div>
               <div class="hero-content-tags">
-                <span class="hero-tag">
-                  <img src="assets/images/img-soinculte/img/hero/clock.svg" alt="clock image" class="hero-clock-img" />
+                <span class="hero-tag"> <img src="assets/images/img-soinculte/img/hero/clock.svg" alt="clock image"
+                    class="hero-clock-img" />
                   60 min
                 </span>
                 <span class="hero-tag"> 240 € </span>
@@ -103,12 +104,7 @@ Cart::create();
                 <a href="#" class="hero-subtag">cryotherapie</a>
               </div>
             </div>
-            <div class="widget">
-              <button class="maison__reserve-btn" type="submit">
-                <!-- <a href="https://cibleskincom.simplybook.it/v2/#book" target="_blank">JE RESERVE</a> -->
-                JE RESERVE
-              </button>
-            </div>
+            <a href="#" class="maison__reserve-btn">Je Réserve mon soin</a>
           </div>
         </div>
       </section>
@@ -122,7 +118,6 @@ Cart::create();
           <span>action anti-taches</span>.
         </p>
       </section>
-
       <!-- Added Swiper and Adjusted Alignments -->
       <section class="main__culte maison">
         <div class="maison__container">
@@ -144,37 +139,31 @@ Cart::create();
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img class="maison__splide-image culte-image" width="340" height="442"
-                    src="assets/images/img-soinculte/img/selebretes/sel-1.jpg" alt="Actices photo" />
+                    src="./assets/images/img-soinculte/img/selebretes/sel-1.jpg" alt="Actices photo" />
                   <p class="maison__fullname">Lily Collins</p>
                   <p class="maison__descpip">Actrice d’Emily in Paris</p>
                 </div>
                 <div class="swiper-slide">
                   <img class="maison__splide-image culte-image" width="340" height="442"
-                    src="assets/images/img-soinculte/img/selebretes/sel.png" alt="Actices photo" />
+                    src="./assets/images/img-soinculte/img/selebretes/sel-2.jpg" alt="Actices photo" />
                   <p class="maison__fullname">Lily Collins</p>
                   <p class="maison__descpip">Actrice d’Emily in Paris</p>
                 </div>
                 <div class="swiper-slide">
                   <img class="maison__splide-image culte-image" width="340" height="442"
-                    src="assets/images/img-soinculte/img/selebretes/sel-3.jpg" alt="Actices photo" />
+                    src="./assets/images/img-soinculte/img/selebretes/sel-3.jpg" alt="Actices photo" />
                   <p class="maison__fullname">Lily Collins</p>
                   <p class="maison__descpip">Actrice d’Emily in Paris</p>
                 </div>
                 <div class="swiper-slide">
                   <img class="maison__splide-image culte-image" width="340" height="442"
-                    src="assets/images/img-soinculte/img/selebretes/sel-1.jpg" alt="Actices photo" />
+                    src="./assets/images/img-soinculte/img/selebretes/sel-4.jpg" alt="Actices photo" />
                   <p class="maison__fullname">Lily Collins</p>
                   <p class="maison__descpip">Actrice d’Emily in Paris</p>
                 </div>
                 <div class="swiper-slide">
                   <img class="maison__splide-image culte-image" width="340" height="442"
-                    src="assets/images/img-soinculte/img/selebretes/sel.png" alt="Actices photo" />
-                  <p class="maison__fullname">Lily Collins</p>
-                  <p class="maison__descpip">Actrice d’Emily in Paris</p>
-                </div>
-                <div class="swiper-slide">
-                  <img class="maison__splide-image culte-image" width="340" height="442"
-                    src="assets/images/img-soinculte/img/selebretes/sel-3.jpg" alt="Actices photo" />
+                    src="./assets/images/img-soinculte/img/selebretes/sel-5.jpg" alt="Actices photo" />
                   <p class="maison__fullname">Lily Collins</p>
                   <p class="maison__descpip">Actrice d’Emily in Paris</p>
                 </div>
@@ -184,64 +173,89 @@ Cart::create();
           </div>
         </div>
       </section>
-
-      <section class="main__maison maison">
+      <!-- Added Swiper and Adjusted Alignments -->
+      <section class="main__maison main__culte  maison">
         <div class="maison__container">
           <h2 class="maison__title">
             La Maison de la Peau élue meilleur centre esthétique et anti-âge
             par la presse internationale
           </h2>
-          <div class="splide maison__splide" role="group" aria-label="Rewiews gallery">
-            <div class="splide__arrows maison__arrows">
-              <button role="move to prev slide" class="splide__arrow splide__arrow--prev maison__arrow_prev">
-                <img class="icon-arrow-prev" width="96" height="112"
-                  src="assets/images/img-soinculte/img/slider-arrow-big-left.svg" alt="" />
-              </button>
-              <button role="move to next slide" class="splide__arrow splide__arrow--next maison__arrow_next">
-                <img class="icon-arrow-next" width="96" height="112"
-                  src="assets/images/img-soinculte/img/slider-arrow-big-right.svg" alt="" />
-              </button>
-            </div>
-            <div class="splide__track maison__track">
-              <ul class="splide__list maison-slider-list">
-                <li class="splide__slide maison__slide">
+          <div class="maison__splide maison-culte__splide">
+            <button class=" splide__arrow maison__arrow_prev maison-main-swiper-button-prev">
+              <img class="icon-arrow-prev" width="96" height="112"
+                src="assets/images/img-soinculte/img/slider-arrow-big-left.svg" alt="" />
+            </button>
+            <button class=" splide__arrow maison__arrow_next maison-main-swiper-button-next">
+              <img class="icon-arrow-next" width="96" height="112"
+                src="assets/images/img-soinculte/img/slider-arrow-big-right.svg" alt="" />
+            </button>
+            <!-- Swiper -->
+            <div class="swiper swiperMaisonMain">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img class="maison__splide-image" width="312" height="463"
                     src="assets/images/img-soinculte/img/maison/maison1.jpg" alt="Artboart with review and rate" />
                   <p class="maison__quote">
                     “Le soin anti-âge le plus high-tech d’Europe”
                   </p>
                   <p class="maison__varanty">VANITY FAIR</p>
-                </li>
-                <li class="splide__slide maison__slide">
+                </div>
+                <div class="swiper-slide">
                   <img class="maison__splide-image" width="312" height="463"
                     src="assets/images/img-soinculte/img/maison/maison2.png" alt="Artboart with review and rate" />
                   <p class="maison__quote">
                     “Le soin anti-âge le plus high-tech d’Europe”
                   </p>
-                  <p class="maison__varanty">Forbes</p>
-                </li>
-                <li class="splide__slide maison__slide">
+                  <p class="maison__varanty">VANITY FAIR</p>
+                </div>
+                <div class="swiper-slide">
                   <img class="maison__splide-image" width="312" height="463"
                     src="assets/images/img-soinculte/img/maison/maison3.png" alt="Artboart with review and rate" />
                   <p class="maison__quote">
                     “Le soin anti-âge le plus high-tech d’Europe”
                   </p>
-                  <p class="maison__varanty">VOGUE</p>
-                </li>
-              </ul>
+                  <p class="maison__varanty">VANITY FAIR</p>
+                </div>
+                <div class="swiper-slide">
+                  <img class="maison__splide-image" width="312" height="463"
+                    src="assets/images/img-soinculte/img/maison/maison1.jpg" alt="Artboart with review and rate" />
+                  <p class="maison__quote">
+                    “Le soin anti-âge le plus high-tech d’Europe”
+                  </p>
+                  <p class="maison__varanty">VANITY FAIR</p>
+                </div>
+                <div class="swiper-slide">
+                  <img class="maison__splide-image" width="312" height="463"
+                    src="assets/images/img-soinculte/img/maison/maison2.png" alt="Artboart with review and rate" />
+                  <p class="maison__quote">
+                    “Le soin anti-âge le plus high-tech d’Europe”
+                  </p>
+                  <p class="maison__varanty">VANITY FAIR</p>
+                </div>
+                <div class="swiper-slide">
+                  <img class="maison__splide-image" width="312" height="463"
+                    src="assets/images/img-soinculte/img/maison/maison3.png" alt="Artboart with review and rate" />
+                  <p class="maison__quote">
+                    “Le soin anti-âge le plus high-tech d’Europe”
+                  </p>
+                  <p class="maison__varanty">VANITY FAIR</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
       </section>
 
-
       <section class="technique-splide">
         <div class="splide__arrows">
           <div class="swiper-button-next splide__arrow splide__arrow--next technique-arrow-next">
-            <img src="assets/images/img-soinculte/img/technique/next.svg" width="100%" alt="" />
+            <img class="icon-arrow-next" width="96" height="112"
+              src="assets/images/img-soinculte/img/slider-arrow-big-right.svg" alt="" />
           </div>
           <div class="swiper-button-prev splide__arrow splide__arrow--prev technique-arrow-prev">
-            <img src="assets/images/img-soinculte/img/slider-arrow-big-left.svg" width="100%" alt="" />
+            <img class="icon-arrow-prev" width="96" height="112"
+              src="assets/images/img-soinculte/img/slider-arrow-big-left.svg" alt="" />
           </div>
         </div>
 
@@ -509,7 +523,8 @@ Cart::create();
           <p class="selebrites__name selebrites__name5">Coco Rocha</p>
         </div>
       </section>
-      <section class="main__google google">
+
+      <section class="main__google main__culte maison google">
         <div class="google__container">
           <div class="google__rate-block">
             <h2 class="google__title">460 Avis Google</h2>
@@ -530,109 +545,52 @@ Cart::create();
             </div>
             <p class="google__text">Je souhaite lire d’autres avis</p>
           </div>
-          <div class="splide google__splide" role="group" aria-label="Rewiews gallery">
-            <div class="splide__arrows google__arrows">
-              <button role="move to prev slide" class="splide__arrow splide__arrow--prev google__arrow_prev">
-                <img class="icon-arrow-prev" width="96" height="112"
-                  src="assets/images/img-soinculte/img/slider-arrow-big-left.svg" alt="" />
-              </button>
-              <button role="move to next slide" class="splide__arrow splide__arrow--next google__arrow_next">
-                <img class="icon-arrow-next" width="96" height="112"
-                  src="assets/images/img-soinculte/img/slider-arrow-big-right.svg" alt="" />
-              </button>
-            </div>
-            <div class="splide__track google__track">
-              <ul class="splide__list google-slider-list">
-                <li class="splide__slide">
+          <div class="maison__splide maison-culte__splide">
+            <button class=" splide__arrow maison__arrow_prev google-main-swiper-button-prev">
+              <img class="icon-arrow-prev" width="96" height="112"
+                src="assets/images/img-soinculte/img/slider-arrow-big-left.svg" alt="" />
+            </button>
+            <button class=" splide__arrow maison__arrow_next google-main-swiper-button-next">
+              <img class="icon-arrow-next" width="96" height="112"
+                src="assets/images/img-soinculte/img/slider-arrow-big-right.svg" alt="" />
+            </button>
+            <!-- Swiper -->
+            <div class="swiper swiperGoogle">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img class="google__splide-image" width="429" height="429"
                     src="assets/images/img-soinculte/img/google/artboart1.png" alt="Artboart with review and rate" />
-                </li>
-                <li class="splide__slide">
+                </div>
+                <div class="swiper-slide">
                   <img class="google__splide-image" width="429" height="429"
                     src="assets/images/img-soinculte/img/google/artboart2.png" alt="Artboart with review and rate" />
-                </li>
-                <li class="splide__slide">
+                </div>
+                <div class="swiper-slide">
                   <img class="google__splide-image" width="429" height="429"
                     src="assets/images/img-soinculte/img/google/artboart3.png" alt="Artboart with review and rate" />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <section class="main__cosmetics cosmetics cosmetics__splide">
-
-          <div class="cosmetics__container">
-            <h2 class="cosmetics__title">Les cosmétiques utilisés dans notre soin</h2>
-            <div class="cosmetics__content">
-              <img class="cosmetics__main-image" width="862" height="676"
-                src="assets/images/img-soinculte/img/cosmetics/cosmetics-image.jpg" alt="Image of our cosmetics" />
-              <!-- Swiper -->
-              <div class="mySwiperCosmaticMain">
-                <div class="swiper mySwiperCosmatic">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img class="cosmetics__s" width="377" height="369"
-                        src="assets/images/img-soinculte/img/cosmetics/product-1.jpg" alt="Our cometic" />
-                      <div class="cosmetics__product-text">
-                        <p class="cosmetics__product-title">
-                          L’Essence Activatrice
-                        </p>
-                        <p class="cosmetics__product-description">
-                          ÉQUILIBRANTE & ÉCLATANTE
-                        </p>
-                        <p class="cosmetics__product-ml">150ml</p>
-                        <p class="cosmetics__product-price">95€</p>
-                        <a href="#" class="cosmetics__product-btn btn">AJOUTER AU PANIER</a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <img class="cosmetics__splide-image" width="377" height="369"
-                        src="assets/images/img-soinculte/img/cosmetics/product-2.jpg" alt="Our cometic" />
-                      <div class="cosmetics__product-text">
-                        <p class="cosmetics__product-title">
-                          Le Sérum Bleu
-                        </p>
-                        <p class="cosmetics__product-description">
-                          ÉQUILIBRANTE & ÉCLATANTE
-                        </p>
-                        <p class="cosmetics__product-ml">150ml</p>
-                        <p class="cosmetics__product-price">95€</p>
-                        <a href="#" class="cosmetics__product-btn btn">AJOUTER AU PANIER</a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <img class="cosmetics__splide-image" width="377" height="369"
-                        src="assets/images/img-soinculte/img/cosmetics/product-3.jpg" alt="Our cometic" />
-                      <div class="cosmetics__product-text">
-                        <p class="cosmetics__product-title">
-                          Le Masque Polyactifs
-                        </p>
-                        <p class="cosmetics__product-description">
-                          ÉQUILIBRANTE & ÉCLATANTE
-                        </p>
-                        <p class="cosmetics__product-ml">150ml</p>
-                        <p class="cosmetics__product-price">95€</p>
-                        <a href="#" class="cosmetics__product-btn btn">AJOUTER AU PANIER</a>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="swiper-button-next">
-                    <i class="fa fa-chevron-right"></i>
-                  </div>
-                  <div class="swiper-button-prev">
-                    <i class="fa fa-chevron-left"></i>
-                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="google__splide-image" width="429" height="429"
+                    src="assets/images/img-soinculte/img/google/artboart1.png" alt="Artboart with review and rate" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="google__splide-image" width="429" height="429"
+                    src="assets/images/img-soinculte/img/google/artboart2.png" alt="Artboart with review and rate" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="google__splide-image" width="429" height="429"
+                    src="assets/images/img-soinculte/img/google/artboart3.png" alt="Artboart with review and rate" />
                 </div>
 
 
-
-                <div class="swiper-pagination"></div>
               </div>
+
             </div>
           </div>
-        </section>
+
+        </div>
       </section>
+
       <section class="main__signature signature">
         <div class="signature__container">
           <h2 class="signature__title">Découvrez nos soins signature</h2>
@@ -675,8 +633,6 @@ Cart::create();
           </div>
         </div>
       </section>
-
-
     </main>
 
     <footer class="footer">

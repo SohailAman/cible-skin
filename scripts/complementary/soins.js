@@ -26,82 +26,58 @@ function imgClick(e) {
   e.target.style.opacity = opacity;
 }
 
-const googleSplide = new Splide(".google__splide", {
-  focus: "center",
-  type: "loop",
-  perPage: 1,
-  perMove: 1,
-  mediaQuery: "min",
-  padding: { left: "3.3em", right: "5em" },
-  breakpoints: {
-    560: {
-      perPage: 2,
-      padding: { left: "5.2em", right: "5.2em" },
-      gap: "5rem",
-    },
-    768: {
-      padding: { left: "5.2em", right: "5.2em" },
-      gap: "5rem",
-    },
 
-    1119: {
-      gap: "null",
-      perPage: 2,
-      padding: { left: "2px", right: "100px" },
-      width: "795px",
-    },
+
+// <!-- Initialize Swiper -->
+var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
+  effect: "coverflow", loop: true,
+  centeredSlides: true,
+  grabCursor: true,
+  slidesPerView: 1.4,
+  spaceBetween: 10,
+  speed: 500,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows: false,
   },
-});
-googleSplide.mount();
-
-const maisonSlider = new Splide(".maison__splide", {
-  focus: "center",
-  type: "loop",
-  perPage: 1,
-  perMove: 1,
-  mediaQuery: "min",
-  fixedWidth: "206px",
-  width: "375px",
-  gap: "26px",
-  breakpoints: {
-    560: {
-      perPage: 1,
-    },
-    1119: {
-      perPage: 1,
-      padding: "0rem",
-      fixedWidth: "312px",
-      width: "650px",
-    },
+  navigation: {
+    nextEl: ".maison-main-swiper-button-next",
+    prevEl: ".maison-main-swiper-button-prev",
   },
-});
-maisonSlider.mount();
-
-const maisonCulteSlider = new Splide(".maison-culte__splide", {
-  focus: "center",
-  type: "loop",
-  perPage: 1,
-  perMove: 1,
-  mediaQuery: "min",
-  width: "405px",
-  fixedWidth: "250px",
-  gap: "11px",
   breakpoints: {
-    712: {
-      perPage: 2,
-
-      gap: "11px",
+    0: {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
     },
-    1119: {
-      perPage: 3,
-
-      fixedWidth: "340px",
-      width: "700px",
-      // gap: "10rem",
-    },
-  },
+    1200: {
+      slidesPerView: 1.8,
+      spaceBetween: 20,
+    }
+  }
 });
-maisonCulteSlider.mount();
+// <!-- Initialize Swiper -->
+var swiperGoogle = new Swiper(".swiperGoogle", {
+  loop: true,
+  centeredSlides: true,
+  grabCursor: true,
+  slidesPerView: 1.6,
+  spaceBetween: 0,
+  speed: 500,
+  navigation: {
+    nextEl: ".google-main-swiper-button-next",
+    prevEl: ".google-main-swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      spaceBetween: 25,
+    }
+  }
+});
+
+
 
 const selebritesSplide = new Splide(".selebrites__slider", {
   type: "loop",
@@ -118,6 +94,42 @@ selebritesSplide.mount();
 const body = document.querySelector("body");
 window.addEventListener("load", function (e) {
   body.classList.remove("global-preload");
+});
+
+// <!-- Initialize Swiper -->
+var swiperMaison = new Swiper(".swiperMaison", {
+  effect: "coverflow",
+  loop: true,
+  centeredSlides: true,
+  grabCursor: true,
+  slidesPerView: 1.4,
+  spaceBetween: 0,
+  speed: 500,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows: false,
+  },
+  navigation: {
+    nextEl: ".maison-swiper-button-next",
+    prevEl: ".maison-swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1.4,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
+    },
+    1200: {
+      slidesPerView: 1.8,
+      spaceBetween: 10,
+    }
+  }
 });
 
 // <!-- Initialize Swiper -->
@@ -163,18 +175,18 @@ var swiper = new Swiper(".mySwiper", {
 var swiperSteps = new Swiper(".mySwiperSteps", {
   slidesPerView: 1.2,
   spaceBetween: 30,
-  centeredSlide: true,
+  // centeredSlides: true,
   navigation: {
     nextEl: ".step-swiper-button-next",
     prevEl: ".step-swiper-button-prev",
   }, breakpoints: {
     640: {
       spaceBetween: 20,
-      slidesPerView: 2,
+      slidesPerView: 1.9,
     },
     998: {
       spaceBetween: 20,
-      slidesPerView: 3,
+      slidesPerView: 2.9,
     },
   },
 });
@@ -215,7 +227,7 @@ for (let i = 0; i < morePara.length; i++) {
     if (viewed === false) {
       elipsis[i].style.display = "none";
       morePara[i].classList.remove('hideText');
-      readMoreBtn[i].innerHTML = "Afficher moins";
+      readMoreBtn[i].innerHTML = "Show less";
       viewed = true;
     }
     else {
@@ -231,6 +243,9 @@ for (let i = 0; i < morePara.length; i++) {
   readMoreBtn[i].innerHTML = "En savoir plus";
 
 }
+
+
+// ---------slide text
 
 let selSlidesMain = document.querySelectorAll('.selebrites__slide');
 let selSlide1 = document.querySelector('.selebrites__slide1');
@@ -261,7 +276,7 @@ function sel() {
   }
 }
 setInterval(sel, 500);
-
+// -----
 function sel2() {
   if (selSlide2.classList.contains("is-active")) {
     selCaptions2.classList.remove('remove');
@@ -274,7 +289,7 @@ function sel2() {
   }
 }
 setInterval(sel2, 500);
-
+// -----
 function sel3() {
   if (selSlide3.classList.contains("is-active")) {
     selCaptions3.classList.remove('remove');
@@ -287,7 +302,7 @@ function sel3() {
   }
 }
 setInterval(sel3, 500);
-
+// -----
 function sel4() {
   if (selSlide4.classList.contains("is-active")) {
     selCaptions4.classList.remove('remove');
@@ -300,7 +315,7 @@ function sel4() {
   }
 }
 setInterval(sel4, 500);
-
+// -----
 function sel5() {
   if (selSlide5.classList.contains("is-active")) {
     selCaptions5.classList.remove('remove');
@@ -314,4 +329,4 @@ function sel5() {
 }
 setInterval(sel5, 500);
 
-
+// ***********
