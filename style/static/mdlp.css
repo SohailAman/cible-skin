@@ -49,6 +49,7 @@ body {
 body,
 html {
   height: 100%;
+  background-color: #ffffff !important;
 }
 
 button {
@@ -206,9 +207,6 @@ video {
   justify-content: space-between;
 }
 
-p.maison__quote {
-  color: black;
-}
 
 .maison__slide.is-active .maison__varanty {
   font-weight: 500

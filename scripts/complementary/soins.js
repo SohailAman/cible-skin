@@ -33,8 +33,8 @@ var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
   effect: "coverflow", loop: true,
   centeredSlides: true,
   grabCursor: true,
-  slidesPerView: 1.5,
-  spaceBetween: 15,
+  slidesPerView: 1.4,
+  spaceBetween: 30,
   speed: 500,
   coverflowEffect: {
     rotate: 0,
@@ -48,6 +48,10 @@ var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
     prevEl: ".maison-main-swiper-button-prev",
   },
   breakpoints: {
+    468: {
+      slidesPerView: 1.5,
+      spaceBetween: 30,
+    },
     998: {
       slidesPerView: 1.6,
       spaceBetween: 30,
@@ -122,8 +126,8 @@ var swiperMaison = new Swiper(".swiperMaison", {
   speed: 500,
   coverflowEffect: {
     rotate: 0,
-    stretch: 0,
-    depth: 100,
+    stretch: 20,
+    depth: 120,
     modifier: 2.7,
     slideShadows: false,
   },
@@ -133,8 +137,12 @@ var swiperMaison = new Swiper(".swiperMaison", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 1.4,
-      spaceBetween: 10,
+      slidesPerView: 1.15,
+      spaceBetween: 100,
+    },
+    480: {
+      slidesPerView: 1.3,
+      spaceBetween: 90,
     },
     768: {
       slidesPerView: 1.6,
@@ -142,7 +150,7 @@ var swiperMaison = new Swiper(".swiperMaison", {
     },
     1200: {
       slidesPerView: 1.8,
-      spaceBetween: 30,
+      spaceBetween: 10,
     }
   }
 });
@@ -164,8 +172,8 @@ var swiper2 = new Swiper(".mySwiperCosmatic", {
 
 // <!-- Initialize Swiper -->
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 10,
+  slidesPerView: 1.4,
+  spaceBetween: 5,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -188,7 +196,7 @@ var swiper = new Swiper(".mySwiper", {
 
 // <!-- Initialize Swiper -->
 var swiperSteps = new Swiper(".mySwiperSteps", {
-  slidesPerView: 1.2,
+  slidesPerView: 1.5,
   spaceBetween: 30,
   // centeredSlides: true,
   navigation: {

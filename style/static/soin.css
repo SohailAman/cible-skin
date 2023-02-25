@@ -520,7 +520,6 @@ h2 {
     padding: 0 28px;
     margin-top: 30px !important;
     max-width: 677px;
-    margin: 0 auto;
   }
 
   .hero-title {
@@ -624,7 +623,6 @@ h2 {
     line-height: 16px;
     font-weight: 300;
     display: block;
-    text-align: center;
     margin-bottom: 0;
     border-radius: 25.5px;
   }
@@ -632,11 +630,15 @@ h2 {
 
 /* sion section  */
 .sion-subtitle {
+  font-style: normal;
+  font-weight: 350;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
   margin: 0 auto;
   max-width: 355px;
   padding: 30px 0;
   margin-top: 23px;
-  text-align: center;
 }
 
 .main__culte.maison {
@@ -723,7 +725,6 @@ h2 {
   margin-top: -2px;
   max-width: 280px;
   max-height: 170px;
-  border-radius: 10px;
   object-fit: cover;
 }
 
@@ -761,11 +762,17 @@ h2 {
   text-align: center;
   margin-bottom: 5px;
   margin-top: 5px;
+  color: #000000;
 }
 
 .maison__descpip {
+  color: #000000;
   text-align: center;
   margin-bottom: 25px;
+}
+
+.swiper-slide.swiper-slide-visible.swiper-slide-active p {
+  color: #6C1401;
 }
 
 .main__culte .maison-culte__splide,
@@ -1033,11 +1040,11 @@ h2 {
 }
 
 .splide__arrow--prev {
-  left: 9px !important;
+  left: -20px !important;
 }
 
 .splide__arrow--next {
-  right: 9px !important;
+  right: -20px !important;
 }
 
 .splide__arrow:disabled {
@@ -1098,10 +1105,11 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: baseline;
+  order: 1;
 }
 
 .google__number-rating {
-  display: inline-block;
+  display: none;
   margin-right: 20px;
   font-family: "TT Commons", sans-serif;
   font-weight: 500;
@@ -1186,10 +1194,11 @@ h2 {
   max-width: 224px;
   margin-left: auto;
   margin-right: auto;
+  color: #000000;
 }
 
 .maison__varanty {
-  color: #6C1401;
+  color: #000000;
   text-transform: uppercase;
   font-size: 24px;
   text-align: center;
@@ -1883,6 +1892,10 @@ div.selebrites__container {
     min-height: 800px;
   }
 
+  .card-item__image {
+    border-radius: 10px;
+  }
+
   .maison__reserve-btn {
     margin-bottom: 120px;
   }
@@ -1972,8 +1985,12 @@ div.selebrites__container {
     display: none;
   }
 
+  .google__rating {
+    order: 0;
+  }
+
   .google__number-rating {
-    display: block;
+    display: inline-block;
     font-size: 42px;
     font-weight: 500;
     padding-top: 12px;
@@ -2543,6 +2560,25 @@ div.selebrites__container {
     width: 100% !important;
     border-right: none !important;
   }
+
+  .signature__cards {
+    gap: 35px;
+  }
+
+  .card-item__image {
+    margin: 8px auto;
+    max-width: 96%;
+  }
+
+  .card-item__description,
+  .card-item__text {
+    max-width: max-content !important;
+  }
+
+
+  .card-item__btn-link {
+    margin-top: 12px !important;
+  }
 }
 
 /* @media only screen and (max-width: 767px) {
@@ -2753,9 +2789,7 @@ div.selebrites__container {
     top: 500px !important;
   }
 
-  .steps-splide.steps__container .splide__arrow.swiper-button-disabled {
-    display: none;
-  }
+
 
   .steps-splide .splide__track::before {
     content: none !important;
@@ -2825,6 +2859,10 @@ div.selebrites__container {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.steps-splide.steps__container .splide__arrow.swiper-button-disabled {
+  display: none;
 }
 
 .steps-splide .splide__slide {
@@ -2899,7 +2937,7 @@ div.selebrites__container {
 
 
 .steps-splide .splide__track::before {
-  content: "";
+  content: none;
   position: absolute;
   top: 0;
   user-select: none;
@@ -3022,11 +3060,10 @@ div.selebrites__container {
 
 @media (max-width:760px) {
   .hero-content-container {
-    text-align: center;
+    text-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-left: 0;
   }
 
@@ -3035,15 +3072,28 @@ div.selebrites__container {
     margin: 20px auto;
   }
 
+  .hero-content-tags> :nth-child(1) {
+    margin-left: 5px;
+  }
+
+  .hero-content-tags {
+    justify-content: start;
+  }
+
+  .hero-content-container .widget,
+  .hero-content-container .inner {
+    margin-left: 22px;
+  }
+
+  .steps-splide {
+    margin: 0 auto;
+  }
+
   .hero-content-container .inner {
     display: flex !important;
-    text-align: center;
-    margin: 0 auto;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
+    margin-right: auto;
   }
 
   .maison-culte__splide .splide__arrow.maison__arrow_next {
@@ -3054,9 +3104,6 @@ div.selebrites__container {
     left: -20px !important;
   }
 
-  .hero-content-container h2 {
-    text-align: center;
-  }
 
   .splide__slide.maison__slide.culte__slide.is-next {
     margin-right: 25px !important;
@@ -3115,13 +3162,27 @@ div.selebrites__container {
     width: 65vw !important;
   }
 
+  .google__rating {
+    margin: 10px auto;
+  }
+
+  .google__number-rating {
+    display: inline-block;
+  }
+
+  .stars__row img {
+    width: 15px;
+    height: 15px;
+  }
+
   .steps-splide {
-    width: 90vw;
+    width: 100vw;
   }
 
   .steps-subtitle {
     font-size: 16px;
     height: 96px;
+    line-height: 16px;
   }
 
   .mySwiperSteps {
@@ -3147,18 +3208,10 @@ div.selebrites__container {
     width: 34ch;
   }
 
-  .hero-content-tags {
-    margin-bottom: 4px !important;
-    justify-content: center;
-  }
 
   .hero-content-tags .hero-subtag {
     margin-left: 4px;
     margin-right: 4px;
-  }
-
-  .hero-content-tags> :nth-child(1) {
-    margin-left: auto;
   }
 
 }
@@ -3169,6 +3222,16 @@ div.selebrites__container {
   .main__culte.maison.main__maison .maison-culte__splide {
     max-width: 86%;
   }
+
+  .technique-splide::before {
+    height: 60vh;
+
+    top: 41%;
+  }
+
+  .steps-splide {
+    padding: 0 20px !important;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -3176,5 +3239,4 @@ div.selebrites__container {
     padding-left: 0;
     padding-right: 0;
   }
-
 }
