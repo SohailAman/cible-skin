@@ -3060,11 +3060,12 @@ div.selebrites__container {
 
 @media (max-width:760px) {
   .hero-content-container {
-    text-align: start;
+    text-align: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-left: 0;
+    margin: 0 auto;
   }
 
   .hero-content-container .maison__reserve-btn,
@@ -3073,16 +3074,15 @@ div.selebrites__container {
   }
 
   .hero-content-tags> :nth-child(1) {
-    margin-left: 5px;
+    margin-left: auto;
+  }
+
+  .hero-title {
+    text-align: center;
   }
 
   .hero-content-tags {
-    justify-content: start;
-  }
-
-  .hero-content-container .widget,
-  .hero-content-container .inner {
-    margin-left: 22px;
+    justify-content: center;
   }
 
   .steps-splide {
@@ -3093,7 +3093,8 @@ div.selebrites__container {
     display: flex !important;
     flex-direction: column;
     justify-content: center;
-    margin-right: auto;
+    align-items: center;
+    margin: a auto;
   }
 
   .maison-culte__splide .splide__arrow.maison__arrow_next {
