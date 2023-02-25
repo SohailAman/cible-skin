@@ -6,19 +6,24 @@
   padding: 0;
   border: 0;
 }
+
 li {
   list-style: none;
 }
+
 a {
   color: inherit;
 }
+
 a,
 a:visited {
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -28,6 +33,7 @@ h6 {
   font-weight: inherit;
   font-size: inherit;
 }
+
 img {
   width: 100%;
   display: block;
@@ -44,6 +50,7 @@ body,
 html {
   height: 100%;
 }
+
 button {
   background-color: transparent;
 }
@@ -51,62 +58,57 @@ button {
 *input:active {
   border: none;
 }
+
 /* ================================================================ */
 
 /* Fonts */
 @font-face {
-  font-family: "TTCommons";
-  src: url("../../assets/fonts/tt-commons/TTCommons-Light.woff2") format("woff2"), url("../../assets/fonts/tt-commons/TTCommons-Light.woff") format("woff");
+  font-family: "TT Commons";
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Light.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "TTCommons";
-  src: url("../../assets/fonts/tt-commons/TTCommons-Regular.woff2") format("woff2"), url("../../assets/fonts/tt-commons/TTCommons-Regular.woff") format("woff");
+  font-family: "TT Commons";
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Regular.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "TTCommons";
-  src: url("../../assets/fonts/tt-commons/TTCommons-Italic.woff2") format("woff2"), url("../../assets/fonts/tt-commons/TTCommons-Italic.woff") format("woff");
+  font-family: "TT Commons";
   font-weight: 400;
   font-style: italic;
-  font-display: swap;
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Italic.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "TTCommons";
-  src: url("../../assets/fonts/tt-commons/TTCommons-Medium.woff2") format("woff2"), url("../../assets/fonts/tt-commons/TTCommons-Medium.woff") format("woff");
+  font-family: "TT Commons";
   font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+  font-style: italic;
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Medium-Italic.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "TTCommons";
-  src: url("../../assets/fonts/tt-commons/TTCommons-DemiBold.woff2") format("woff2"), url("../../assets/fonts/tt-commons/TTCommons-DemiBold.woff") format("woff");
+  font-family: "TT Commons";
   font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+  font-style: italic;
+  src: url("../../assets/fonts/tt-commons/TT-Commons-DemiBold-Italic.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "TTCommons";
-  src: url("../../assets/fonts/tt-commons/TTCommons-Bold.woff2") format("woff2"), url("../../assets/fonts/tt-commons/TTCommons-Bold.woff") format("woff");
+  font-family: "TT Commons";
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Bold.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "ClassicoUrw";
-  src: url("../../assets/fonts/tt-commons/classico-urw.woff2") format("woff2"), url("../../assets/fonts/tt-commons/classico-urw.woff") format("woff");
+  font-family: "Classico URW";
   font-weight: 400;
   font-style: normal;
+  src: url("../../assets/fonts/classico-urw/Classico-URW-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -757,6 +759,7 @@ p.maison__quote {
 }
 
 .maison__splide {
+  margin: 0 auto;
   margin-top: 18px;
 }
 
@@ -813,6 +816,12 @@ p.maison__quote {
 .selebrites {
   padding-top: 28px;
   background: rgba(237, 236, 229, 0.7);
+}
+
+.main__culte .maison-culte__splide,
+.main__culte.maison.main__maison .maison-culte__splide {
+  max-width: 720px;
+  position: relative;
 }
 
 div.selebrites__container {
@@ -913,6 +922,15 @@ div.selebrites__container {
   display: none;
 }
 
+.main__culte.maison.main__maison .maison-culte__splide {
+  max-width: 720px;
+  position: relative;
+}
+
+.main__maison .maison-culte__splide {
+  margin: 0 auto;
+}
+
 /* ===================== */
 
 @media screen and (min-width: 560px) {
@@ -1011,8 +1029,9 @@ div.selebrites__container {
   }
 
   .maison__splide::after,
+  .maison-culte__splide::after,
   .maison__track::after {
-    width: 350px !important;
+    width: 400px;
   }
 
   .google__rate-block {
@@ -1214,8 +1233,28 @@ div.selebrites__container {
     max-width: 768px;
   }
 
+  .icon-arrow-prev,
+  .maison__splide::after,
+  .maison__track::after {
+    width: 100px !important;
+    background: linear-gradient(90deg,
+        #ffffff 30.74%,
+        rgba(255, 255, 255, 0) 100%) !important;
+  }
+
+  .maison-culte__splide::after,
+  .maison-culte__splide::after {
+    background: linear-gradient(90deg,
+        #ffffff 30.74%,
+        rgba(255, 255, 255, 0) 100%) !important;
+  }
+
   .splide__arrow--prev {
     left: 185px !important;
+  }
+
+  .main__culte.maison.main__maison .maison-culte__splide {
+    max-width: 425px;
   }
 
   .splide__arrow--next {
@@ -1730,5 +1769,17 @@ div.selebrites__container {
   .reser-inner a {
     padding: 20px 32px 16px 32px;
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .maison__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main__culte .maison-culte__splide,
+  .main__culte.maison.main__maison .maison-culte__splide {
+    max-width: 100%;
   }
 }

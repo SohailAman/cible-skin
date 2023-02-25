@@ -697,7 +697,7 @@ footer .content .bottom-row .copyright {
 }
 @media screen and (min-width: 1120px) {
   footer .content .bottom-row .copyright {
-    margin-right: 288px;
+    margin-right: 283px;
   }
 }
 footer .content .bottom-row .social-media {
@@ -822,6 +822,29 @@ footer .content .bottom-row .social-media .icon:not(:first-child) {
   margin-top: 15px;
 }
 
+#floating-whatsapp-icon {
+  z-index: 100;
+  position: fixed;
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+}
+@media screen and (min-width: 728px) {
+  #floating-whatsapp-icon {
+    right: 24px;
+    bottom: 24px;
+  }
+}
+@media screen and (min-width: 1120px) {
+  #floating-whatsapp-icon {
+    right: 38px;
+    bottom: 38px;
+  }
+}
+
 #slideover-background-mask {
   z-index: 999;
   position: fixed;
@@ -861,12 +884,37 @@ footer .content .bottom-row .social-media .icon:not(:first-child) {
 .slideover footer {
   background-color: inherit;
 }
+.slideover #floating-whatsapp-icon {
+  display: none !important;
+}
 
 #cart-slideover, #address-form-slideover {
   z-index: 1000;
 }
 #cart-slideover .content, #address-form-slideover .content {
   height: 100%;
+}
+#cart-slideover .content h2, #cart-slideover .content h3, #address-form-slideover .content h2, #address-form-slideover .content h3 {
+  color: #6C1401;
+  font-family: "Classico URW", serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+#cart-slideover .content h2.underlined, #cart-slideover .content h3.underlined, #address-form-slideover .content h2.underlined, #address-form-slideover .content h3.underlined {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #6C1401;
+  text-transform: uppercase;
+}
+#cart-slideover .content h2, #address-form-slideover .content h2 {
+  font-size: 20px;
+}
+@media screen and (min-width: 728px) {
+  #cart-slideover .content h2, #address-form-slideover .content h2 {
+    font-size: 28px;
+  }
+}
+#cart-slideover .content h3, #address-form-slideover .content h3 {
+  font-size: 16px;
 }
 #cart-slideover .content section.fixed-header, #address-form-slideover .content section.fixed-header {
   display: flex;
@@ -887,6 +935,20 @@ footer .content .bottom-row .social-media .icon:not(:first-child) {
     padding-right: 49px;
   }
 }
+#cart-slideover .content section.fixed-header h2, #address-form-slideover .content section.fixed-header h2 {
+  line-height: 1;
+  margin-top: 7px;
+}
+@media screen and (min-width: 728px) {
+  #cart-slideover .content section.fixed-header h2, #address-form-slideover .content section.fixed-header h2 {
+    margin-top: 9px;
+  }
+}
+@media screen and (min-width: 1120px) {
+  #cart-slideover .content section.fixed-header h2, #address-form-slideover .content section.fixed-header h2 {
+    margin-top: 10px;
+  }
+}
 #cart-slideover .content section.fixed-header button.close, #address-form-slideover .content section.fixed-header button.close {
   width: 20px;
   height: 20px;
@@ -900,7 +962,6 @@ footer .content .bottom-row .social-media .icon:not(:first-child) {
 #cart-slideover .content section.scrolling, #address-form-slideover .content section.scrolling {
   overflow-y: scroll;
   height: calc(100% - 100px);
-  padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -916,23 +977,11 @@ footer .content .bottom-row .social-media .icon:not(:first-child) {
     padding-right: 49px;
   }
 }
-#cart-slideover .content section.scrolling h2, #cart-slideover .content section.scrolling h3, #address-form-slideover .content section.scrolling h2, #address-form-slideover .content section.scrolling h3 {
-  color: #6C1401;
-  font-family: "Classico URW", serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-#cart-slideover .content section.scrolling h2, #address-form-slideover .content section.scrolling h2 {
-  font-size: 20px;
-}
-@media screen and (min-width: 728px) {
-  #cart-slideover .content section.scrolling h2, #address-form-slideover .content section.scrolling h2 {
-    font-size: 28px;
-  }
-}
-#cart-slideover .content section.scrolling h3, #address-form-slideover .content section.scrolling h3 {
-  margin-top: 50px;
-  font-size: 16px;
+#cart-slideover .content section.scrolling .horizontal-separator, #address-form-slideover .content section.scrolling .horizontal-separator {
+  width: 100%;
+  height: 0;
+  margin-top: 20px;
+  border-top: 1px solid #B8B8B8;
 }
 
 #cart-slideover {
@@ -945,15 +994,23 @@ footer .content .bottom-row .social-media .icon:not(:first-child) {
 }
 @media screen and (min-width: 728px) {
   #cart-slideover section.scrolling {
-    padding-bottom: 70px;
+    padding-bottom: 40px;
   }
+}
+#cart-slideover section.scrolling .entries .entry-wrapper {
+  overflow: auto;
+  max-height: 208px;
+  padding-right: 8px;
 }
 #cart-slideover section.scrolling p.empty-text {
   margin-top: 30px;
   font-weight: 300;
   font-size: 14px;
 }
-#cart-slideover section.scrolling .recommended-products {
+#cart-slideover section.scrolling .product-recommendation {
+  margin-top: 50px;
+}
+#cart-slideover section.scrolling .product-recommendation .recommended-products {
   margin-top: 20px;
   overflow-x: scroll;
   -ms-overflow-style: none;
@@ -961,34 +1018,34 @@ footer .content .bottom-row .social-media .icon:not(:first-child) {
   display: flex;
   flex-wrap: nowrap;
 }
-#cart-slideover section.scrolling .recommended-products::-webkit-scrollbar {
+#cart-slideover section.scrolling .product-recommendation .recommended-products::-webkit-scrollbar {
   display: none;
 }
-#cart-slideover section.scrolling .recommended-products .product {
+#cart-slideover section.scrolling .product-recommendation .recommended-products .product {
   flex: 0 0 152px;
   width: 152px;
   margin-right: 10px;
   background-color: white;
 }
-#cart-slideover section.scrolling .recommended-products .product:last-child {
+#cart-slideover section.scrolling .product-recommendation .recommended-products .product:last-child {
   margin-right: 0;
 }
-#cart-slideover section.scrolling .recommended-products .product button.favourite {
+#cart-slideover section.scrolling .product-recommendation .recommended-products .product button.favourite {
   display: none;
 }
-#cart-slideover section.scrolling .recommended-products .product .info .title, #cart-slideover section.scrolling .recommended-products .product .info .subtitle, #cart-slideover section.scrolling .recommended-products .product .info .spec {
+#cart-slideover section.scrolling .product-recommendation .recommended-products .product .info .title, #cart-slideover section.scrolling .product-recommendation .recommended-products .product .info .subtitle, #cart-slideover section.scrolling .product-recommendation .recommended-products .product .info .spec {
   padding: 0 10px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#cart-slideover section.scrolling .recommended-products .product .bottom-container {
+#cart-slideover section.scrolling .product-recommendation .recommended-products .product .bottom-container {
   padding: 0 10px 10px 10px;
 }
-#cart-slideover section.scrolling .recommended-products .product .bottom-container button.add-to-cart {
+#cart-slideover section.scrolling .product-recommendation .recommended-products .product .bottom-container button.add-to-cart {
   letter-spacing: 0;
 }
 #cart-slideover section.scrolling .buttons {
-  margin-top: 80px;
+  margin-top: 20px;
 }
 #cart-slideover section.scrolling footer {
   margin-top: 80px;
@@ -1591,6 +1648,79 @@ a.back.on-image img {
   height: 12px;
   object-fit: contain;
 }
+#cart-slideover section.packages, section.cart section.packages, section.order-detail section.packages {
+  margin-top: 40px;
+}
+#cart-slideover section.packages .list, section.cart section.packages .list, section.order-detail section.packages .list {
+  margin-top: 20px;
+}
+#cart-slideover section.packages .list .item, section.cart section.packages .list .item, section.order-detail section.packages .list .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+#cart-slideover section.packages .list .item input[type=radio], section.cart section.packages .list .item input[type=radio], section.order-detail section.packages .list .item input[type=radio] {
+  flex: 0 0 20px;
+}
+#cart-slideover section.packages .list .item img.package, section.cart section.packages .list .item img.package, section.order-detail section.packages .list .item img.package {
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-left: 10px;
+}
+#cart-slideover section.packages .list .item .info, section.cart section.packages .list .item .info, section.order-detail section.packages .list .item .info {
+  margin-left: 10px;
+  color: #555555;
+}
+@media screen and (min-width: 728px) {
+  #cart-slideover section.packages .list .item .info, section.cart section.packages .list .item .info, section.order-detail section.packages .list .item .info {
+    margin-left: 15px;
+  }
+}
+#cart-slideover section.packages .list .item .info .title, section.cart section.packages .list .item .info .title, section.order-detail section.packages .list .item .info .title {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+#cart-slideover section.packages .list .item .info p, section.cart section.packages .list .item .info p, section.order-detail section.packages .list .item .info p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.75px;
+}
+#cart-slideover section.packages .list .item .info p img, section.cart section.packages .list .item .info p img, section.order-detail section.packages .list .item .info p img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 10px;
+  width: 10px;
+  object-fit: contain;
+}
+#cart-slideover section.packages .list .item .info .write-message, section.cart section.packages .list .item .info .write-message, section.order-detail section.packages .list .item .info .write-message {
+  color: #6C1401;
+  font-family: "Classico URW", serif;
+  font-size: 14px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+#cart-slideover section.packages .list .item .info textarea, section.cart section.packages .list .item .info textarea, section.order-detail section.packages .list .item .info textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+  color: #6C1401;
+  font-family: "Classico URW", serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+#cart-slideover section.packages .list .item .package-price, section.cart section.packages .list .item .package-price, section.order-detail section.packages .list .item .package-price {
+  flex: 0 0;
+  margin-left: 40px;
+  color: #979797;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
 #cart-slideover .subtotal, section.cart .subtotal, section.order-detail .subtotal {
   margin-top: 20px;
 }
@@ -1617,9 +1747,7 @@ a.back.on-image img {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  margin-bottom: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #D8D8D8;
+  margin-bottom: 30px;
 }
 #cart-slideover .total .text, section.cart .total .text, section.order-detail .total .text {
   font-size: 16px;
@@ -1660,6 +1788,21 @@ a.back.on-image img {
   color: #6C1401;
   font-family: "TT Commons", sans-serif;
   text-decoration: underline;
+}
+
+.livraison-offerte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+.livraison-offerte .icon {
+  height: 40px;
+}
+.livraison-offerte .text {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #6C1401;
 }
 
 body {
@@ -2314,422 +2457,422 @@ section.power-of-science .power-bg-container .particle-wrap .particle {
 }
 @keyframes particle-animation-1 {
   100% {
-    transform: translate3d(27vw, 85vh, 76px);
+    transform: translate3d(46vw, 75vh, 84px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(1) {
   animation: particle-animation-1 60s infinite;
-  opacity: 0.22;
-  height: 16px;
-  width: 16px;
+  opacity: 0.63;
+  height: 14px;
+  width: 14px;
   animation-delay: -0.2s;
-  transform: translate3d(32vw, 62vh, 29px);
+  transform: translate3d(33vw, 65vh, 57px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-2 {
   100% {
-    transform: translate3d(76vw, 73vh, 12px);
+    transform: translate3d(37vw, 23vh, 59px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(2) {
   animation: particle-animation-2 60s infinite;
-  opacity: 0.73;
+  opacity: 0.27;
   height: 15px;
   width: 15px;
   animation-delay: -0.4s;
-  transform: translate3d(53vw, 80vh, 26px);
+  transform: translate3d(73vw, 70vh, 38px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-3 {
   100% {
-    transform: translate3d(52vw, 71vh, 35px);
+    transform: translate3d(28vw, 16vh, 69px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(3) {
   animation: particle-animation-3 60s infinite;
-  opacity: 0.87;
-  height: 13px;
-  width: 13px;
+  opacity: 0.74;
+  height: 15px;
+  width: 15px;
   animation-delay: -0.6s;
-  transform: translate3d(51vw, 71vh, 29px);
+  transform: translate3d(66vw, 64vh, 76px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-4 {
   100% {
-    transform: translate3d(56vw, 67vh, 4px);
+    transform: translate3d(68vw, 11vh, 95px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(4) {
   animation: particle-animation-4 60s infinite;
-  opacity: 0.02;
-  height: 16px;
-  width: 16px;
+  opacity: 0.59;
+  height: 9px;
+  width: 9px;
   animation-delay: -0.8s;
-  transform: translate3d(24vw, 54vh, 25px);
+  transform: translate3d(45vw, 26vh, 83px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-5 {
   100% {
-    transform: translate3d(3vw, 23vh, 60px);
+    transform: translate3d(8vw, 58vh, 19px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(5) {
   animation: particle-animation-5 60s infinite;
-  opacity: 0.94;
-  height: 13px;
-  width: 13px;
+  opacity: 0.86;
+  height: 15px;
+  width: 15px;
   animation-delay: -1s;
-  transform: translate3d(6vw, 3vh, 12px);
+  transform: translate3d(15vw, 65vh, 61px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-6 {
   100% {
-    transform: translate3d(58vw, 27vh, 99px);
+    transform: translate3d(44vw, 82vh, 47px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(6) {
   animation: particle-animation-6 60s infinite;
-  opacity: 0.34;
-  height: 14px;
-  width: 14px;
+  opacity: 0.25;
+  height: 9px;
+  width: 9px;
   animation-delay: -1.2s;
-  transform: translate3d(28vw, 48vh, 57px);
+  transform: translate3d(52vw, 84vh, 36px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-7 {
   100% {
-    transform: translate3d(51vw, 73vh, 62px);
+    transform: translate3d(26vw, 18vh, 22px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(7) {
   animation: particle-animation-7 60s infinite;
-  opacity: 0.78;
-  height: 13px;
-  width: 13px;
+  opacity: 0.6;
+  height: 9px;
+  width: 9px;
   animation-delay: -1.4s;
-  transform: translate3d(40vw, 11vh, 73px);
+  transform: translate3d(44vw, 6vh, 92px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-8 {
   100% {
-    transform: translate3d(58vw, 29vh, 29px);
+    transform: translate3d(21vw, 33vh, 100px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(8) {
   animation: particle-animation-8 60s infinite;
-  opacity: 0.35;
-  height: 12px;
-  width: 12px;
+  opacity: 0.16;
+  height: 14px;
+  width: 14px;
   animation-delay: -1.6s;
-  transform: translate3d(88vw, 69vh, 86px);
+  transform: translate3d(43vw, 43vh, 38px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-9 {
   100% {
-    transform: translate3d(86vw, 1vh, 23px);
+    transform: translate3d(32vw, 76vh, 59px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(9) {
   animation: particle-animation-9 60s infinite;
-  opacity: 0.82;
-  height: 10px;
-  width: 10px;
+  opacity: 1;
+  height: 12px;
+  width: 12px;
   animation-delay: -1.8s;
-  transform: translate3d(87vw, 39vh, 61px);
+  transform: translate3d(48vw, 70vh, 73px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-10 {
   100% {
-    transform: translate3d(17vw, 69vh, 63px);
+    transform: translate3d(35vw, 68vh, 83px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(10) {
   animation: particle-animation-10 60s infinite;
-  opacity: 0.71;
-  height: 14px;
-  width: 14px;
+  opacity: 0.03;
+  height: 15px;
+  width: 15px;
   animation-delay: -2s;
-  transform: translate3d(61vw, 83vh, 13px);
+  transform: translate3d(66vw, 47vh, 78px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-11 {
   100% {
-    transform: translate3d(74vw, 49vh, 25px);
+    transform: translate3d(4vw, 57vh, 89px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(11) {
   animation: particle-animation-11 60s infinite;
-  opacity: 0.72;
-  height: 9px;
-  width: 9px;
+  opacity: 0.5;
+  height: 10px;
+  width: 10px;
   animation-delay: -2.2s;
-  transform: translate3d(9vw, 41vh, 26px);
+  transform: translate3d(40vw, 62vh, 24px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-12 {
   100% {
-    transform: translate3d(24vw, 54vh, 32px);
+    transform: translate3d(10vw, 41vh, 76px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(12) {
   animation: particle-animation-12 60s infinite;
-  opacity: 0.64;
-  height: 9px;
-  width: 9px;
+  opacity: 0.28;
+  height: 12px;
+  width: 12px;
   animation-delay: -2.4s;
-  transform: translate3d(73vw, 72vh, 23px);
+  transform: translate3d(13vw, 74vh, 1px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-13 {
   100% {
-    transform: translate3d(3vw, 30vh, 96px);
+    transform: translate3d(77vw, 40vh, 46px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(13) {
   animation: particle-animation-13 60s infinite;
-  opacity: 0.54;
-  height: 10px;
-  width: 10px;
+  opacity: 0.99;
+  height: 11px;
+  width: 11px;
   animation-delay: -2.6s;
-  transform: translate3d(11vw, 34vh, 27px);
+  transform: translate3d(46vw, 66vh, 45px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-14 {
   100% {
-    transform: translate3d(19vw, 59vh, 13px);
+    transform: translate3d(38vw, 34vh, 22px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(14) {
   animation: particle-animation-14 60s infinite;
-  opacity: 0.9;
-  height: 11px;
-  width: 11px;
+  opacity: 0.95;
+  height: 9px;
+  width: 9px;
   animation-delay: -2.8s;
-  transform: translate3d(73vw, 31vh, 77px);
+  transform: translate3d(73vw, 69vh, 44px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-15 {
   100% {
-    transform: translate3d(79vw, 60vh, 25px);
+    transform: translate3d(71vw, 49vh, 17px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(15) {
   animation: particle-animation-15 60s infinite;
-  opacity: 0.07;
-  height: 15px;
-  width: 15px;
+  opacity: 0.27;
+  height: 9px;
+  width: 9px;
   animation-delay: -3s;
-  transform: translate3d(44vw, 32vh, 31px);
+  transform: translate3d(39vw, 7vh, 45px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-16 {
   100% {
-    transform: translate3d(17vw, 57vh, 26px);
+    transform: translate3d(78vw, 47vh, 34px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(16) {
   animation: particle-animation-16 60s infinite;
-  opacity: 0.31;
-  height: 16px;
-  width: 16px;
+  opacity: 0.72;
+  height: 9px;
+  width: 9px;
   animation-delay: -3.2s;
-  transform: translate3d(84vw, 24vh, 19px);
+  transform: translate3d(24vw, 1vh, 29px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-17 {
   100% {
-    transform: translate3d(24vw, 60vh, 36px);
+    transform: translate3d(73vw, 35vh, 77px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(17) {
   animation: particle-animation-17 60s infinite;
-  opacity: 0.06;
-  height: 12px;
-  width: 12px;
+  opacity: 0.31;
+  height: 11px;
+  width: 11px;
   animation-delay: -3.4s;
-  transform: translate3d(59vw, 78vh, 23px);
+  transform: translate3d(84vw, 48vh, 44px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-18 {
   100% {
-    transform: translate3d(69vw, 12vh, 84px);
+    transform: translate3d(41vw, 67vh, 17px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(18) {
   animation: particle-animation-18 60s infinite;
-  opacity: 0.2;
-  height: 9px;
-  width: 9px;
+  opacity: 0.74;
+  height: 14px;
+  width: 14px;
   animation-delay: -3.6s;
-  transform: translate3d(65vw, 88vh, 75px);
+  transform: translate3d(16vw, 69vh, 19px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-19 {
   100% {
-    transform: translate3d(76vw, 19vh, 87px);
+    transform: translate3d(9vw, 26vh, 23px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(19) {
   animation: particle-animation-19 60s infinite;
-  opacity: 0.93;
-  height: 11px;
-  width: 11px;
+  opacity: 0.73;
+  height: 13px;
+  width: 13px;
   animation-delay: -3.8s;
-  transform: translate3d(57vw, 24vh, 59px);
+  transform: translate3d(42vw, 40vh, 48px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-20 {
   100% {
-    transform: translate3d(33vw, 89vh, 36px);
+    transform: translate3d(24vw, 27vh, 25px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(20) {
   animation: particle-animation-20 60s infinite;
-  opacity: 0.99;
+  opacity: 0.06;
   height: 15px;
   width: 15px;
   animation-delay: -4s;
-  transform: translate3d(35vw, 12vh, 6px);
+  transform: translate3d(78vw, 84vh, 52px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-21 {
   100% {
-    transform: translate3d(49vw, 10vh, 20px);
+    transform: translate3d(51vw, 36vh, 43px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(21) {
   animation: particle-animation-21 60s infinite;
-  opacity: 0.11;
-  height: 9px;
-  width: 9px;
+  opacity: 0.27;
+  height: 12px;
+  width: 12px;
   animation-delay: -4.2s;
-  transform: translate3d(11vw, 1vh, 42px);
+  transform: translate3d(11vw, 47vh, 67px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-22 {
   100% {
-    transform: translate3d(18vw, 51vh, 85px);
+    transform: translate3d(62vw, 71vh, 30px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(22) {
   animation: particle-animation-22 60s infinite;
-  opacity: 0.82;
-  height: 12px;
-  width: 12px;
+  opacity: 0.36;
+  height: 16px;
+  width: 16px;
   animation-delay: -4.4s;
-  transform: translate3d(10vw, 84vh, 12px);
+  transform: translate3d(21vw, 57vh, 79px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-23 {
   100% {
-    transform: translate3d(65vw, 86vh, 60px);
+    transform: translate3d(54vw, 78vh, 52px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(23) {
   animation: particle-animation-23 60s infinite;
-  opacity: 0.91;
-  height: 11px;
-  width: 11px;
+  opacity: 0.87;
+  height: 14px;
+  width: 14px;
   animation-delay: -4.6s;
-  transform: translate3d(25vw, 8vh, 63px);
+  transform: translate3d(37vw, 25vh, 37px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-24 {
   100% {
-    transform: translate3d(49vw, 50vh, 26px);
+    transform: translate3d(6vw, 14vh, 38px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(24) {
   animation: particle-animation-24 60s infinite;
-  opacity: 0.99;
-  height: 12px;
-  width: 12px;
+  opacity: 0.91;
+  height: 9px;
+  width: 9px;
   animation-delay: -4.8s;
-  transform: translate3d(78vw, 42vh, 83px);
+  transform: translate3d(53vw, 15vh, 90px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-25 {
   100% {
-    transform: translate3d(70vw, 88vh, 3px);
+    transform: translate3d(39vw, 3vh, 34px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(25) {
   animation: particle-animation-25 60s infinite;
-  opacity: 0.53;
-  height: 12px;
-  width: 12px;
+  opacity: 0.01;
+  height: 10px;
+  width: 10px;
   animation-delay: -5s;
-  transform: translate3d(28vw, 8vh, 35px);
+  transform: translate3d(64vw, 89vh, 50px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-26 {
   100% {
-    transform: translate3d(64vw, 6vh, 99px);
+    transform: translate3d(81vw, 10vh, 18px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(26) {
   animation: particle-animation-26 60s infinite;
-  opacity: 0.79;
-  height: 12px;
-  width: 12px;
+  opacity: 0.06;
+  height: 16px;
+  width: 16px;
   animation-delay: -5.2s;
-  transform: translate3d(1vw, 56vh, 60px);
+  transform: translate3d(14vw, 78vh, 33px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-27 {
   100% {
-    transform: translate3d(72vw, 70vh, 58px);
+    transform: translate3d(60vw, 52vh, 2px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(27) {
   animation: particle-animation-27 60s infinite;
-  opacity: 0.91;
-  height: 10px;
-  width: 10px;
+  opacity: 0.64;
+  height: 15px;
+  width: 15px;
   animation-delay: -5.4s;
-  transform: translate3d(55vw, 5vh, 27px);
+  transform: translate3d(43vw, 38vh, 69px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-28 {
   100% {
-    transform: translate3d(20vw, 6vh, 91px);
+    transform: translate3d(82vw, 42vh, 22px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(28) {
   animation: particle-animation-28 60s infinite;
-  opacity: 0.85;
-  height: 13px;
-  width: 13px;
+  opacity: 0.54;
+  height: 14px;
+  width: 14px;
   animation-delay: -5.6s;
-  transform: translate3d(83vw, 82vh, 91px);
+  transform: translate3d(23vw, 75vh, 15px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-29 {
   100% {
-    transform: translate3d(1vw, 66vh, 25px);
+    transform: translate3d(21vw, 74vh, 22px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(29) {
   animation: particle-animation-29 60s infinite;
-  opacity: 0.68;
-  height: 11px;
-  width: 11px;
+  opacity: 0.41;
+  height: 14px;
+  width: 14px;
   animation-delay: -5.8s;
-  transform: translate3d(84vw, 1vh, 74px);
+  transform: translate3d(12vw, 50vh, 96px);
   background: rgb(255, 255, 255);
 }
 @keyframes particle-animation-30 {
   100% {
-    transform: translate3d(2vw, 36vh, 20px);
+    transform: translate3d(65vw, 39vh, 41px);
   }
 }
 section.power-of-science .power-bg-container .particle-wrap .particle:nth-child(30) {
   animation: particle-animation-30 60s infinite;
-  opacity: 0.77;
+  opacity: 0.22;
   height: 14px;
   width: 14px;
   animation-delay: -6s;
-  transform: translate3d(45vw, 32vh, 19px);
+  transform: translate3d(37vw, 52vh, 52px);
   background: rgb(255, 255, 255);
 }
 section.power-of-science h2 {

@@ -38,13 +38,12 @@ const googleSplide = new Splide(".google__splide", {
 googleSplide.mount();
 
 // <!-- Initialize Swiper -->
-var swiperMaison = new Swiper(".swiperMaison", {
-  effect: "coverflow",
-  loop: true,
+var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
+  effect: "coverflow", loop: true,
   centeredSlides: true,
   grabCursor: true,
   slidesPerView: 1.4,
-  spaceBetween: 0,
+  spaceBetween: 10,
   speed: 500,
   coverflowEffect: {
     rotate: 0,
@@ -54,25 +53,20 @@ var swiperMaison = new Swiper(".swiperMaison", {
     slideShadows: false,
   },
   navigation: {
-    nextEl: ".maison-swiper-button-next",
-    prevEl: ".maison-swiper-button-prev",
+    nextEl: ".maison-main-swiper-button-next",
+    prevEl: ".maison-main-swiper-button-prev",
   },
   breakpoints: {
     0: {
-      slidesPerView: 1.4,
-      spaceBetween: 0,
-    },
-    768: {
       slidesPerView: 1.5,
       spaceBetween: 10,
     },
     1200: {
       slidesPerView: 1.8,
-      spaceBetween: 10,
+      spaceBetween: 20,
     }
   }
 });
-
 
 const selebritesSplide = new Splide(".selebrites__slider", {
   type: "loop",

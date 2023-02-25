@@ -101,6 +101,7 @@ h6 {
 img {
   width: 100%;
   display: block;
+  background: none;
 }
 
 body {
@@ -113,6 +114,7 @@ body {
 body,
 html {
   height: 100%;
+  background-color: #FFFFFF;
 }
 
 button {
@@ -224,8 +226,7 @@ h2 {
   justify-content: space-between;
 }
 
-.fa,
-p.maison__quote {
+.fa {
   color: black;
 }
 
@@ -649,7 +650,7 @@ p.maison__quote {
 
 .main__culte .maison-culte__splide,
 .main__culte.maison.main__maison .maison-culte__splide {
-  max-width: 720px;
+  max-width: 846px;
   position: relative;
 }
 
@@ -706,7 +707,7 @@ p.maison__quote {
 
 .card-item__title {
   font-weight: 300;
-  font-family: "ClassicoUrw";
+  font-family: "ClassicoUrw", sans-serif;
   font-size: 21px;
   line-height: 171%;
 }
@@ -772,7 +773,6 @@ p.maison__quote {
   margin: 0 auto;
 }
 
-.maison-culte__splide::after,
 .maison-culte__splide::after {
   content: "";
   user-select: none;
@@ -780,15 +780,12 @@ p.maison__quote {
   top: 0;
   right: -1%;
   z-index: 1;
-  width: 100px !important;
+  width: 240px;
   height: 100%;
-  background: linear-gradient(90deg,
-      #ffffff 15.74%,
-      rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
   transform: rotate(180deg);
 }
 
-.maison-culte__splide::before,
 .maison-culte__splide::before {
   content: "";
   user-select: none;
@@ -796,11 +793,10 @@ p.maison__quote {
   top: 0;
   left: -1%;
   z-index: 2;
-  width: 100px !important;
+  width: 240px;
   height: 100%;
-  background: linear-gradient(90deg,
-      #ffffff 15.74%,
-      rgba(255, 255, 255, 0) 100%);
+
+  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
 }
 
 
@@ -824,6 +820,11 @@ p.maison__quote {
   background-color: #6c1401;
   padding: 9px 40px 7px;
   border-radius: 16.5px;
+}
+
+.splide__arrow {
+  top: 45% !important;
+  background-color: transparent !important;
 }
 
 @media screen and (max-width: 728px) {
@@ -1027,6 +1028,8 @@ p.maison__quote {
 
 .splide__arrow {
   background: none !important;
+  z-index: 99999 !important;
+  opacity: 1 !important;
 }
 
 .splide__arrow--prev {
@@ -1059,10 +1062,13 @@ p.maison__quote {
 /* ==================== google slide ========================  */
 
 .google__text {
-  color: #1f1f1f;
-  font-style: 20px;
-  line-height: 23.9px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
   text-align: center;
+  font-family: "TT Commons", sans-serif;
+  color: #1F1F1F;
 }
 
 .main__google {
@@ -1089,10 +1095,9 @@ p.maison__quote {
 
 .google__rating {
   margin: 0 auto;
-
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
 }
 
 .google__number-rating {
@@ -1105,10 +1110,14 @@ p.maison__quote {
 }
 
 .stars__row {
-  display: grid;
+  display: flex;
   gap: 15px;
   align-items: center;
-  grid-template-columns: repeat(5, 15px);
+}
+
+.stars__row img {
+  width: 32px;
+  height: 32px;
 }
 
 .splide {
@@ -1131,9 +1140,8 @@ p.maison__quote {
   left: -20px;
   width: 130px !important;
   height: 100%;
-  background: linear-gradient(90deg,
-      #ffffff 15.74%,
-      rgba(255, 255, 255, 0) 100%);
+
+  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
 }
 
 .google__splide::after {
@@ -1144,9 +1152,8 @@ p.maison__quote {
   right: -1%;
   width: 130px !important;
   height: 100%;
-  background: linear-gradient(90deg,
-      #ffffff 15.74%,
-      rgba(255, 255, 255, 0) 100%);
+
+  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
   transform: rotate(180deg);
 }
 
@@ -1182,7 +1189,7 @@ p.maison__quote {
 }
 
 .maison__varanty {
-  color: #1f1f1f;
+  color: #6C1401;
   text-transform: uppercase;
   font-size: 24px;
   text-align: center;
@@ -1220,11 +1227,10 @@ p.maison__quote {
   top: 0;
   user-select: none;
   left: -2%;
-  width: 40px !important;
+  width: 240px;
   height: 100%;
-  background: linear-gradient(90deg,
-      #ffffff 15.74%,
-      rgba(255, 255, 255, 0) 100%);
+
+  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
 }
 
 .maison__splide::after {
@@ -1233,12 +1239,9 @@ p.maison__quote {
   position: absolute;
   top: 0;
   right: -1%;
-  width: 40px !important;
+  width: 240px;
   height: 100%;
-  background: linear-gradient(90deg,
-      #ffffff 15.74%,
-      rgba(255, 255, 255, 0) 100%);
-  transform: rotate(180deg);
+  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
 }
 
 .google__arrow_next,
@@ -1316,7 +1319,7 @@ div.selebrites__container {
 
   .main__culte .maison-culte__splide,
   .main__culte.maison.main__maison .maison-culte__splide {
-    max-width: 425px;
+    max-width: 506px;
   }
 }
 
@@ -1590,13 +1593,6 @@ div.selebrites__container {
   .google__splide::after,
   .google__track::after {
     width: 400px !important;
-  }
-
-  .maison-culte__splide::after,
-  .maison__splide::after,
-  .maison-culte__splide::after,
-  .maison__track::after {
-    width: 400px;
   }
 
 
@@ -1873,6 +1869,13 @@ div.selebrites__container {
     pointer-events: none;
     visibility: hidden;
   }
+
+  .steps-splide .splide__track::after,
+  .steps-splide .splide__track::before,
+  .maison-culte__splide::before,
+  .maison-culte__splide::after {
+    width: 52px;
+  }
 }
 
 @media screen and (min-width: 1119px) {
@@ -1899,10 +1902,7 @@ div.selebrites__container {
   .icon-arrow-prev,
   .maison__splide::after,
   .maison__track::after {
-    width: 100px !important;
-    background: linear-gradient(90deg,
-        #ffffff 30.74%,
-        rgba(255, 255, 255, 0) 100%) !important;
+    background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
   }
 
   .maison__fullname {
@@ -1911,13 +1911,6 @@ div.selebrites__container {
 
   .maison__descpip {
     font-size: 30px;
-  }
-
-  .maison-culte__splide::after,
-  .maison-culte__splide::after {
-    background: linear-gradient(90deg,
-        #ffffff 30.74%,
-        rgba(255, 255, 255, 0) 100%) !important;
   }
 
   .google__splide::after,
@@ -2001,7 +1994,7 @@ div.selebrites__container {
   .google__rating {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     gap: 15px;
     max-width: 500px;
   }
@@ -2086,7 +2079,12 @@ div.selebrites__container {
 
   .card-item__description {
     margin-bottom: 12px;
-    font-size: 27px;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
     margin-top: 12px;
     max-width: 350px;
   }
@@ -2216,7 +2214,6 @@ div.selebrites__container {
     font-size: 36px;
     line-height: 1;
     min-height: 100px;
-    max-width: 244px;
   }
 
   .card-item__btn-link {
@@ -2251,8 +2248,13 @@ div.selebrites__container {
 
   .card-item__text {
     min-height: 48px;
-    font-size: 32px;
-    max-width: 344px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #1F1F1F;
+    max-width: 358px;
   }
 
   .main__offre {
@@ -2292,6 +2294,11 @@ div.selebrites__container {
 
   .maison__title {
     font-size: 48px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 58px;
+    text-align: center;
+    color: #6C1401;
     max-width: 1134px;
     margin: 0 auto;
     line-height: 1.2;
@@ -2322,7 +2329,7 @@ div.selebrites__container {
   }
 
   .selebrites .captions {
-    bottom: -106px;
+    bottom: -114px;
   }
 }
 
@@ -2630,8 +2637,8 @@ div.selebrites__container {
 
 /* ==== technique-splide ====== */
 .technique-splide {
-  padding-left: 31px;
-  padding-right: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
   margin-bottom: 45px;
   position: relative;
   margin: 0 auto;
@@ -2645,10 +2652,10 @@ div.selebrites__container {
 .technique-splide::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 232px;
   left: 0;
-  top: 170px;
+  top: 290px;
   background: #f7f7f4;
   z-index: 1;
 }
@@ -2683,7 +2690,7 @@ div.selebrites__container {
 }
 
 .technique-img-5 {
-  border-radius: 0 0 50px 0;
+  border-top-right-radius: 80px;
 }
 
 .technique-span {
@@ -2699,15 +2706,27 @@ div.selebrites__container {
   max-width: 148px;
 }
 
-.technique-splide .splide__arrow {
+.technique-splide .splide__arrow.splide__arrow--next {
   width: 34px;
   height: 40px;
   right: 19px !important;
   top: 250px;
 }
 
+.technique-splide .splide__arrow.splide__arrow--prev {
+  width: 34px;
+  height: 40px;
+  left: 19px !important;
+  top: 250px;
+
+}
+
+.lg-break {
+  display: none;
+}
 
 @media screen and (min-width: 728px) {
+
   .technique-subtitle {
     font-size: 35px;
     line-height: 42px;
@@ -2717,11 +2736,11 @@ div.selebrites__container {
   }
 
   .technique-splide .splide__arrow {
-    top: 400px;
+    top: 400px !important;
   }
 
   .technique-splide::before {
-    top: 207px;
+    top: 275px;
   }
 
   .mySwiperSteps {
@@ -2732,6 +2751,18 @@ div.selebrites__container {
 @media screen and (min-width: 1119px) {
   .technique-splide .splide__arrow {
     top: 500px !important;
+  }
+
+  .steps-splide.steps__container .splide__arrow.swiper-button-disabled {
+    display: none;
+  }
+
+  .steps-splide .splide__track::before {
+    content: none !important;
+  }
+
+  .lg-break {
+    display: block;
   }
 }
 
@@ -2763,7 +2794,13 @@ div.selebrites__container {
   }
 
   .technique-span {
+    font-style: normal;
+    font-weight: 350;
     font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #000000;
     line-height: 28.68px;
     max-width: 221px;
   }
@@ -2779,8 +2816,7 @@ div.selebrites__container {
 
 .steps-splide {
   padding: 0 40px;
-  margin: 0 auto;
-  margin-bottom: 90px;
+  margin: 90px auto;
   position: relative;
 }
 
@@ -2856,7 +2892,7 @@ div.selebrites__container {
 /* ----------js ClassList---- */
 
 .steps-splide .splide__arrow {
-  top: 70%;
+  top: 60% !important;
   width: 90px;
   height: 40px;
 }
@@ -2867,9 +2903,9 @@ div.selebrites__container {
   position: absolute;
   top: 0;
   user-select: none;
-  width: 200px;
+  width: 240px;
   height: 100%;
-  left: -9%;
+  left: -1%;
   z-index: 2;
   background: linear-gradient(90deg, #ffffff 30.74%, rgba(255, 255, 255, 0) 100%) !important;
 }
@@ -2879,9 +2915,9 @@ div.selebrites__container {
   position: absolute;
   top: 0;
   user-select: none;
-  width: 200px;
+  width: 240px;
   height: 100%;
-  right: -9%;
+  right: -1%;
   z-index: 1;
   background: linear-gradient(270deg, #ffffff 30.74%, rgba(255, 255, 255, 0) 100%) !important;
 }
@@ -2953,9 +2989,12 @@ div.selebrites__container {
   }
 
   .steps-splide .splide__arrow {
-    width: 55px;
+    width: 35px;
   }
 
+  .technique-splide .splide__track {
+    width: 94%;
+  }
 }
 
 @media (max-width:726px) {
@@ -3008,11 +3047,11 @@ div.selebrites__container {
   }
 
   .maison-culte__splide .splide__arrow.maison__arrow_next {
-    right: 12px !important;
+    right: -20px !important;
   }
 
   .maison-culte__splide .splide__arrow.maison__arrow_prev {
-    left: 12px !important;
+    left: -20px !important;
   }
 
   .hero-content-container h2 {
@@ -3124,14 +3163,18 @@ div.selebrites__container {
 
 }
 
+@media screen and (max-width: 640px) {
+
+  .main__culte .maison-culte__splide,
+  .main__culte.maison.main__maison .maison-culte__splide {
+    max-width: 86%;
+  }
+}
+
 @media screen and (max-width: 560px) {
   .maison__container {
     padding-left: 0;
     padding-right: 0;
   }
 
-  .main__culte .maison-culte__splide,
-  .main__culte.maison.main__maison .maison-culte__splide {
-    max-width: 100%;
-  }
 }

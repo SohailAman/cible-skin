@@ -915,7 +915,7 @@ footer {
                 letter-spacing: 2px;
 
                 @include respondToDesktop {
-                    margin-right: 288px;
+                    margin-right: 283px;
                 }
             }
 
@@ -1078,6 +1078,29 @@ footer {
         }
     }
 }
+
+
+
+#floating-whatsapp-icon {
+    z-index: 100;
+    position: fixed;
+    $s: 32px;
+    height: $s; width: $s;
+    object-fit: contain;
+    right: $responsiveMobilePagePadding;
+    bottom: $responsiveMobilePagePadding;
+    cursor: pointer;
+
+    @include respondToTablet {
+        right: $responsiveTabletPagePadding;
+        bottom: $responsiveTabletPagePadding;
+    }
+
+    @include respondToDesktop {
+        right: $responsiveDesktopPagePadding;
+        bottom: $responsiveDesktopPagePadding;
+    }
+}
 //endregion
 
 
@@ -1124,6 +1147,11 @@ footer {
     footer {
         background-color: inherit;
     }
+
+
+    #floating-whatsapp-icon {
+        display: none !important;
+    }
 }
 
 
@@ -1135,6 +1163,32 @@ footer {
         $horizontalPaddingDesktop: 49px;
 
         height: 100%;
+
+
+        h2, h3 {
+            color: $themeBrown;
+            @include serifFontFamily;
+            font-weight: 400;
+            letter-spacing: 1px;
+
+            &.underlined {
+                padding-bottom: 8px;
+                border-bottom: 1px solid $themeBrown;
+                text-transform: uppercase;
+            }
+        }
+
+        h2 {
+            font-size: 20px;
+
+            @include respondToTablet {
+                font-size: 28px;
+            }
+        }
+
+        h3 {
+            font-size: 16px;
+        }
 
 
         section.fixed-header {
@@ -1155,6 +1209,20 @@ footer {
             }
 
 
+            h2 {
+                line-height: 1;
+                margin-top: 7px;
+
+                @include respondToTablet {
+                    margin-top: 9px;
+                }
+
+                @include respondToDesktop {
+                    margin-top: 10px;
+                }
+            }
+
+
             button.close {
                 width: $headerButtonSideLength;
                 height: $headerButtonSideLength;
@@ -1172,11 +1240,8 @@ footer {
         section.scrolling {
             overflow-y: scroll;
             height: calc(100% - $headerHeight);
-            padding: {
-                top: 20px;
-                left: $responsiveMobilePagePadding;
-                right: $responsiveMobilePagePadding;
-            }
+            padding-left: $responsiveMobilePagePadding;
+            padding-right: $responsiveMobilePagePadding;
 
             @include respondToTablet {
                 padding-left: $responsiveTabletPagePadding;
@@ -1189,24 +1254,11 @@ footer {
             }
 
 
-            h2, h3 {
-                color: $themeBrown;
-                @include serifFontFamily;
-                font-weight: 400;
-                letter-spacing: 1px;
-            }
-
-            h2 {
-                font-size: 20px;
-
-                @include respondToTablet {
-                    font-size: 28px;
-                }
-            }
-
-            h3 {
-                margin-top: 50px;
-                font-size: 16px;
+            .horizontal-separator {
+                width: 100%;
+                height: 0;
+                margin-top: 20px;
+                border-top: 1px solid $separatorGrey;
             }
         }
     }
@@ -1222,7 +1274,16 @@ footer {
 
     section.scrolling {
         @include respondToTablet {
-            padding-bottom: 70px;
+            padding-bottom: 40px;
+        }
+
+
+        .entries {
+            .entry-wrapper {
+                overflow: auto;
+                max-height: 208px;
+                padding-right: 8px;
+            }
         }
 
 
@@ -1233,47 +1294,52 @@ footer {
         }
 
 
-        .recommended-products {
-            margin-top: 20px;
-            overflow-x: scroll;
-            @include noScrollbar;
-
-            display: flex;
-            flex-wrap: nowrap;
+        .product-recommendation {
+            margin-top: 50px;
 
 
-            .product {
-                $w: 152px;
-                flex: 0 0 $w;
-                width: $w;
-                margin-right: 10px;
-                background-color: white;
+            .recommended-products {
+                margin-top: 20px;
+                overflow-x: scroll;
+                @include noScrollbar;
 
-                &:last-child {
-                    margin-right: 0;
-                }
+                display: flex;
+                flex-wrap: nowrap;
 
 
-                button.favourite {
-                    display: none;
-                }
+                .product {
+                    $w: 152px;
+                    flex: 0 0 $w;
+                    width: $w;
+                    margin-right: 10px;
+                    background-color: white;
 
-
-                .info {
-                    .title, .subtitle, .spec {
-                        padding: 0 10px;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
+                    &:last-child {
+                        margin-right: 0;
                     }
-                }
 
 
-                .bottom-container {
-                    padding: 0 10px 10px 10px;
+                    button.favourite {
+                        display: none;
+                    }
 
 
-                    button.add-to-cart {
-                        letter-spacing: 0;
+                    .info {
+                        .title, .subtitle, .spec {
+                            padding: 0 10px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+
+
+                    .bottom-container {
+                        padding: 0 10px 10px 10px;
+
+
+                        button.add-to-cart {
+                            letter-spacing: 0;
+                        }
                     }
                 }
             }
@@ -1281,7 +1347,7 @@ footer {
 
 
         .buttons {
-            margin-top: 80px;
+            margin-top: 20px;
         }
 
 
@@ -2049,6 +2115,103 @@ a.back.on-image {
     }
 
 
+
+    section.packages {
+        margin-top: 40px;
+
+
+        .list {
+            margin-top: 20px;
+
+
+            .item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                cursor: pointer;
+
+
+                input[type='radio'] {
+                    flex: 0 0 20px;
+                }
+
+
+                img.package {
+                    $w: 100px;
+                    flex: 0 0 $w;
+                    width: $w; height: $w;
+                    object-fit: cover;
+                    margin-left: 10px;
+                }
+
+
+                .info {
+                    margin-left: 10px;
+                    color: $textGrey3;
+
+                    @include respondToTablet {
+                        margin-left: 15px;
+                    }
+
+
+                    .title {
+                        font-size: 15px;
+                        letter-spacing: 1px;
+                    }
+
+
+                    p {
+                        margin-top: 4px;
+                        margin-bottom: 4px;
+                        font-size: 12px;
+                        font-weight: 300;
+                        letter-spacing: 0.75px;
+
+
+                        img {
+                            display: inline-block; vertical-align: middle;
+                            $s: 10px;
+                            height: $s; width: $s;
+                            object-fit: contain;
+                        }
+                    }
+
+
+                    .write-message {
+                        color: $themeBrown;
+                        @include serifFontFamily;
+                        font-size: 14px;
+                        text-decoration: underline;
+                        letter-spacing: 1px;
+                    }
+
+
+                    textarea {
+                        display: block;
+                        width: 100%;
+                        resize: none;
+                        color: $themeBrown;
+                        @include serifFontFamily;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                    }
+                }
+
+
+                .package-price {
+                    flex: 0 0;
+                    margin-left: 40px;
+                    color: $textGrey6;
+                    font-size: 16px;
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
+
+
     .subtotal {
         margin-top: 20px;
 
@@ -2084,9 +2247,7 @@ a.back.on-image {
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
-        margin-bottom: 40px;
-        padding-top: 20px;
-        border-top: 1px solid $backgroundColourGrey;
+        margin-bottom: 30px;
 
 
         .text {
@@ -2142,6 +2303,26 @@ a.back.on-image {
             @include sansSerifFontFamily;
             text-decoration: underline;
         }
+    }
+}
+
+
+.livraison-offerte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+
+
+    .icon {
+        height: 40px;
+    }
+
+
+    .text {
+        margin-left: 20px;
+        font-size: 14px;
+        color: $themeBrown;
     }
 }
 //endregion

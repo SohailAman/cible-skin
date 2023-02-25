@@ -33,8 +33,8 @@ var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
   effect: "coverflow", loop: true,
   centeredSlides: true,
   grabCursor: true,
-  slidesPerView: 1.4,
-  spaceBetween: 10,
+  slidesPerView: 1.5,
+  spaceBetween: 15,
   speed: 500,
   coverflowEffect: {
     rotate: 0,
@@ -48,23 +48,32 @@ var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
     prevEl: ".maison-main-swiper-button-prev",
   },
   breakpoints: {
-    0: {
-      slidesPerView: 1.5,
-      spaceBetween: 10,
+    998: {
+      slidesPerView: 1.6,
+      spaceBetween: 30,
     },
-    1200: {
-      slidesPerView: 1.8,
+    1240: {
+      slidesPerView: 1.9,
       spaceBetween: 20,
     }
   }
 });
 // <!-- Initialize Swiper -->
 var swiperGoogle = new Swiper(".swiperGoogle", {
+  effect: "coverflow",
   loop: true,
   centeredSlides: true,
   grabCursor: true,
-  slidesPerView: 1.6,
-  spaceBetween: 0,
+  slidesPerView: 1.4,
+  spaceBetween: 15,
+  speed: 500,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 1.8,
+    slideShadows: false,
+  },
   speed: 500,
   navigation: {
     nextEl: ".google-main-swiper-button-next",
@@ -72,7 +81,15 @@ var swiperGoogle = new Swiper(".swiperGoogle", {
   },
   breakpoints: {
     640: {
-      spaceBetween: 25,
+      spaceBetween: 30,
+    },
+    1020: {
+      slidesPerView: 1.8,
+      spaceBetween: 40,
+    },
+    1240: {
+      slidesPerView: 1.8,
+      spaceBetween: 40,
     }
   }
 });
@@ -83,7 +100,7 @@ const selebritesSplide = new Splide(".selebrites__slider", {
   type: "loop",
   perPage: 5,
   perMove: 1,
-  gap: "4px",
+  gap: "2px",
   breakpoints: {
     559: { perPage: 2 },
     991: { perPage: 3 },
@@ -102,14 +119,12 @@ var swiperMaison = new Swiper(".swiperMaison", {
   loop: true,
   centeredSlides: true,
   grabCursor: true,
-  slidesPerView: 1.4,
-  spaceBetween: 0,
   speed: 500,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
     depth: 100,
-    modifier: 2,
+    modifier: 2.7,
     slideShadows: false,
   },
   navigation: {
@@ -119,15 +134,15 @@ var swiperMaison = new Swiper(".swiperMaison", {
   breakpoints: {
     0: {
       slidesPerView: 1.4,
-      spaceBetween: 0,
+      spaceBetween: 10,
     },
     768: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.6,
       spaceBetween: 10,
     },
     1200: {
       slidesPerView: 1.8,
-      spaceBetween: 10,
+      spaceBetween: 30,
     }
   }
 });
@@ -158,15 +173,15 @@ var swiper = new Swiper(".mySwiper", {
   breakpoints: {
     640: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 10,
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 40,
+      spaceBetween: 10,
     },
     1440: {
       slidesPerView: 5,
-      spaceBetween: 50,
+      spaceBetween: 10,
     },
   },
 });
@@ -185,7 +200,7 @@ var swiperSteps = new Swiper(".mySwiperSteps", {
       slidesPerView: 1.9,
     },
     998: {
-      spaceBetween: 20,
+      spaceBetween: 10,
       slidesPerView: 2.9,
     },
   },
