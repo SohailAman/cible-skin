@@ -342,69 +342,69 @@ video {
 
 /* ftire section */
 
-.main__signature {
+.main__signature-mdlp {
   margin-top: 27px;
   margin-bottom: 12px;
 }
 
 
 
-.signature__title {
+.signature-mdlp__title {
   text-align: center;
   line-height: 1.2;
   margin-bottom: 16px;
 }
 
-.signature__cards {
+.signature-mdlp__cards {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   row-gap: 10px;
 }
 
-.signature__card {
+.signature-mdlp__card {
   display: flex;
   flex-direction: column;
   gap: 8px;
   align-items: center;
 }
 
-.card-item {
+.card-item-mdlp {
   text-align: center;
   padding: 2px 20px 20px;
 }
 
-.card-item_3 {
+.card-item-mdlp_3 {
   margin-top: -20px;
 }
 
-.card-item__title {
+.card-item-mdlp__title {
   font-weight: 300;
   font-family: "ClassicoUrw";
   font-size: 24px;
   line-height: 171%;
 }
 
-.card-item__text {
+.card-item-mdlp__text {
   font-size: 20px;
   max-width: 280px;
   font-weight: 500;
   color: #1f1f1f;
 }
 
-.card-item__image {
+.card-item-mdlp__image {
   margin-top: -2px;
   max-width: 280px;
   max-height: 170px;
 }
 
-.card-item__description {
+.card-item-mdlp__description {
   max-width: 284px;
   color: #000000;
   font-size: 12px;
   font-weight: 300;
 }
 
-.card-item__btn-link {
+.card-item-mdlp__btn-link {
   margin-top: -2px;
   font-size: 16px;
   line-height: 1;
@@ -932,7 +932,7 @@ div.selebrites__container {
 /* ===================== */
 
 @media screen and (min-width: 560px) {
-  .card-item {
+  .card-item-mdlp {
     padding: 0;
   }
 
@@ -940,7 +940,7 @@ div.selebrites__container {
     left: 45%;
   }
 
-  .card-item__image {
+  .card-item-mdlp__image {
     max-width: 200px;
     max-height: 217px;
   }
@@ -953,13 +953,13 @@ div.selebrites__container {
     min-height: 443px;
   }
 
-  .signature__cards {
+  .signature-mdlp__cards {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 20px;
   }
 
-  .signature__title {
+  .signature-mdlp__title {
     margin-bottom: 40px;
   }
 
@@ -971,7 +971,7 @@ div.selebrites__container {
     max-width: 350px;
   }
 
-  .main__signature {
+  .main__signature-mdlp {
     margin-bottom: 80px;
   }
 
@@ -1089,22 +1089,22 @@ div.selebrites__container {
     margin-left: auto;
   }
 
-  .card-item__title {
+  .card-item-mdlp__title {
     font-size: 21px;
   }
 
-  .card-item__text {
+  .card-item-mdlp__text {
     font-weight: 300;
     font-size: 20px;
   }
 
-  .card-item__description,
-  .card-item__text {
+  .card-item-mdlp__description,
+  .card-item-mdlp__text {
     max-width: 202px;
     /* min-height: 48px; */
   }
 
-  .signature__cards {
+  .signature-mdlp__cards {
     max-width: 768px;
     margin: 0 auto;
     grid-template-columns: repeat(3, 1fr);
@@ -1134,7 +1134,7 @@ div.selebrites__container {
     margin-bottom: 97px;
   }
 
-  .card-item__image {
+  .card-item-mdlp__image {
     max-width: 200px;
     max-height: 217px;
   }
@@ -1357,14 +1357,15 @@ div.selebrites__container {
     text-transform: uppercase;
   }
 
-  .signature__cards {
+  .signature-mdlp__cards {
     max-width: 1150px;
     gap: 30px !important;
   }
 
-  .card-item__image {
+  .card-item-mdlp__image {
     max-width: 350px;
     max-height: 380px;
+    border-radius: 8px;
   }
 
   .header__logo {
@@ -1420,7 +1421,7 @@ div.selebrites__container {
     grid-column-start: 2;
   }
 
-  .card-item__description {
+  .card-item-mdlp__description {
     margin-bottom: 12px;
     font-size: 16px;
     margin-top: 12px;
@@ -1454,19 +1455,19 @@ div.selebrites__container {
     left: 30%;
   }
 
-  .signature__title {
+  .signature-mdlp__title {
     margin-top: 60px;
     margin-bottom: 60px;
   }
 
-  .card-item__title {
+  .card-item-mdlp__title {
     font-size: 38px;
     line-height: 1;
     min-height: 100px;
     max-width: 244px;
   }
 
-  .card-item__btn-link {
+  .card-item-mdlp__btn-link {
     padding: 14px 56px 12px 56px;
     background-color: transparent;
     border-color: #6c1401;
@@ -1486,16 +1487,16 @@ div.selebrites__container {
     margin-bottom: 49px;
   }
 
-  .card-item_3 {
+  .card-item-mdlp_3 {
     margin-top: 0;
   }
 
-  .card-item__btn-link {
+  .card-item-mdlp__btn-link {
     font-size: 24px;
     padding: 12px 79px 7px;
   }
 
-  .card-item__text {
+  .card-item-mdlp__text {
     min-height: 48px;
     font-size: 24px;
     max-width: 1000px;

@@ -381,7 +381,7 @@ h2 {
 }
 
 .hero-title {
-  font-family: "ClassicoUrw";
+  font-family: "ClassicoUrw", sans-serif;
   font-size: 32px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -492,6 +492,10 @@ h2 {
   left: -75px !important;
 }
 
+.steps-splide.steps__container {
+  z-index: 999;
+}
+
 @media (max-width:1210px) {
 
   .steps-splide.splide--loop .splide__arrow--prev,
@@ -520,22 +524,24 @@ h2 {
     padding: 0 28px;
     margin-top: 30px !important;
     max-width: 677px;
+    margin: 0 auto;
   }
 
   .hero-title {
     font-size: 32px;
-    margin-top: 36.5px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     width: initial;
   }
 
   .hero-subtitle {
-    margin-bottom: 27.5px;
+    margin-bottom: 13px;
   }
 
   .hero-content-tags {
     padding: 10px 5px;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 8px;
   }
 
   .hero-content-container .maison__reserve-btn {
@@ -663,9 +669,6 @@ h2 {
 }
 
 @media screen and (min-width: 1400px) {
-  .sion-subtitle {
-    max-width: 1060px;
-  }
 
   .sion-subtitle span {
     color: #6c1401;
@@ -1847,7 +1850,7 @@ div.selebrites__container {
   }
 }
 
-@media screen and (min-width: 767px) and (max-width:1400px) {
+@media screen and (min-width: 728px) and (max-width:1400px) {
   .hero-content-container .inner {
     display: grid;
     grid-template-columns: 300px 300px;
@@ -1888,12 +1891,21 @@ div.selebrites__container {
 }
 
 @media screen and (min-width: 1119px) {
+  .sion-subtitle {
+    max-width: 1060px;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+  }
+
   div.selebrites__container {
     min-height: 800px;
   }
 
   .card-item__image {
-    border-radius: 10px;
+    border-radius: 10px !important;
   }
 
   .maison__reserve-btn {
@@ -2385,7 +2397,7 @@ div.selebrites__container {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 727px) {
   .maison__title {
     margin: 0 auto;
     max-width: 500px;
@@ -2613,7 +2625,7 @@ div.selebrites__container {
   }
 } */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 727px) {
   .reservation__price {
     display: block;
   }
@@ -3058,7 +3070,7 @@ div.selebrites__container {
   }
 }
 
-@media (max-width:760px) {
+@media (max-width:728px) {
   .hero-content-container {
     text-align: center;
     display: flex;
