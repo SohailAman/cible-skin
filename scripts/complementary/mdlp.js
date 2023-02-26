@@ -9,33 +9,44 @@ const headerEl = document.querySelector(".header");
 
 btnNavEl.forEach((btn) => btn.addEventListener("click", () => headerEl.classList.toggle("nav-open")));
 
-const googleSplide = new Splide(".google__splide", {
-  focus: "center",
-  type: "loop",
-  perPage: 1,
-  perMove: 1,
-  mediaQuery: "min",
-  padding: { left: "3.3em", right: "5em" },
-  breakpoints: {
-    560: {
-      perPage: 2,
-      padding: { left: "5.2em", right: "5.2em" },
-      gap: "5rem",
-    },
-    768: {
-      padding: { left: "5.2em", right: "5.2em" },
-      gap: "5rem",
-    },
-
-    1119: {
-      gap: "null",
-      perPage: 2,
-      padding: { left: "2px", right: "100px" },
-      width: "795px",
-    },
+// <!-- Initialize Swiper -->
+var swiperGoogle = new Swiper(".swiperGoogle", {
+  effect: "coverflow",
+  loop: true,
+  centeredSlides: true,
+  grabCursor: true,
+  slidesPerView: 1.4,
+  spaceBetween: 15,
+  speed: 500,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 1.8,
+    slideShadows: false,
   },
+  speed: 500,
+  navigation: {
+    nextEl: ".google-main-swiper-button-next",
+    prevEl: ".google-main-swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      spaceBetween: 30,
+    },
+    1020: {
+      slidesPerView: 1.8,
+      spaceBetween: 40,
+    },
+    1240: {
+      slidesPerView: 1.8,
+      spaceBetween: 40,
+    }
+  }
 });
-googleSplide.mount();
+
+
+
 
 // <!-- Initialize Swiper -->
 var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
