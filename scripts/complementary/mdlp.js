@@ -43,7 +43,7 @@ var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
   centeredSlides: true,
   grabCursor: true,
   slidesPerView: 1.4,
-  spaceBetween: 10,
+  spaceBetween: 30,
   speed: 500,
   coverflowEffect: {
     rotate: 0,
@@ -57,12 +57,16 @@ var swiperMaisonMain = new Swiper(".swiperMaisonMain", {
     prevEl: ".maison-main-swiper-button-prev",
   },
   breakpoints: {
-    0: {
+    468: {
       slidesPerView: 1.5,
-      spaceBetween: 10,
+      spaceBetween: 30,
     },
-    1200: {
-      slidesPerView: 1.8,
+    998: {
+      slidesPerView: 1.6,
+      spaceBetween: 30,
+    },
+    1240: {
+      slidesPerView: 1.9,
       spaceBetween: 20,
     }
   }

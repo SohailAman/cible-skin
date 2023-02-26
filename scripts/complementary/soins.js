@@ -180,11 +180,11 @@ var swiper = new Swiper(".mySwiper", {
   },
   breakpoints: {
     640: {
-      slidesPerView: 2,
+      slidesPerView: 2.2,
       spaceBetween: 10,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 3.4,
       spaceBetween: 10,
     },
     1440: {
