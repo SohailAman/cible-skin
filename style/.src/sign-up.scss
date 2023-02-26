@@ -1,0 +1,55 @@
+@use 'global' as *;
+
+
+
+body {
+    max-width: $responsiveDesktopPageMaxWidth;
+}
+
+
+header {
+    .second-deck {
+        background-color: $backgroundColour;
+    }
+}
+
+
+
+main {
+    padding-bottom: 40px;
+
+
+    .content.narrow {
+        max-width: 450px;
+
+        @include respondToTablet {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+
+    h1 {
+        @extend .commonProminentH1;
+        margin-top: 30px;
+    }
+
+    h1 + p {
+        margin-top: 20px;
+        color: $textGrey3;
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.8px;
+    }
+
+
+    form {
+        margin-top: 50px;
+
+
+        button[type='submit'] {
+            margin-top: 50px;
+        }
+    }
+}
