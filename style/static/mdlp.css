@@ -1488,13 +1488,13 @@ div.selebrites__container {
   }
 
   .offre__title {
-    max-width: 700px;
+    max-width: 900px !important;
     font-size: 44px !important;
     margin-bottom: 58px;
   }
 
   .offre__text {
-    max-width: 650px;
+    max-width: 680px !important;
     font-size: 24px;
     margin-bottom: 49px;
   }
