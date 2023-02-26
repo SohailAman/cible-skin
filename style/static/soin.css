@@ -1868,14 +1868,27 @@ div.selebrites__container {
   }
 }
 
-@media screen and (min-width: 728px) and (max-width:1400px) {
+@media screen and (min-width: 700px) and (max-width:800px) {
   .hero-content-container .inner {
-    display: grid;
-    grid-template-columns: 300px 300px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 65px;
-    width: fit-content;
+  }
+
+  .hero-content-container {
+    max-width: 90vw;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width:1400px) {
+  .hero-content-container .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-content-container {
+    max-width: 80vw;
   }
 }
 
