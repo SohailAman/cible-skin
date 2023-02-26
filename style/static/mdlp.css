@@ -406,6 +406,7 @@ video {
 }
 
 .card-item-mdlp__btn-link {
+  font-family: "TT Commons", sans-serif;
   margin-top: -2px;
   font-size: 16px;
   line-height: 1;
