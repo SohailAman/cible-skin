@@ -3245,6 +3245,19 @@ div.selebrites__container {
   .steps-splide {
     padding: 0 20px !important;
   }
+
+  .selebrites__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .selebrites__container .splide__slide {
+    transform: scale(.8);
+  }
+
+  .selebrites__container .splide__slide.is-active {
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 560px) {
