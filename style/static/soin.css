@@ -2438,7 +2438,7 @@ div.selebrites__container {
 
   .selebrites .captions {
     width: 45%;
-    bottom: -80px;
+    bottom: -86px;
     left: 12px;
   }
 
@@ -3246,17 +3246,17 @@ div.selebrites__container {
     padding: 0 20px !important;
   }
 
-  .selebrites__container {
-    padding-left: 20px;
-    padding-right: 20px;
+
+  .selebrites__container .splide__slide img {
+    transform: scale(.7);
   }
 
-  .selebrites__container .splide__slide {
-    transform: scale(.8);
-  }
-
-  .selebrites__container .splide__slide.is-active {
+  .selebrites__container .splide__slide.is-active img {
     transform: scale(1);
+  }
+
+  .selebrites__phone {
+    left: 6px;
   }
 }
 
