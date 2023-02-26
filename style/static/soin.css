@@ -134,6 +134,7 @@ button {
   display: flex;
   flex-direction: column;
   margin-top: -120px;
+  max-width: 100vw;
 }
 
 [class*="__container"] {
@@ -152,6 +153,8 @@ body {
   font-size: 16px;
   line-height: 1;
   color: #6c1401;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -190,6 +193,9 @@ h2 {
   z-index: 9999;
 }
 
+.main__hero {
+  overflow-x: hidden;
+}
 
 .reservation.fixed {
   position: fixed;
@@ -516,6 +522,18 @@ h2 {
   .steps-splide .splide__track::after,
   .steps-splide .splide__track::before {
     width: 150px !important;
+  }
+}
+
+@media screen and (max-width: 659px) {
+  .signature__cards {
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 660px) and (max-width: 728px) {
+  .signature__cards {
+    align-items: end;
   }
 }
 
@@ -1043,11 +1061,11 @@ h2 {
 }
 
 .splide__arrow--prev {
-  left: -20px !important;
+  left: 2px !important;
 }
 
 .splide__arrow--next {
-  right: -20px !important;
+  right: 2px !important;
 }
 
 .splide__arrow:disabled {
@@ -2436,6 +2454,22 @@ div.selebrites__container {
     width: 58%;
   }
 
+  .maison__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #6C1401;
+  }
+
+  [class*="__container"] {
+    max-width: 100vw !important;
+    padding: 0;
+    margin: 0;
+  }
+
   .selebrites .captions {
     width: 45%;
     bottom: -86px;
@@ -3237,13 +3271,9 @@ div.selebrites__container {
   }
 
   .technique-splide::before {
-    height: 60vh;
 
-    top: 41%;
-  }
-
-  .steps-splide {
-    padding: 0 20px !important;
+    height: 60%;
+    top: 45%;
   }
 
 
