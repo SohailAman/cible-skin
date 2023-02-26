@@ -1235,7 +1235,6 @@ div.selebrites__container {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-
     color: #000000;
   }
 
@@ -1770,6 +1769,19 @@ div.selebrites__container {
   .users-links {
     width: 100% !important;
     border-right: none !important;
+  }
+
+  .signature-mdlp__cards {
+    align-items: baseline;
+  }
+
+  .card-item-mdlp__description,
+  .card-item-mdlp__text {
+    max-width: 214px;
+  }
+
+  .card-item-mdlp__btn-link {
+    margin-top: 10px;
   }
 }
 
