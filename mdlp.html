@@ -1,0 +1,429 @@
+<?php
+
+
+namespace CibleSkin;
+
+require_once __DIR__ . "/../vendor/autoload.php";
+
+
+
+Cart::create();
+
+
+?>
+<!DOCTYPE html>
+<html lang='fr' data-wish-list='<?= is_null($wishList) ? "" : htmlspecialchars($wishList) ?>'>
+
+<head>
+    <?php require_once "../include/html/head.php"; ?>
++   <title>La Maison de la Peau - Cible Skin</title>
+    <link rel="stylesheet" href="style/static/mdlp.css" />
+    <link rel="stylesheet" href="style/static/soin.css" />
+    <link rel='stylesheet' href='style/products.css?<?= filemtime("style/products.css") ?>'>
+    <link rel='stylesheet'
+        href='scripts/flickity/flickity.min.css?<?= filemtime("scripts/flickity/flickity.min.css") ?>'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+</head>
+
+<body class="global-preload">
+
+    <?php echo Analytics::renderHTMLForGTM(true); ?>
+
+    <?php require_once "../include/html/header.php"; ?>
+    <div class="wrapper">
+
+        <main class="main">
+            <section class="main__hero hero">
+                <div class="hero__container">
+                    <h1 class="hero__title">La Maison de la Peau</h1>
+                    <video autoplay muted>
+                        <source src="assets/videos/landing-maison-de-la-peau.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+            <section class="main__signature-mdlp signature-mdlp">
+                <div class="signature-mdlp__container">
+                    <h2 class="signature-mdlp__title">Découvrez nos soins signature</h2>
+                   
+                    <div class="signature-mdlp__cards">
+                        <div class="signature-mdlp__card card-item-mdlp card-item-mdlp_1">    
+                        <p class="card-item-mdlp__title"><a href="<?= Page::SkincareCulte->url() ?>">Le Soin Culte</a></p>
+                            <p class="card-item-mdlp__text"><a href="<?= Page::SkincareCulte->url() ?>">Le soin <span class="span-red">illuminateur</span> et <span
+                                    class="span-red">anti-taches</span> miraculeux</a></p>
+                                    <a class="signature-mdlp__card__details" href="<?= Page::SkincareCulte->url() ?>">
+                            <img class="card-item-mdlp__image" width="350" height="380"
+                                src="assets/images/common-imgs/signature/card-1-image.jpg "
+                                alt="a women relax on our procedures" style="border-radius:8px !important" />
+                            <p class="card-item-mdlp__description"><a href="<?= Page::SkincareCulte->url() ?>">
+                                L’ultime soin <span class="span-red">illuminateur et détox</span> pour un véritable
+                                <span class="span-red">coup d’éclat.</span> Ce soin
+                                <span class="span-red">resserre les pores dilatés</span> et <span
+                                    class="span-red">unifie le
+                                    teint</span> par son action anti-taches.
+                             </a>
+                            </p>
+                            </a>
+                            <a href="<?= Page::SkincareCulte->url() ?>" class="card-item-mdlp__btn-link">JE DÉCOUVRE</a>
+                        </div>
+                        <div class="signature-mdlp__card card-item-mdlp card-item-mdlp_1">
+                            <p class="card-item-mdlp__title"><a href="<?= Page::SkincareSecondePeau->url() ?>">Le Soin Seconde-Peau</a></p>
+                            <p class="card-item-mdlp__text"><a href="<?= Page::SkincareSecondePeau->url() ?>">Le soin <span class="span-red">ultra-hydratant</span> et
+                                <span class="span-red">purifiant</span></a></p>
+                        <a class="signature-mdlp__card__details" href="<?= Page::SkincareSecondePeau->url() ?>">
+                            <img class="card-item-mdlp__image" style="border-radius:8px !important" width="350" height="380"
+                                src="assets/images/common-imgs/steps/3.jpg"
+                                alt="a women relax on our procedures" />
+                            <p class="card-item-mdlp__description">
+                                Ce soin <span class="span-red">anti-points noirs</span> et anti-pores dilatés est
+                                parfaitement adapté
+                                aux <span class="span-red">peaux grasses</span> et aux teints ternes. Il
+                                <span class="span-red">hydrate, nettoie et purifie en profondeur</span>.
+                            </p>
+                            </a>
+                            <a href="<?= Page::SkincareSecondePeau->url() ?>" class="card-item-mdlp__btn-link">JE DÉCOUVRE</a>
+                        </div>
+                        <div class="signature-mdlp__card card-item-mdlp card-item-mdlp_1">
+                            <p class="card-item-mdlp__title"><a href="<?= Page::SkincareSecondePeau->url() ?>">Le Soin Renew Cellular</a></p>
+                            <p class="card-item-mdlp__text"><a href="<?= Page::SkincareSecondePeau->url() ?>">Le soin <span class="span-red">anti-âge</span> et
+                                <span class="span-red">anti-rides</span> révolutionnaire</a></p>
+                        <a  class="signature-mdlp__card__details" href="<?= Page::SkincareRenewCellular->url() ?>">
+                            <img class="card-item-mdlp__image" style="border-radius:8px !important" width="350" height="380"
+                                src="assets/images/common-imgs/img-skincares/h/3.jpg"
+                                alt="a women relax on our procedures" />
+                            <p class="card-item-mdlp__description">
+                                Ce soin <span class="span-red">anti-âge anti-rides</span> de haute performance 
+                                est spècialemenet adapté aux <span class="span-red">peaux matures</span> il vient 
+                                <span class="span-red">lifter raffermir et repuiper</span> la peau.
+                               
+                            </p>
+                            </a>
+                            <a href="<?= Page::SkincareRenewCellular->url() ?>" class="card-item-mdlp__btn-link">JE DÉCOUVRE</a>
+                        </div>
+                        
+                        
+                    </div>
+
+                </div>
+            </section>
+            <section class="main__offre offre">
+                <div class="offre__container">
+                    <div class="offre__row">
+                        <h2 class="offre__title">L’expertise de la Maison de la Peau : l’héritage de la médecine
+                            anti-âge</h2>
+                        <p class="offre__text">
+                            La Maison de la Peau Cible Skin offre aujourd’hui <span class="span-red">une véritable
+                                révolution de
+                                l’approche des soins anti-âge et esthétiques.</span> Elle est considérée par la
+                            presse internationale comme <span class="span-red">l’un des meilleurs centre esthétique et
+                                anti-âge au
+                                monde.</span>
+                        </p>
+                        <img class="offre__image" width="819" height="647"
+                            src="assets/images/img-mdlp/img/offre/cible-skin.jpg" alt="" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Added Swiper and Adjusted Alignments -->
+            <section class="main__maison main__culte  maison">
+                <div class="maison__container">
+                    <h2 class="maison__title">
+                        La Maison de la Peau élue meilleur centre esthétique et anti-âge
+                        par la presse internationale
+                    </h2>
+                    <div class="maison__splide maison-culte__splide">
+                        <button class=" splide__arrow maison__arrow_prev maison-main-swiper-button-prev">
+                            <img class="icon-arrow-prev" width="96" height="112"
+                                src="assets/images/common-imgs/slider-arrow-big-left.svg" alt="" />
+                        </button>
+                        <button class=" splide__arrow maison__arrow_next maison-main-swiper-button-next">
+                            <img class="icon-arrow-next" width="96" height="112"
+                                src="assets/images/common-imgs/slider-arrow-big-right.svg" alt="" />
+                        </button>
+                        <!-- Swiper -->
+                        <div class="swiper swiperMaisonMain">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="maison__splide-image" width="312" height="463"
+                                        src="assets/images/common-imgs/maison/maison1.jpg"
+                                        alt="Artboart with review and rate" />
+                                    <p class="maison__quote">
+                                        “Le soin anti-âge le plus high-tech d’Europe”
+                                    </p>
+                                    <p class="maison__varanty">VANITY FAIR</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="maison__splide-image" width="312" height="463"
+                                        src="assets/images/common-imgs/maison/maison2.jpg"
+                                        alt="Artboart with review and rate" />
+                                    <p class="maison__quote">
+                                    “Best place for a facial in Paris”
+                                    </p>
+                                    <p class="maison__varanty">FORBES</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="maison__splide-image" width="312" height="463"
+                                        src="assets/images/common-imgs/maison/maison3.jpg"
+                                        alt="Artboart with review and rate" />
+                                    <p class="maison__quote">
+                                    “L’adresse beauté préférée de Lily J. Collins”
+                                    </p> 
+                                    <p class="maison__varanty">VOGUE</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="maison__splide-image" width="312" height="463"
+                                        src="assets/images/common-imgs/maison/maison4.jpg"
+                                        alt="Artboart with review and rate" />
+                                    <p class="maison__quote">
+                                    “Le coup de coeur de la rédaction Beauté”
+                                    </p>
+                                    <p class="maison__varanty">Marie-Claire</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="maison__splide-image" width="312" height="463"
+                                        src="assets/images/common-imgs/maison/maison5.jpg"
+                                        alt="Artboart with review and rate" />
+                                    <p class="maison__quote">
+                                    “Le lieu pour effacer les traces du jet-lag sur votre visage”
+                                    </p>
+                                    <p class="maison__varanty">En Vols</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="maison__splide-image" width="312" height="463"
+                                        src="assets/images/common-imgs/maison/maison6.jpg"
+                                        alt="Artboart with review and rate" />
+                                    <p class="maison__quote">
+                                        “The French capital is dazzling with new retail concepts”
+                                    </p>
+                                    <p class="maison__varanty">WWD
+                                    </p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="maison__splide-image" width="312" height="463"
+                                        src="assets/images/common-imgs/maison/maison7.jpg"
+                                        alt="Artboart with review and rate" />
+                                    <p class="maison__quote">
+                                    “Le Soin Renew-Cellular : pour transformer la texture de sa peau”
+                                    </p>
+                                    <p class="maison__varanty">Elle
+                                    </p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="maison__splide-image" width="312" height="463"
+                                        src="assets/images/common-imgs/maison/maison8.jpg"
+                                        alt="Artboart with review and rate" />
+                                    <p class="maison__quote">
+                                    “Le Soin Seconde-Peau : le soin le plus calibré à la Maison de la Peau, le cocon parisien où se refaire une santé de la peau”
+                                </p>
+                                    <p class="maison__varanty">Vogue
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main__selebrites selebrites">
+                <div class="selebrites__container">
+                    <h2 class="selebrites__title">
+                        Les célébrités en ont fait leur seconde Maison
+                    </h2>
+                    <div class="splide selebrites__slider" role="group" aria-label="Gallery image">
+                        <div class="splide__arrows">
+                            <button role="move to prev slide"
+                                class="splide__arrow splide__arrow--prev selebrites__arrow-prev">
+                                Prev
+                            </button>
+                            <button role="move to next slide"
+                                class="splide__arrow splide__arrow--next selebrites__arrow-next">
+                                <img class="icon-arrow-next icon-arrow-next_big" width="96" height="112"
+                                    src="assets/images/common-imgs/selebretes/component.svg" alt="" />
+                            </button>
+                        </div>
+                        <img src="assets/images/common-imgs/signature/cellphone.png" class="selebrites__phone"
+                            width="255" height="527" alt="" />
+                        <div class="captions">
+                            <p class="selebrites-caption1 selebrites-caption">
+                                <b>cibleskin.paris.</b> <a href="#"><u>@lilyjcollins</u></a> choisit Cible Skin comme
+                                son lieu
+                                skincare
+                                préféré <span style="color:red;">❤</span> <a href="#">@voguefrance</a>...
+                            </p>
+                            <p class="selebrites-caption2 selebrites-caption">
+                                Le secret ultime de <a href="#"><u>@camillerazat </u></a> pour prendre soin de sa peau ?
+                                Elle vous emmène ...
+                            </p>
+                            <p class="selebrites-caption3 selebrites-caption">
+                                <b>cibleskin.paris.</b> Very pleased to welcome <a href="#"><u>@ashleyparklady</u></a>
+                                from <a href="#"><u>@emilyinparis</u></a> with our founders ...
+
+                            </p>
+                            <p class="selebrites-caption4 selebrites-caption">
+                                <a href="#"><u>@alexandralamyofficiel</u></a> at La Maison de la Peau ! ✨
+                                #cibleskin #cibleskinparis #skin #paris
+                            </p>
+                            <p class="selebrites-caption5 selebrites-caption">
+                                <a href="#"><u>@cocorocha</u></a> <span style="color:rgb(235, 225, 225);">❤</span> Cible
+                                Skin
+                                #cibleskin #cibleskinparis #paris #pfw #skin #supermodel
+                            </p>
+                        </div>
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide selebrites__slide selebrites__slide1">
+                                    <img class="selebrites__image" width="232" height="237"
+                                        src="assets/images/common-imgs/selebretes/sel-1.jpg"
+                                        alt="Lily J. Collins photo" />
+                                </li>
+                                <li class="splide__slide selebrites__slide selebrites__slide2">
+                                    <img class="selebrites__image" width="232" height="237"
+                                        src="assets/images/common-imgs/selebretes/sel-2.jpg"
+                                        alt="Lily J. Collins photo" />
+                                </li>
+                                <li class="splide__slide selebrites__slide selebrites__slide3">
+                                    <img class="selebrites__image" width="232" height="237"
+                                        src="assets/images/common-imgs/selebretes/sel-3.jpg"
+                                        alt="Lily J. Collins photo" />
+                                </li>
+                                <li class="splide__slide selebrites__slide selebrites__slide4">
+                                    <img class="selebrites__image" width="232" height="237"
+                                        src="assets/images/common-imgs/selebretes/sel-4.jpg"
+                                        alt="Lily J. Collins photo" />
+                                </li>
+                                <li class="splide__slide selebrites__slide selebrites__slide5">
+                                    <img class="selebrites__image" width="232" height="237"
+                                        src="assets/images/common-imgs/selebretes/sel-5.jpg"
+                                        alt="Lily J. Collins photo" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="selebrites__name selebrites__name1">Lily J. Collins </p>
+                    <p class="selebrites__name selebrites__name2">Camille Razat</p>
+                    <p class="selebrites__name selebrites__name3">Ashley Park</p>
+                    <p class="selebrites__name selebrites__name4">Alexandra Lamy</p>
+                    <p class="selebrites__name selebrites__name5">Coco Rocha</p>
+                </div>
+            </section>
+
+
+            <section class="main__google main__culte maison google">
+                <div class="google__container">
+                    <div class="google__rate-block">
+                        <h2 class="google__title">460 Avis Google</h2>
+                        <div class="google__rating">
+                            <p class="google__number-rating">4.9/5</p>
+                            <div class="stars__row">
+                                <img width="32" height="32" src="assets/images/common-imgs/google/star.svg"
+                                    alt="rating star yellow icon" />
+                                <img width="32" height="32" src="assets/images/common-imgs/google/star.svg"
+                                    alt="rating star yellow icon" />
+                                <img width="32" height="32" src="assets/images/common-imgs/google/star.svg"
+                                    alt="rating star yellow icon" />
+                                <img width="32" height="32" src="assets/images/common-imgs/google/star.svg"
+                                    alt="rating star yellow icon" />
+                                <img width="32" height="32" src="assets/images/common-imgs/google/star.svg"
+                                    alt="rating star yellow icon" />
+                            </div>
+                        </div>
+                        <a class="google__text" href="https://www.google.com/maps/place/Cible+Skin/@48.8681935,2.3018849,17z/data=!3m1!5s0x47e66fc33cd093ef:0x2b4cd796cc2f82cb!4m8!3m7!1s0x47e66fc305255555:0xf7472fb96ded06ce!8m2!3d48.8681935!4d2.3040736!9m1!1b1!16s%2Fg%2F11cscc3fcl" target="_blank">Je souhaite lire d’autres avis</a>
+                    </div>
+                    <div class="maison__splide maison-culte__splide">
+                        <button class=" splide__arrow maison__arrow_prev google-main-swiper-button-prev">
+                            <img class="icon-arrow-prev" width="96" height="112"
+                                src="assets/images/common-imgs/slider-arrow-big-left.svg" alt="" />
+                        </button>
+                        <button class=" splide__arrow maison__arrow_next google-main-swiper-button-next">
+                            <img class="icon-arrow-next" width="96" height="112"
+                                src="assets/images/common-imgs/slider-arrow-big-right.svg" alt="" />
+                        </button>
+                        <!-- Swiper -->
+                        <div class="swiper swiperGoogle">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="google__splide-image" width="429" height="429"
+                                        src="assets/images/common-imgs/google/artboart1.jpg"
+                                        alt="Artboart with review and rate">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="google__splide-image" width="429" height="429"
+                                        src="assets/images/common-imgs/google/artboart2.jpg"
+                                        alt="Artboart with review and rate">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="google__splide-image" width="429" height="429"
+                                        src="assets/images/common-imgs/google/artboart3.jpg"
+                                        alt="Artboart with review and rate">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="google__splide-image" width="429" height="429"
+                                        src="assets/images/common-imgs/google/artboart4.jpg"
+                                        alt="Artboart with review and rate">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="google__splide-image" width="429" height="429"
+                                        src="assets/images/common-imgs/google/artboart5.jpg"
+                                        alt="Artboart with review and rate">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="google__splide-image" width="429" height="429"
+                                        src="assets/images/common-imgs/google/artboart6.jpg"
+                                        alt="Artboart with review and rate">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="google__splide-image" width="429" height="429"
+                                        src="assets/images/common-imgs/google/artboart7.jpg"
+                                        alt="Artboart with review and rate">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="google__splide-image" width="429" height="429"
+                                        src="assets/images/common-imgs/google/artboart8.jpg"
+                                        alt="Artboart with review and rate">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </section>
+
+            <!-- <section class="reservation">
+          <div class="container">
+            <div class="reser-inner">
+              <div class="resertext">
+                <h3>LE SOIN CULTE</h3>
+                <h5>Peau lumineuse, tonifiée, réoxygénée, teint unifié</h5>
+              </div>
+
+              <div class="col">
+                <div class="clockmin">
+                  <img width="16" height="16" src="assets/images/img-mdlp/img/clock.svg" alt="60 min" />
+                  <span>60 min</span>
+                </div>
+                <a>JE RÉSERVE MON SOIN</a>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        </main>
+     
+        <?php require_once "../include/html/alert-confirmation.html"; ?>
+        <?php require_once "../include/html/cookie-consent.php"; ?>
+
+        <?php require_once "../include/html/cart-slideover.php"; ?>
+        <?php require_once "../include/html/menu-slideover.php"; ?>
+
+
+        <?php require "../include/html/footer.php"; ?>
+    </div>
+
+
+    <script type='module' src='scripts/public.js?<?= filemtime("scripts/public.js") ?>'></script>
+    <script defer src="./scripts/complementary/mdlp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</body>
+</html>

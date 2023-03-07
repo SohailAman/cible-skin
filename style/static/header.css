@@ -1,0 +1,15 @@
+.header nav.mdlp .items-wrapper {
+    align-items: flex-start !important;
+}
+
+header .items-wrapper{
+    overflow-y: auto !important;
+}
+
+header .item-img{
+    height: 300px !important;
+}
+
+header .item-description{
+    font-size: 18px !important;
+}

@@ -1,0 +1,54 @@
+@use 'global' as *;
+
+
+
+body {
+    max-width: $responsiveDesktopPageMaxWidth;
+}
+
+
+header {
+    .second-deck {
+        background-color: $backgroundColour;
+    }
+}
+
+
+
+section.banner {
+    position: relative;
+    height: 240px;
+    font-size: 0;
+    @include backgroundCover;
+
+    @include respondToTablet {
+        height: 400px;
+    }
+
+
+    .content {
+        height: 100%;
+        padding-bottom: 40px;
+        display: flex;
+        align-items: end;
+
+        @include respondToTablet {
+            padding-bottom: 75px;
+        }
+
+
+        h2 {
+            line-height: 1;
+            color: white;
+            @include serifFontFamily;
+            font-weight: 400;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+
+            @include respondToTablet {
+                font-size: 48px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
