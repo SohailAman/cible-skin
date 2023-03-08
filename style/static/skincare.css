@@ -1525,12 +1525,16 @@ div.selebrites__container {
   margin-top: 70px;
 }
 
+.translate #splide01-slide01 {
+  transform: translate(-8px, 0px) !important;
+}
+
 .selebrites__phone {
   width: 21.8%;
   height: auto;
   position: absolute;
   top: 0;
-  left: 14px;
+  left: 2px;
   z-index: 50;
   transform: translate(-5%, -18%);
   user-select: none;

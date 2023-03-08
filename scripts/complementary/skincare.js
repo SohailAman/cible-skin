@@ -104,6 +104,7 @@ const selebritesSplide = new Splide(".selebrites__slider", {
   perPage: 5,
   perMove: 1,
   gap: "2px",
+  drag: true,
   breakpoints: {
     559: { perPage: 2 },
     991: { perPage: 3 },
@@ -365,6 +366,19 @@ function overlayHid() {
   }
   else {
     mySwiperStepsWhole.classList.remove('gone')
+  }
+}
+setInterval(overlayHid, 500);
+let selebrites__sliderWhole = document.querySelector(".selebrites__slider");
+let selebrites__sliderSlide = document.querySelector("#fstSel");
+let selebrites__slide2 = document.querySelector(".selebrites__slide2");
+
+console.log(selebrites__sliderSlide)
+
+function overlayHid() {
+  if (selebrites__slide2.classList.contains('is-active')) {
+    console.log('bib')
+    selebrites__sliderWhole.classList.remove('translate')
   }
 }
 setInterval(overlayHid, 500);
