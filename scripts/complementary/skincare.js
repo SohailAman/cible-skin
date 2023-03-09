@@ -375,10 +375,10 @@ let selebrites__slide2 = document.querySelector(".selebrites__slide2");
 
 console.log(selebrites__sliderSlide)
 
-function overlayHid() {
+function overlayHid2() {
   if (selebrites__slide2.classList.contains('is-active')) {
     console.log('bib')
     selebrites__sliderWhole.classList.remove('translate')
   }
 }
-setInterval(overlayHid, 500);
+setInterval(overlayHid2, 500);
