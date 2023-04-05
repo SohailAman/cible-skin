@@ -2,175 +2,200 @@
   font-family: "TT Commons";
   font-weight: 100;
   font-style: normal;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Thin.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Thin.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 100;
   font-style: italic;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Thin-Italic.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Thin-Italic.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 200;
   font-style: normal;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-ExtraLight.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-ExtraLight.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 200;
   font-style: italic;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-ExtraLight-Italic.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-ExtraLight-Italic.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 300;
   font-style: normal;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Light.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Light.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 300;
   font-style: italic;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Light-Italic.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Light-Italic.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 400;
   font-style: normal;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Regular.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Regular.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 400;
   font-style: italic;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Italic.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Italic.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 500;
   font-style: normal;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Medium.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Medium.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 500;
   font-style: italic;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Medium-Italic.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Medium-Italic.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 600;
   font-style: normal;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-DemiBold.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-DemiBold.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 600;
   font-style: italic;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-DemiBold-Italic.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-DemiBold-Italic.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 700;
   font-style: normal;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Bold.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Bold.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 700;
   font-style: italic;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Bold-Italic.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Bold-Italic.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 800;
   font-style: normal;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-ExtraBold.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-ExtraBold.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 800;
   font-style: italic;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-ExtraBold-Italic.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-ExtraBold-Italic.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 900;
   font-style: normal;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Black.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Black.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "TT Commons";
   font-weight: 900;
   font-style: italic;
-  src: url("../../assets/fonts/tt-commons/TT-Commons-Black-Italic.otf") format("truetype");
+  src: url("../../assets/fonts/tt-commons/TT-Commons-Black-Italic.otf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "Classico URW";
   font-weight: 400;
   font-style: normal;
-  src: url("../../assets/fonts/classico-urw/Classico-URW-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/classico-urw/Classico-URW-Regular.ttf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "Classico URW";
   font-weight: 400;
   font-style: italic;
-  src: url("../../assets/fonts/classico-urw/Classico-URW-Regular-Italic.ttf") format("truetype");
+  src: url("../../assets/fonts/classico-urw/Classico-URW-Regular-Italic.ttf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "Classico URW";
   font-weight: 500;
   font-style: normal;
-  src: url("../../assets/fonts/classico-urw/Classico-URW-Medium.ttf") format("truetype");
+  src: url("../../assets/fonts/classico-urw/Classico-URW-Medium.ttf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "Classico URW";
   font-weight: 500;
   font-style: italic;
-  src: url("../../assets/fonts/classico-urw/Classico-URW-Medium-Italic.ttf") format("truetype");
+  src: url("../../assets/fonts/classico-urw/Classico-URW-Medium-Italic.ttf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "Classico URW";
   font-weight: 700;
   font-style: normal;
-  src: url("../../assets/fonts/classico-urw/Classico-URW-Bold.ttf") format("truetype");
+  src: url("../../assets/fonts/classico-urw/Classico-URW-Bold.ttf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "Classico URW";
   font-weight: 700;
   font-style: italic;
-  src: url("../../assets/fonts/classico-urw/Classico-URW-Bold-Italic.ttf") format("truetype");
+  src: url("../../assets/fonts/classico-urw/Classico-URW-Bold-Italic.ttf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "Classico URW";
   font-weight: 900;
   font-style: normal;
-  src: url("../../assets/fonts/classico-urw/Classico-URW-Black.ttf") format("truetype");
+  src: url("../../assets/fonts/classico-urw/Classico-URW-Black.ttf")
+    format("truetype");
 }
 
 *,
@@ -225,7 +250,7 @@ body {
 body,
 html {
   height: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 button {
@@ -331,7 +356,6 @@ h2 {
   padding: 50px 8px;
 }
 
-
 .header__row {
   display: flex;
   align-items: center;
@@ -376,7 +400,6 @@ h2 {
   position: relative;
   z-index: 1000;
 }
-
 
 .navigation__link.active {
   font-weight: 700;
@@ -444,7 +467,6 @@ h2 {
 .header__log-in-button {
   display: none;
 }
-
 
 /* ================== Hero ===================*/
 .hero__title {
@@ -514,7 +536,7 @@ h2 {
   margin-bottom: 29.5px;
 }
 
-.hero-subtitle>span {
+.hero-subtitle > span {
   color: #6c1401;
 }
 
@@ -528,11 +550,11 @@ h2 {
   margin-bottom: 20px;
 }
 
-.hero-content-tags> :nth-child(2) {
+.hero-content-tags > :nth-child(2) {
   margin-left: auto;
 }
 
-.hero-content-tags> :nth-child(3) {
+.hero-content-tags > :nth-child(3) {
   margin-right: auto;
 }
 
@@ -546,11 +568,11 @@ h2 {
   margin-bottom: 20px;
 }
 
-.hero-content-tags-cellular> :nth-child(2) {
+.hero-content-tags-cellular > :nth-child(2) {
   margin-left: auto;
 }
 
-.hero-content-tags-cellular> :nth-child(3) {
+.hero-content-tags-cellular > :nth-child(3) {
   margin-right: auto;
 }
 
@@ -627,8 +649,7 @@ h2 {
   z-index: 99;
 }
 
-@media (max-width:1210px) {
-
+@media (max-width: 1210px) {
   .steps-splide.splide--loop .splide__arrow--prev,
   .steps-splide.splide--loop .splide__arrow--next,
   .icon-arrow-prev,
@@ -760,7 +781,6 @@ h2 {
     max-width: 450px;
   }
 
-
   .hero-tag {
     font-size: 28px;
   }
@@ -828,7 +848,6 @@ h2 {
 }
 
 @media screen and (min-width: 1400px) {
-
   .sion-subtitle span {
     color: #6c1401;
     padding: 50px 0;
@@ -842,7 +861,6 @@ h2 {
   margin-top: 27px;
   margin-bottom: 35px;
 }
-
 
 .signature__title {
   text-align: center;
@@ -936,7 +954,7 @@ h2 {
 }
 
 .swiper-slide.swiper-slide-visible.swiper-slide-active p {
-  color: #6C1401;
+  color: #6c1401;
 }
 
 .main__culte .maison-culte__splide,
@@ -953,7 +971,11 @@ h2 {
   z-index: 1;
   width: 240px;
   height: 100%;
-  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    #ffffff 15.74%,
+    rgba(255, 255, 255, 0) 100%
+  );
   transform: rotate(180deg);
 }
 
@@ -967,9 +989,12 @@ h2 {
   width: 240px;
   height: 100%;
 
-  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    #ffffff 15.74%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
-
 
 .culte__slide {
   display: flex;
@@ -1015,7 +1040,6 @@ h2 {
 .main__offre {
   margin-bottom: 75px;
 }
-
 
 .offre__row {
   text-align: center;
@@ -1098,7 +1122,6 @@ h2 {
   gap: 15px;
 }
 
-
 .footer__link {
   color: #979797;
   font-size: 14px;
@@ -1109,7 +1132,6 @@ h2 {
   color: #1f1f1f;
   text-transform: uppercase;
 }
-
 
 .paiement__text {
   margin-bottom: 15px;
@@ -1129,7 +1151,6 @@ h2 {
   width: auto;
   height: auto;
 }
-
 
 .newsettler {
   grid-row: 2;
@@ -1151,7 +1172,6 @@ h2 {
   line-height: 133%;
   color: #1f1f1f;
 }
-
 
 .form__input {
   width: 100%;
@@ -1241,7 +1261,7 @@ h2 {
   line-height: 36px;
   text-align: center;
   font-family: "TT Commons", sans-serif;
-  color: #1F1F1F;
+  color: #1f1f1f;
   width: 100%;
   display: block;
 }
@@ -1251,7 +1271,6 @@ h2 {
   margin-bottom: 27px;
   position: relative;
 }
-
 
 .google__arrows {
   margin-bottom: 39px;
@@ -1266,7 +1285,6 @@ h2 {
   transition: 0.2s ease-out transform;
   transform: scale(1);
 }
-
 
 .google__rating {
   margin: 0 auto;
@@ -1317,7 +1335,11 @@ h2 {
   width: 130px !important;
   height: 100%;
 
-  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    #ffffff 15.74%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .google__splide::after {
@@ -1329,7 +1351,11 @@ h2 {
   width: 130px !important;
   height: 100%;
 
-  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    #ffffff 15.74%,
+    rgba(255, 255, 255, 0) 100%
+  );
   transform: rotate(180deg);
 }
 
@@ -1340,7 +1366,6 @@ h2 {
 }
 
 /* ======================= */
-
 
 .maison__container {
   padding-bottom: 30px;
@@ -1382,13 +1407,10 @@ h2 {
   transform: translateY(-200%) !important;
 }
 
-
-
 .splide__track {
   display: flex;
   justify-content: center;
 }
-
 
 .maison__splide-image {
   /* object-fit: contain; */
@@ -1407,7 +1429,11 @@ h2 {
   width: 240px;
   height: 100%;
 
-  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    #ffffff 15.74%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .maison__splide::after {
@@ -1418,7 +1444,11 @@ h2 {
   right: -1%;
   width: 240px;
   height: 100%;
-  background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    #ffffff 15.74%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .google__arrow_next,
@@ -1466,8 +1496,6 @@ div.selebrites__container {
   line-height: 17px;
   color: #000000;
 }
-
-
 
 .remove {
   display: none;
@@ -1520,7 +1548,6 @@ div.selebrites__container {
   left: 70%;
 }
 
-
 .selebrites__slider {
   margin-top: 70px;
 }
@@ -1553,7 +1580,6 @@ div.selebrites__container {
   margin-bottom: 90px;
 }
 
-
 .cosmetics__title {
   width: fit-content;
   text-align: center;
@@ -1570,7 +1596,6 @@ div.selebrites__container {
   max-width: 316px;
   max-height: 254px;
 }
-
 
 .cosmetics__splide {
   max-width: 320px;
@@ -1596,7 +1621,7 @@ div.selebrites__container {
   position: relative;
 }
 
-.cosmetics__splide .swiper-horizontal>.swiper-pagination-bullets,
+.cosmetics__splide .swiper-horizontal > .swiper-pagination-bullets,
 .cosmetics__splide .swiper-pagination-bullets.swiper-pagination-horizontal,
 .cosmetics__splide .swiper-pagination-custom,
 .cosmetics__splide .swiper-pagination-fraction .cosmetics__slide {
@@ -1604,7 +1629,7 @@ div.selebrites__container {
 }
 
 .cosmetics__splide .swiper-pagination-bullet {
-  background: #B8B8B8;
+  background: #b8b8b8;
   margin: 0 30px !important;
   opacity: 1;
   width: 17px;
@@ -1612,7 +1637,7 @@ div.selebrites__container {
 }
 
 .cosmetics__splide .swiper-pagination-bullet-active {
-  background: #9C6A63;
+  background: #9c6a63;
 }
 
 .cosmetic__roduct-prev,
@@ -1663,7 +1688,6 @@ div.selebrites__container {
   color: #6c1401;
 }
 
-
 .cosmetics__product-btn {
   display: none;
 }
@@ -1673,7 +1697,6 @@ div.selebrites__container {
   margin-top: 50px !important;
   margin-bottom: 9px !important;
 }
-
 
 @media screen and (min-width: 560px) {
   .card-item {
@@ -1753,13 +1776,11 @@ div.selebrites__container {
     min-height: 700px;
   }
 
-
   .icon-arrow-prev,
   .icon-arrow-next {
     width: 96px;
     height: 111px;
   }
-
 
   .selebrites__title {
     max-width: 500px;
@@ -1771,7 +1792,6 @@ div.selebrites__container {
   .google__track::after {
     width: 400px !important;
   }
-
 
   .google__rate-block {
     gap: 15px;
@@ -2015,7 +2035,7 @@ div.selebrites__container {
   }
 }
 
-@media screen and (min-width: 700px) and (max-width:800px) {
+@media screen and (min-width: 700px) and (max-width: 800px) {
   .hero-content-container .inner {
     display: flex;
     justify-content: space-between;
@@ -2027,7 +2047,7 @@ div.selebrites__container {
   }
 }
 
-@media screen and (min-width: 800px) and (max-width:1400px) {
+@media screen and (min-width: 800px) and (max-width: 1400px) {
   .hero-content-container .inner {
     display: flex;
     justify-content: space-between;
@@ -2105,7 +2125,11 @@ div.selebrites__container {
   .icon-arrow-prev,
   .maison__splide::after,
   .maison__track::after {
-    background: linear-gradient(90deg, #FFFFFF 15.74%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(
+      90deg,
+      #ffffff 15.74%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 
   .maison__fullname {
@@ -2138,10 +2162,6 @@ div.selebrites__container {
   .header {
     padding-top: 42px;
     padding-bottom: 0px;
-  }
-
-  .main {
-    margin-top: 150px;
   }
 
   .header__saved-products-button {
@@ -2385,10 +2405,10 @@ div.selebrites__container {
   .cosmetics__product-btn {
     margin-top: 10px;
     font-size: 24px;
-    background: #6C1401;
+    background: #6c1401;
     mix-blend-mode: normal;
     opacity: 0.9;
-    border: 1px solid #6C1401;
+    border: 1px solid #6c1401;
     border-radius: 20px;
     height: 40px;
     display: flex;
@@ -2445,7 +2465,6 @@ div.selebrites__container {
 
   .card-item_3 {
     margin-top: 0;
-
   }
 
   .card-item__btn-link {
@@ -2460,7 +2479,7 @@ div.selebrites__container {
     font-size: 24px;
     line-height: 29px;
     text-align: center;
-    color: #1F1F1F;
+    color: #1f1f1f;
     max-width: 358px;
   }
 
@@ -2488,7 +2507,6 @@ div.selebrites__container {
 
   .main__maison {
     padding-bottom: 0px;
-
   }
 
   .selebrites {
@@ -2506,7 +2524,7 @@ div.selebrites__container {
     font-weight: 400;
     line-height: 58px;
     text-align: center;
-    color: #6C1401;
+    color: #6c1401;
     max-width: 1134px;
     margin: 0 auto;
     line-height: 1.2;
@@ -2525,11 +2543,9 @@ div.selebrites__container {
   }
 
   .splide__arrow--next {
-
     width: 65px !important;
     right: 1.5em !important;
   }
-
 
   .selebrites .captions * {
     line-height: 20px;
@@ -2622,7 +2638,7 @@ div.selebrites__container {
     line-height: 29px;
     text-align: center;
 
-    color: #6C1401;
+    color: #6c1401;
   }
 
   [class*="__container"] {
@@ -2640,7 +2656,6 @@ div.selebrites__container {
   .selebrites .captions * {
     font-size: 12px;
     line-height: 14px;
-
   }
 }
 
@@ -2778,8 +2793,6 @@ div.selebrites__container {
   }
 
   .card-item__description,
-
-
   .card-item__btn-link {
     margin-top: 12px !important;
   }
@@ -2856,7 +2869,6 @@ div.selebrites__container {
   .cosmetic__roduct-prev {
     left: 3em !important;
   }
-
 
   /*
   .resertext h3,
@@ -2958,7 +2970,6 @@ div.selebrites__container {
   height: 40px;
   left: 19px !important;
   top: 250px;
-
 }
 
 .lg-break {
@@ -2966,7 +2977,6 @@ div.selebrites__container {
 }
 
 @media screen and (min-width: 728px) {
-
   .technique-subtitle {
     font-size: 35px;
     line-height: 42px;
@@ -2992,8 +3002,6 @@ div.selebrites__container {
   .technique-splide .splide__arrow {
     top: 500px !important;
   }
-
-
 
   .steps-splide .splide__track::before {
     content: none !important;
@@ -3117,18 +3125,17 @@ div.selebrites__container {
   padding-left: 2px;
 }
 
-
 /* ----------js ClassList---- */
 
 .morePara {
   visibility: visible;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .hideText {
   font-size: 0;
   line-height: 0;
-  transition: all .3s;
+  transition: all 0.3s;
   visibility: hidden;
 }
 
@@ -3140,7 +3147,6 @@ div.selebrites__container {
   height: 40px;
 }
 
-
 .steps-splide .splide__track::before {
   content: none;
   position: absolute;
@@ -3150,12 +3156,16 @@ div.selebrites__container {
   height: 100%;
   left: -1%;
   z-index: 2;
-  background: linear-gradient(90deg, #ffffff 30.74%, rgba(255, 255, 255, 0) 100%) !important;
+  background: linear-gradient(
+    90deg,
+    #ffffff 30.74%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
 }
 
 .steps-splide .gone.splide__track::after {
   width: 0;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .steps-splide .splide__track::after {
@@ -3167,8 +3177,12 @@ div.selebrites__container {
   height: 100%;
   right: -1%;
   z-index: 1;
-  background: linear-gradient(270deg, #ffffff 30.74%, rgba(255, 255, 255, 0) 100%) !important;
-  transition: .2s;
+  background: linear-gradient(
+    270deg,
+    #ffffff 30.74%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+  transition: 0.2s;
 }
 
 .steps-splide .splide__arrow--prev img {
@@ -3207,7 +3221,7 @@ div.selebrites__container {
   }
 }
 
-@media (max-width:1210px) {
+@media (max-width: 1210px) {
   .cosmetics__splide {
     width: 90%;
     min-width: 75% !important;
@@ -3217,7 +3231,6 @@ div.selebrites__container {
   .cosmetics__container {
     display: flex;
     flex-direction: column;
-
   }
 
   .cosmetics__main-image {
@@ -3246,7 +3259,7 @@ div.selebrites__container {
   }
 }
 
-@media (max-width:726px) {
+@media (max-width: 726px) {
   .cosmetics__splide {
     width: 80vw;
     margin: 0 auto !important;
@@ -3262,14 +3275,14 @@ div.selebrites__container {
   }
 }
 
-@media (min-width:1288px) {
+@media (min-width: 1288px) {
   .cosmetics__content {
     grid-template-columns: 790px 377px;
     column-gap: 90px;
   }
 }
 
-@media (max-width:728px) {
+@media (max-width: 728px) {
   .hero-content-container {
     text-align: center;
     display: flex;
@@ -3284,11 +3297,11 @@ div.selebrites__container {
     margin: 20px auto;
   }
 
-  .hero-content-tags> :nth-child(1) {
+  .hero-content-tags > :nth-child(1) {
     margin-left: auto;
   }
 
-  .hero-content-tags-cellular> :nth-child(1) {
+  .hero-content-tags-cellular > :nth-child(1) {
     margin-left: auto;
   }
 
@@ -3323,7 +3336,6 @@ div.selebrites__container {
   .maison-culte__splide .splide__arrow.maison__arrow_prev {
     left: -20px !important;
   }
-
 
   .splide__slide.maison__slide.culte__slide.is-next {
     margin-right: 25px !important;
@@ -3377,7 +3389,6 @@ div.selebrites__container {
     flex-direction: row;
     justify-content: center;
   }
-
 }
 
 .cosmetics__splide-image {
@@ -3385,7 +3396,7 @@ div.selebrites__container {
   max-width: 100%;
 }
 
-@media (max-width:640px) {
+@media (max-width: 640px) {
   .splide__list.maison-slider-list .splide__slide {
     width: 65vw !important;
   }
@@ -3421,7 +3432,8 @@ div.selebrites__container {
     height: 185px;
   }
 
-  .mySwiperCosmaticMain .swiper-pagination-bullets.swiper-pagination-horizontal {
+  .mySwiperCosmaticMain
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
     left: -70px !important;
   }
 
@@ -3436,7 +3448,6 @@ div.selebrites__container {
     width: 25ch;
   }
 
-
   .hero-content-tags .hero-subtag {
     margin-left: 4px;
     margin-right: 4px;
@@ -3449,21 +3460,18 @@ div.selebrites__container {
 }
 
 @media screen and (max-width: 640px) {
-
   .main__culte .maison-culte__splide,
   .main__culte.maison.main__maison .maison-culte__splide {
     max-width: 86%;
   }
 
   .technique-splide::before {
-
     height: 60%;
     top: 45%;
   }
 
-
   .selebrites__container .splide__slide img {
-    transform: scale(.7);
+    transform: scale(0.7);
   }
 
   .selebrites__container .splide__slide.is-active img {
@@ -3492,14 +3500,6 @@ div.selebrites__container {
   margin-bottom: 10px;
 }
 
-.main {
-  margin-top: 150px;
-}
-
-
-
-
-
 @media screen and (min-width: 1400px) {
   .soins-six-cards-section {
     width: 15% !important;
@@ -3526,7 +3526,7 @@ div.selebrites__container {
     -moz-transform: scale(1.6);
     -o-transform: scale(1.6);
     transform: scale(1.6);
-    transition: transform .2s;
+    transition: transform 0.2s;
   }
 }
 
@@ -3537,7 +3537,6 @@ div.selebrites__container {
 }
 
 @media screen and (max-width: 561px) {
-
   .signature__card.card-item .card-item__text {
     min-height: unset;
   }
@@ -3555,9 +3554,8 @@ div.selebrites__container {
 .reservation {
   width: 100%;
   padding: 16px 48px;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   display: flex;
-
 }
 
 .reser-inner {
@@ -3569,8 +3567,8 @@ div.selebrites__container {
 }
 
 .reser-inner a {
-  background: #6C1401;
-  color: #FFF;
+  background: #6c1401;
+  color: #fff;
   border-radius: 40px;
   padding: 18px 96px 14px 96px;
   font-family: "TT Commons", sans-serif;
@@ -3613,13 +3611,12 @@ div.selebrites__container {
   font-size: 24px;
 }
 
-
 .reser-inner h3 {
   font-family: "Classico Urw", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
-  color: #6C1401;
+  color: #6c1401;
 }
 
 .reser-inner h5 {
@@ -3648,7 +3645,6 @@ div.selebrites__container {
 @media only screen and (max-width: 990px) {
   .reser-inner {
     flex-direction: column;
-
   }
 
   .reser-inner .col {
@@ -3673,7 +3669,6 @@ div.selebrites__container {
   }
 
   .reser-inner a {
-
     padding: 20px 32px 16px 32px;
     font-size: 16px;
   }
